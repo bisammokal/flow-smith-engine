@@ -20,7 +20,7 @@ export const AboutSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-gradient-dark">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-5xl font-bold">

@@ -61,7 +61,7 @@ export const Header = () => {
 
           <div className="hidden md:block">
             <Button
-              variant="hero"
+              variant="cta"
               size="lg"
               onClick={() => scrollToSection("contact")}
             >
@@ -92,7 +92,7 @@ export const Header = () => {
             ))}
             <div className="px-4 pt-2">
               <Button
-                variant="hero"
+                variant="cta"
                 size="lg"
                 className="w-full"
                 onClick={() => scrollToSection("contact")}
