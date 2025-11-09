@@ -1,60 +1,57 @@
-import { Code2 } from "lucide-react";
-
 export const TechStackSection = () => {
   const technologies = [
-    "Zapier",
-    "Make (Integromat)",
-    "n8n",
-    "OpenAI",
-    "Dialogflow",
-    "ClickUp",
-    "Zoho",
-    "Shopify",
-    "WordPress",
-    "Google Sheets",
-    "Slack",
-    "Gmail",
+    { name: "Zapier", logo: "/logos/zapier.png" },
+    { name: "Make", logo: "/logos/make.png" },
+    { name: "n8n", logo: "/logos/n8n.png" },
+    { name: "OpenAI", logo: "/logos/openai.png" },
+    { name: "Dialogflow", logo: "/logos/dialogflow.png" },
+    { name: "ClickUp", logo: "/logos/clickup.svg" },
+    { name: "Zoho", logo: "/logos/zoho.svg" },
+    { name: "Shopify", logo: "/logos/shopify.svg" },
+    { name: "WordPress", logo: "/logos/wordpress.png" },
+    { name: "Google Sheets", logo: "/logos/google-sheets.png" },
+    { name: "Slack", logo: "/logos/slack.png" },
+    { name: "Gmail", logo: "/logos/gmail.png" },
   ];
 
   return (
-    <section className="py-24 bg-muted/30">
+    <section className="py-24 bg-gradient-dark overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 rounded-full mb-4">
-            <Code2 className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">Technology Stack</span>
-          </div>
-          
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Powered by Leading{" "}
+            Tools We{" "}
             <span className="bg-gradient-primary bg-clip-text text-transparent">
-              No-Code & AI Tools
+              Use
             </span>
           </h2>
           
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We integrate 100+ platforms seamlessly to keep your systems connected
+          <p className="text-lg text-muted-foreground">
+            Powered by the best automation tools in the industry.
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {technologies.map((tech) => (
-            <div
-              key={tech}
-              className="bg-card p-6 rounded-lg shadow-soft hover:shadow-medium transition-all text-center group"
-            >
-              <div className="w-12 h-12 bg-primary/10 rounded-lg mx-auto mb-3 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                <Code2 className="w-6 h-6 text-primary" />
-              </div>
-              <p className="font-semibold text-foreground">{tech}</p>
+        {/* Infinite scrolling logos */}
+        <div className="relative">
+          <div className="logo-scroll">
+            <div className="logo-scroll-content">
+              {[...technologies, ...technologies].map((tech, index) => (
+                <div
+                  key={`${tech.name}-${index}`}
+                  className="logo-item bg-white/95 rounded-xl p-6 shadow-soft hover:shadow-medium transition-all flex items-center justify-center"
+                >
+                  <img
+                    src={tech.logo}
+                    alt={`${tech.name} logo`}
+                    className="h-12 w-auto object-contain"
+                  />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-
-        <div className="mt-12 text-center">
-          <p className="text-muted-foreground">
-            And many more... We work with whatever tools you already use
-          </p>
+          </div>
+          
+          {/* Fade edges */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-background to-transparent z-10"></div>
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-background to-transparent z-10"></div>
         </div>
       </div>
     </section>

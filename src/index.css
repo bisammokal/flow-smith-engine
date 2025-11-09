@@ -90,3 +90,39 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Infinite logo scroll animation */
+@keyframes scroll-logos {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.logo-scroll {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.logo-scroll-content {
+  display: flex;
+  gap: 2rem;
+  animation: scroll-logos 30s linear infinite;
+  width: fit-content;
+}
+
+.logo-scroll:hover .logo-scroll-content {
+  animation-play-state: paused;
+}
+
+.logo-item {
+  flex-shrink: 0;
+  width: 180px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
