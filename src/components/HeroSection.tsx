@@ -22,15 +22,15 @@ export const HeroSection = () => {
             </div>
             
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Automate Your Entire{" "}
+              Build a{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Sales & Client Journey
+                24/7 Sales Engine
               </span>{" "}
-              with AI
+              That Converts 10x Faster
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              We build smart systems that capture leads, send follow-ups, and onboard clients automatically — saving 20+ hours weekly.
+              We build smart systems that capture leads, send follow-ups, and onboard clients automatically — saving 20+ hours weekly. Used by 50+ Agencies & SaaS Teams.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
