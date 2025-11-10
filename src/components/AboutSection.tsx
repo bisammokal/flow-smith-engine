@@ -31,9 +31,7 @@ export const AboutSection = () => {
             — Not More Manpower
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Our mission is to free teams from repetitive tasks. We design intelligent workflows 
-            that handle lead capture, outreach, onboarding, and follow-ups automatically — so you 
-            focus on growth, not grunt work.
+            We empower teams to achieve more with less. Our AI-driven workflows deliver measurable impact — up to 60% more revenue, 3× faster client onboarding, and zero manual follow-ups — giving you freedom to scale with precision and confidence.
           </p>
         </div>
 
