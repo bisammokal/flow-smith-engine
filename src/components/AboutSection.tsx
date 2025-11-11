@@ -4,18 +4,18 @@ export const AboutSection = () => {
   const features = [
     {
       icon: Target,
-      title: "Mission-Focused",
-      description: "Free teams from repetitive tasks to focus on growth",
+      title: "Growth Engine",
+      description: "Replace repetitive work with scalable client pipelines.",
     },
     {
       icon: Zap,
-      title: "Lightning Fast",
-      description: "Intelligent workflows that work 24/7 automatically",
+      title: "Smart Systems",
+      description: "Automations that work 24/7 — no burnout, no missed leads.",
     },
     {
       icon: TrendingUp,
-      title: "Scale Efficiently",
-      description: "Grow without adding more manpower",
+      title: "Effortless Scale",
+      description: "Grow faster with lean teams and predictable results.",
     },
   ];
 
