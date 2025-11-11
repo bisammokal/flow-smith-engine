@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,20 +17,35 @@ export const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
+  const handleNavigation = (path: string, sectionId?: string) => {
+    setIsMobileMenuOpen(false);
+    if (path === "/" && sectionId) {
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          const element = document.getElementById(sectionId);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
+      } else {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    } else {
+      navigate(path);
     }
   };
 
   const menuItems = [
-    { label: "Home", id: "hero" },
-    { label: "Solutions", id: "workflows" },
-    { label: "Case Studies", id: "case-studies" },
-    { label: "Pricing", id: "pricing" },
-    { label: "About", id: "about" },
+    { label: "Home", path: "/", sectionId: "hero" },
+    { label: "Services", path: "/services" },
+    { label: "Solutions", path: "/", sectionId: "workflows" },
+    { label: "Case Studies", path: "/", sectionId: "case-studies" },
+    { label: "Pricing", path: "/", sectionId: "pricing" },
+    { label: "About", path: "/", sectionId: "about" },
   ];
 
   return (
@@ -48,10 +66,10 @@ export const Header = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item) => (
+            {menuItems.map((item, index) => (
               <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                key={index}
+                onClick={() => handleNavigation(item.path, item.sectionId)}
                 className="text-foreground hover:text-primary transition-colors"
               >
                 {item.label}
@@ -63,7 +81,7 @@ export const Header = () => {
             <Button
               variant="cta"
               size="lg"
-              onClick={() => scrollToSection("contact")}
+              onClick={() => handleNavigation("/", "contact")}
             >
               🚀 Book a Free Demo
             </Button>
@@ -81,10 +99,10 @@ export const Header = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <nav className="md:hidden py-4 space-y-4 bg-background border-t border-border">
-            {menuItems.map((item) => (
+            {menuItems.map((item, index) => (
               <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
+                key={index}
+                onClick={() => handleNavigation(item.path, item.sectionId)}
                 className="block w-full text-left px-4 py-2 hover:bg-muted transition-colors"
               >
                 {item.label}
@@ -95,7 +113,7 @@ export const Header = () => {
                 variant="cta"
                 size="lg"
                 className="w-full"
-                onClick={() => scrollToSection("contact")}
+                onClick={() => handleNavigation("/", "contact")}
               >
                 🚀 Book a Free Demo
               </Button>
