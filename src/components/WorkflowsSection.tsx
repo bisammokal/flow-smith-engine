@@ -73,19 +73,19 @@ export const WorkflowsSection = () => {
             return (
               <Card
                 key={workflow.title}
-                className="p-6 hover:shadow-medium transition-all group"
+                className="p-6 group"
               >
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex items-start gap-4 mb-4 relative z-10">
                   <span className="text-3xl">{workflow.number}</span>
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
                 </div>
                 
-                <h3 className="text-xl font-semibold mb-3">{workflow.title}</h3>
-                <p className="text-muted-foreground mb-4">{workflow.description}</p>
+                <h3 className="text-xl font-semibold mb-3 relative z-10">{workflow.title}</h3>
+                <p className="text-[#EDEDED] mb-4 relative z-10">{workflow.description}</p>
                 
-                <div className="pt-4 border-t border-border">
+                <div className="pt-4 border-t border-border relative z-10">
                   <p className="text-sm font-medium text-primary">
                     ✓ {workflow.benefit}
                   </p>

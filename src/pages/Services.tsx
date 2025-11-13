@@ -184,13 +184,13 @@ const Services = () => {
               return (
                 <Card
                   key={service.title}
-                  className="p-8 hover:shadow-large transition-all group"
+                  className="p-8 group"
                 >
-                  <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                  <div className="w-16 h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors relative z-10">
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-xl font-bold mb-4 relative z-10">{service.title}</h3>
+                  <p className="text-[#EDEDED] leading-relaxed relative z-10">
                     {service.description}
                   </p>
                 </Card>
@@ -212,13 +212,13 @@ const Services = () => {
               return (
                 <Card
                   key={solution.title}
-                  className="p-8 hover:shadow-medium transition-all"
+                  className="p-8"
                 >
-                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6">
+                  <div className="w-14 h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-6 relative z-10">
                     <Icon className="w-7 h-7 text-accent" />
                   </div>
-                  <h3 className="text-lg font-bold mb-3">{solution.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                  <h3 className="text-lg font-bold mb-3 relative z-10">{solution.title}</h3>
+                  <p className="text-[#EDEDED] text-sm leading-relaxed relative z-10">
                     {solution.description}
                   </p>
                 </Card>
@@ -240,13 +240,13 @@ const Services = () => {
               return (
                 <Card
                   key={service.title}
-                  className="p-8 hover:shadow-medium transition-all"
+                  className="p-8"
                 >
-                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6">
+                  <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-6 relative z-10">
                     <Icon className="w-7 h-7 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold mb-4">{service.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-xl font-bold mb-4 relative z-10">{service.title}</h3>
+                  <p className="text-[#EDEDED] leading-relaxed relative z-10">
                     {service.description}
                   </p>
                 </Card>
@@ -274,21 +274,21 @@ const Services = () => {
               return (
                 <Card
                   key={workflow.title}
-                  className="p-6 hover:shadow-medium transition-all group bg-card/50 backdrop-blur-sm"
+                  className="p-6 group"
                 >
-                  <div className="flex items-start gap-4 mb-4">
+                  <div className="flex items-start gap-4 mb-4 relative z-10">
                     <span className="text-3xl">{workflow.number}</span>
                     <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center group-hover:bg-primary/20 transition-colors">
                       <Icon className="w-6 h-6 text-primary" />
                     </div>
                   </div>
                   
-                  <h3 className="text-xl font-semibold mb-3">{workflow.title}</h3>
-                  <p className="text-muted-foreground mb-4 text-sm leading-relaxed">
+                  <h3 className="text-xl font-semibold mb-3 relative z-10">{workflow.title}</h3>
+                  <p className="text-[#EDEDED] mb-4 text-sm leading-relaxed relative z-10">
                     {workflow.description}
                   </p>
                   
-                  <div className="pt-4 border-t border-border">
+                  <div className="pt-4 border-t border-border relative z-10">
                     <p className="text-sm font-medium text-primary">
                       → {workflow.result}
                     </p>
@@ -299,18 +299,19 @@ const Services = () => {
           </div>
 
           <div className="text-center">
-            <p className="text-lg text-muted-foreground mb-6 max-w-3xl mx-auto">
+            <p className="text-lg text-[#EDEDED] mb-6 max-w-3xl mx-auto">
               Together, these workflows form a powerful end-to-end automation system that acts as your virtual sales and client-success team — running 24/7.
             </p>
-            <div className="inline-block p-8 bg-card rounded-2xl shadow-large">
-              <p className="text-2xl font-bold mb-2">
+            <div className="glass-card inline-block p-8 shadow-large">
+              <p className="text-2xl font-bold mb-2 relative z-10">
                 Full Suite Setup — $3,800 to $4,200 USD
               </p>
-              <p className="text-muted-foreground mb-6">(one-time project)</p>
+              <p className="text-[#EDEDED] mb-6 relative z-10">(one-time project)</p>
               <Button
                 variant="cta"
                 size="lg"
                 onClick={scrollToContact}
+                className="relative z-10"
               >
                 Book a Free Demo of the Suite <ArrowRight className="ml-2" />
               </Button>
@@ -331,12 +332,12 @@ const Services = () => {
               return (
                 <Card
                   key={index}
-                  className="p-6 hover:shadow-medium transition-all flex items-start gap-4"
+                  className="p-6 flex items-start gap-4"
                 >
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 relative z-10">
                     <Icon className="w-6 h-6 text-primary" />
                   </div>
-                  <p className="text-foreground font-medium pt-2">{item.text}</p>
+                  <p className="text-foreground font-medium pt-2 relative z-10">{item.text}</p>
                 </Card>
               );
             })}

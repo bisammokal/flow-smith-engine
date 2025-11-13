@@ -69,19 +69,19 @@ export const HeroSection = () => {
 
           {/* Right Visual */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-large">
+            <div className="glass-hero relative overflow-hidden shadow-large">
               <img
                 src={heroImage}
                 alt="AI Automation Visualization"
-                className="w-full h-auto"
+                className="w-full h-auto rounded-[20px]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent rounded-[20px]" />
             </div>
             
             {/* Floating Stats */}
-            <div className="absolute -bottom-6 -left-6 bg-card p-6 rounded-xl shadow-medium">
-              <div className="text-4xl font-bold text-primary">70-80%</div>
-              <div className="text-sm text-muted-foreground">Workload Reduction</div>
+            <div className="glass-card absolute -bottom-6 -left-6 p-6 shadow-medium">
+              <div className="text-4xl font-bold text-primary relative z-10">70-80%</div>
+              <div className="text-sm text-[#EDEDED] relative z-10">Workload Reduction</div>
             </div>
           </div>
         </div>

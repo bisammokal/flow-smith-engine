@@ -48,29 +48,29 @@ export const CaseStudiesSection = () => {
             return (
               <Card
                 key={caseStudy.industry}
-                className="p-8 hover:shadow-large transition-all"
+                className="p-8"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-4 relative z-10">
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
 
-                <div className="text-sm font-semibold text-primary mb-2">
+                <div className="text-sm font-semibold text-primary mb-2 relative z-10">
                   {caseStudy.industry}
                 </div>
 
-                <h3 className="text-xl font-semibold mb-4 leading-tight">
+                <h3 className="text-xl font-semibold mb-4 leading-tight relative z-10">
                   {caseStudy.title}
                 </h3>
 
-                <div className="inline-block px-4 py-2 bg-primary/10 rounded-lg mb-6">
+                <div className="inline-block px-4 py-2 bg-primary/10 rounded-lg mb-6 relative z-10">
                   <p className="text-lg font-bold text-primary">{caseStudy.result}</p>
                 </div>
 
-                <div className="space-y-2">
+                <div className="space-y-2 relative z-10">
                   {caseStudy.metrics.map((metric) => (
                     <div key={metric} className="flex items-start gap-2">
                       <span className="text-primary mt-1">✓</span>
-                      <span className="text-sm text-muted-foreground">{metric}</span>
+                      <span className="text-sm text-[#EDEDED]">{metric}</span>
                     </div>
                   ))}
                 </div>
