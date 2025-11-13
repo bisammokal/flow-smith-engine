@@ -83,7 +83,7 @@ export const TeamSection = () => {
             <div className="glass-card rounded-2xl overflow-hidden shadow-large">
               <img
                 src={teamImage}
-                alt="Preesoft Automations Team"
+                alt="Fluxyn Team"
                 className="w-full h-auto"
               />
             </div>

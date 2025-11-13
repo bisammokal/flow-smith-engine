@@ -15,10 +15,10 @@ export const Footer = () => {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-4">
-              Preesoft Automations
+              Fluxyn
             </h3>
             <p className="text-foreground/70 leading-relaxed">
-              Preesoft Automations truly believes in customer satisfaction. Share your burden with us, we will provide you quality services. Trust us, you will have unbreakable bond with Preesoft Automations.
+              Fluxyn truly believes in customer satisfaction. Share your burden with us, we will provide you quality services. Trust us, you will have unbreakable bond with Fluxyn.
             </p>
           </div>
 
@@ -86,15 +86,15 @@ export const Footer = () => {
             <div className="space-y-3">
               <div>
                 <span className="text-primary font-medium">Inquiry:</span>
-                <p className="text-foreground/80 break-all">hello@preesoftautomations.com</p>
+                <p className="text-foreground/80 break-all">hello@fluxyn.com</p>
               </div>
               <div>
                 <span className="text-primary font-medium">Resume:</span>
-                <p className="text-foreground/80 break-all">careers@preesoftautomations.com</p>
+                <p className="text-foreground/80 break-all">careers@fluxyn.com</p>
               </div>
               <div>
                 <span className="text-primary font-medium">Quotation:</span>
-                <p className="text-foreground/80 break-all">sales@preesoftautomations.com</p>
+                <p className="text-foreground/80 break-all">sales@fluxyn.com</p>
               </div>
             </div>
           </div>
@@ -147,7 +147,7 @@ export const Footer = () => {
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-foreground/70">
-              Copyright © 2025 | Preesoft Automations. All rights reserved.
+              Copyright © 2025 | Fluxyn. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <button 
