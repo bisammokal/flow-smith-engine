@@ -72,22 +72,22 @@ export const PricingSection = () => {
             <Card
               key={plan.type}
               className={`p-8 relative ${
-                plan.popular ? "ring-2 ring-primary shadow-large" : ""
+                plan.popular ? "ring-2 ring-primary" : ""
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground rounded-full text-sm font-semibold">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1 bg-primary text-primary-foreground rounded-full text-sm font-semibold z-10">
                   Most Popular
                 </div>
               )}
 
-              <div className="mb-6">
+              <div className="mb-6 relative z-10">
                 <h3 className="text-2xl font-bold mb-2">{plan.type}</h3>
-                <p className="text-muted-foreground mb-4">{plan.description}</p>
+                <p className="text-[#EDEDED] mb-4">{plan.description}</p>
                 <div className="text-3xl font-bold text-primary">{plan.price}</div>
               </div>
 
-              <div className="space-y-3 mb-8">
+              <div className="space-y-3 mb-8 relative z-10">
                 {plan.features.map((feature) => (
                   <div key={feature} className="flex items-start gap-3">
                     <div className="w-5 h-5 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -100,7 +100,7 @@ export const PricingSection = () => {
 
               <Button
                 variant={plan.popular ? "hero" : "outline"}
-                className="w-full"
+                className="w-full relative z-10"
                 onClick={() => scrollToSection("contact")}
               >
                 Get Started

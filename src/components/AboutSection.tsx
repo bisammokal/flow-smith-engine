@@ -1,4 +1,5 @@
 import { Target, TrendingUp, Zap } from "lucide-react";
+import { Card } from "@/components/ui/card";
 
 export const AboutSection = () => {
   const features = [
@@ -39,16 +40,16 @@ export const AboutSection = () => {
           {features.map((feature) => {
             const Icon = feature.icon;
             return (
-              <div
+              <Card
                 key={feature.title}
-                className="bg-card p-8 rounded-xl shadow-soft hover:shadow-medium transition-all"
+                className="p-8"
               >
-                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4">
+                <div className="w-14 h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 relative z-10">
                   <Icon className="w-7 h-7 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
-                <p className="text-muted-foreground">{feature.description}</p>
-              </div>
+                <h3 className="text-xl font-semibold mb-2 relative z-10">{feature.title}</h3>
+                <p className="text-[#EDEDED] relative z-10">{feature.description}</p>
+              </Card>
             );
           })}
         </div>

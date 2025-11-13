@@ -47,17 +47,17 @@ export const TestimonialsSection = () => {
         <div className="grid md:grid-cols-2 gap-6">
           {testimonials.map((testimonial) => (
             <Card key={testimonial.name} className="p-8">
-              <div className="flex gap-1 mb-4">
+              <div className="flex gap-1 mb-4 relative z-10">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-5 h-5 fill-primary text-primary" />
                 ))}
               </div>
 
-              <p className="text-lg mb-6 leading-relaxed">"{testimonial.text}"</p>
+              <p className="text-lg mb-6 leading-relaxed relative z-10">"{testimonial.text}"</p>
 
-              <div className="border-t border-border pt-4">
+              <div className="border-t border-border pt-4 relative z-10">
                 <p className="font-semibold">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                <p className="text-sm text-[#EDEDED]">{testimonial.role}</p>
               </div>
             </Card>
           ))}

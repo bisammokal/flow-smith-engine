@@ -24,7 +24,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 0 0% 93%;
 
     --accent: 45 93% 58%;
     --accent-foreground: 222 47% 11%;
@@ -48,6 +48,14 @@ All colors MUST be HSL.
     --shadow-glow: 0 0 40px hsl(45 93% 58% / 0.2);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    /* Glassmorphism design tokens */
+    --glass-bg: rgba(255, 255, 255, 0.08);
+    --glass-border: rgba(255, 255, 255, 0.15);
+    --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.03));
+    --glass-hero-bg: rgba(255, 255, 255, 0.06);
+    --glass-hero-gradient: linear-gradient(115deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
+    --glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
   }
 
   .dark {
@@ -67,7 +75,7 @@ All colors MUST be HSL.
     --secondary-foreground: 0 0% 100%;
 
     --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 70%;
+    --muted-foreground: 0 0% 93%;
 
     --accent: 45 93% 58%;
     --accent-foreground: 0 0% 5%;
@@ -125,4 +133,49 @@ All colors MUST be HSL.
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/* Glassmorphism utilities */
+@layer utilities {
+  .glass-card {
+    background: var(--glass-bg);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    position: relative;
+    transition: var(--transition-smooth);
+  }
+  
+  .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--glass-gradient);
+    pointer-events: none;
+  }
+  
+  .glass-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--glass-shadow);
+  }
+  
+  .glass-hero {
+    background: var(--glass-hero-bg);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid var(--glass-border);
+    border-radius: 20px;
+    position: relative;
+  }
+  
+  .glass-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--glass-hero-gradient);
+    pointer-events: none;
+  }
 }

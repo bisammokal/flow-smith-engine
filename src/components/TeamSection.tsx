@@ -80,7 +80,7 @@ export const TeamSection = () => {
           </div>
 
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-large">
+            <div className="glass-card rounded-2xl overflow-hidden shadow-large">
               <img
                 src={teamImage}
                 alt="Preesoft Automations Team"
@@ -88,9 +88,9 @@ export const TeamSection = () => {
               />
             </div>
             
-            <div className="absolute -bottom-6 -right-6 bg-card p-6 rounded-xl shadow-medium max-w-xs">
-              <p className="font-semibold mb-1">Smart Automation, Real Growth.</p>
-              <p className="text-sm text-muted-foreground">
+            <div className="glass-card absolute -bottom-6 -right-6 p-6 max-w-xs shadow-medium">
+              <p className="font-semibold mb-1 relative z-10">Smart Automation, Real Growth.</p>
+              <p className="text-sm text-[#EDEDED] relative z-10">
                 Trusted by businesses across healthcare, real estate, and SaaS
               </p>
             </div>
