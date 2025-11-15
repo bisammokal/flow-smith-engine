@@ -40,7 +40,7 @@ export const Header = () => {
   };
 
   const menuItems = [
-    { label: "Home", path: "/", sectionId: "hero" },
+    { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
     { label: "Solutions", path: "/", sectionId: "workflows" },
     { label: "Case Studies", path: "/", sectionId: "case-studies" },
@@ -81,7 +81,7 @@ export const Header = () => {
             <Button
               variant="cta"
               size="lg"
-              onClick={() => handleNavigation("/", "contact")}
+              onClick={() => navigate("/book-call")}
             >
               🚀 Book a Free Demo
             </Button>
@@ -113,7 +113,7 @@ export const Header = () => {
                 variant="cta"
                 size="lg"
                 className="w-full"
-                onClick={() => handleNavigation("/", "contact")}
+                onClick={() => navigate("/book-call")}
               >
                 🚀 Book a Free Demo
               </Button>
