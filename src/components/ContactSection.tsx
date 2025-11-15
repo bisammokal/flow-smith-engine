@@ -1,126 +1,49 @@
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card } from "@/components/ui/card";
-import { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
+import { Lock, ArrowRight } from "lucide-react";
 
 export const ContactSection = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    company: "",
-    message: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Form submission logic would go here
-    toast({
-      title: "Message Sent!",
-      description: "We'll get back to you within 24 hours.",
-    });
-
-    // Reset form
-    setFormData({ name: "", email: "", company: "", message: "" });
-  };
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }));
-  };
-
   return (
-    <section id="contact" className="py-24 bg-gradient-hero">
-      <div className="container mx-auto px-4">
-        <div className="max-w-3xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Ready to{" "}
-              <span className="bg-gradient-primary bg-clip-text text-transparent">
-                Automate Your Business?
-              </span>
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Book a free strategy call and let's discuss how we can save you 20+ hours weekly
-            </p>
-          </div>
+    <section id="contact" className="py-24 bg-gradient-hero relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-[120px]" />
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-[140px]" />
+      </div>
 
-          <Card className="p-8 md:p-12 shadow-large">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-2">
-                    Name *
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    required
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="John Doe"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-2">
-                    Email *
-                  </label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    required
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="john@company.com"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="company" className="block text-sm font-medium mb-2">
-                  Company / Website
-                </label>
-                <Input
-                  id="company"
-                  name="company"
-                  value={formData.company}
-                  onChange={handleChange}
-                  placeholder="yourcompany.com"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium mb-2">
-                  What process do you want to automate? *
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  required
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder="Tell us about your current manual processes..."
-                  rows={5}
-                />
-              </div>
-
-              <Button type="submit" variant="hero" size="lg" className="w-full">
-                Book My Free Strategy Call
-              </Button>
-
-              <p className="text-sm text-center text-muted-foreground">
-                We'll respond within 24 hours • No obligations • 100% free consultation
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="max-w-4xl mx-auto">
+          <Card className="glass-card p-12 md:p-16 text-center space-y-8">
+            <div className="space-y-6">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                Ready to Automate{" "}
+                <span className="bg-gradient-to-r from-[#8B9DC3] to-[#4A90E2] bg-clip-text text-transparent">
+                  Your Business?
+                </span>
+              </h2>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto">
+                Join hundreds of businesses already saving 20–80 hours per month with smart automation.
               </p>
-            </form>
+            </div>
+
+            <div className="pt-4">
+              <Link to="/book-call">
+                <Button 
+                  variant="hero" 
+                  size="lg" 
+                  className="text-lg px-12 py-6 hover:scale-105 transition-transform duration-200"
+                >
+                  Book Your Free Strategy Call <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
+            </div>
+
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground pt-2">
+              <Lock className="w-4 h-4 text-primary" />
+              <span>Your information is 100% secure • No spam, ever</span>
+            </div>
           </Card>
         </div>
       </div>
