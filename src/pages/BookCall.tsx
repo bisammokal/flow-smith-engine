@@ -87,60 +87,97 @@ const BookCall = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Floating Background Elements */}
+      {/* Premium Ambient Gradient Lighting */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse"></div>
-        <div className="absolute top-40 right-20 w-[500px] h-[500px] bg-blue-500/15 rounded-full blur-[140px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-20 left-1/3 w-[400px] h-[400px] bg-purple-500/10 rounded-full blur-[130px] animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-blue-500/20 via-purple-500/15 to-transparent rounded-full blur-[140px]"></div>
+        <div className="absolute top-40 right-20 w-[700px] h-[700px] bg-gradient-to-bl from-purple-500/20 via-blue-600/15 to-transparent rounded-full blur-[160px]"></div>
+        <div className="absolute bottom-20 left-1/3 w-[500px] h-[500px] bg-gradient-to-tr from-primary/15 via-purple-400/10 to-transparent rounded-full blur-[130px]"></div>
       </div>
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 px-4 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="relative z-10 space-y-6">
-              <div className="inline-block px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
-                <span className="text-primary text-sm font-medium">✨ Free Strategy Call — No Obligations</span>
-              </div>
-              <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Book Your Free
-                <span className="block bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                  Strategy Call
-                </span>
-              </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-xl">
-                Let's explore how automation can save you 20–80 hours per month and scale your revenue effortlessly.
-              </p>
-              <div className="flex flex-wrap gap-4 pt-4">
-                <div className="flex items-center gap-2 text-foreground/80">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                  <span>30-45 min call</span>
-                </div>
-                <div className="flex items-center gap-2 text-foreground/80">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                  <span>Actionable insights</span>
-                </div>
-                <div className="flex items-center gap-2 text-foreground/80">
-                  <CheckCircle2 className="w-5 h-5 text-primary" />
-                  <span>Custom roadmap</span>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            {/* Premium Glass Panel with Content */}
+            <div className="relative z-10">
+              <div className="relative p-8 lg:p-10 rounded-3xl bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] shadow-2xl">
+                {/* Gradient border glow effect */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-blue-500/10 to-purple-500/20 opacity-50 blur-xl -z-10"></div>
+                
+                <div className="space-y-6">
+                  {/* Badge */}
+                  <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/30 backdrop-blur-sm">
+                    <span className="text-primary text-sm font-medium">✨ Free Strategy Call — No Obligations</span>
+                  </div>
+                  
+                  {/* Headline */}
+                  <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
+                    Book Your Free{" "}
+                    <span className="bg-gradient-to-r from-[#FFD43B] via-[#4A90E2] to-[#8B9DC3] bg-clip-text text-transparent">
+                      Strategy Call
+                    </span>
+                  </h1>
+                  
+                  {/* Subtitle */}
+                  <p className="text-lg lg:text-xl text-foreground/70 leading-relaxed">
+                    Let's explore how automation can save you 20–80 hours per month and scale your revenue effortlessly.
+                  </p>
+                  
+                  {/* Premium Benefits Row */}
+                  <div className="flex flex-wrap gap-3 pt-2">
+                    <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-primary/30 transition-all duration-300 hover:bg-white/[0.05]">
+                      <div className="flex items-center gap-2">
+                        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                          <Clock className="w-3 h-3 text-primary" />
+                        </div>
+                        <span className="text-sm text-foreground/80 font-medium">30-45 min call</span>
+                      </div>
+                    </div>
+                    <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-blue-500/30 transition-all duration-300 hover:bg-white/[0.05]">
+                      <div className="flex items-center gap-2">
+                        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center">
+                          <Target className="w-3 h-3 text-blue-400" />
+                        </div>
+                        <span className="text-sm text-foreground/80 font-medium">Actionable insights</span>
+                      </div>
+                    </div>
+                    <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-purple-500/30 transition-all duration-300 hover:bg-white/[0.05]">
+                      <div className="flex items-center gap-2">
+                        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-500/5 flex items-center justify-center">
+                          <TrendingUp className="w-3 h-3 text-purple-400" />
+                        </div>
+                        <span className="text-sm text-foreground/80 font-medium">Custom roadmap</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Floating Illustration */}
-            <div className="relative h-[400px] lg:h-[500px]">
+            {/* Minimal Floating Icons */}
+            <div className="relative h-[400px] lg:h-[500px] hidden lg:block">
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="relative w-full h-full">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-primary/30 to-blue-500/30 rounded-full blur-3xl animate-pulse"></div>
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-purple-500/30 to-primary/30 rounded-full blur-2xl animate-pulse" style={{ animationDelay: '0.5s' }}></div>
-                  <div className="absolute top-1/4 left-1/4 w-32 h-32 glass-card rounded-3xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300">
-                    <Zap className="w-16 h-16 text-primary" />
+                  {/* Soft ambient glow */}
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-gradient-to-br from-primary/20 via-blue-500/15 to-purple-500/20 rounded-full blur-[100px]"></div>
+                  
+                  {/* Minimal neon-line icon cards */}
+                  <div className="absolute top-[15%] left-[20%] group">
+                    <div className="w-24 h-24 rounded-2xl bg-white/[0.02] backdrop-blur-xl border border-primary/30 flex items-center justify-center hover:border-primary/50 transition-all duration-300 hover:scale-110">
+                      <Target className="w-12 h-12 text-primary/80 stroke-[1.5]" />
+                    </div>
                   </div>
-                  <div className="absolute bottom-1/4 right-1/4 w-32 h-32 glass-card rounded-3xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300" style={{ animationDelay: '0.2s' }}>
-                    <Target className="w-16 h-16 text-blue-400" />
+                  
+                  <div className="absolute top-[50%] right-[15%] group">
+                    <div className="w-24 h-24 rounded-2xl bg-white/[0.02] backdrop-blur-xl border border-blue-500/30 flex items-center justify-center hover:border-blue-500/50 transition-all duration-300 hover:scale-110">
+                      <Zap className="w-12 h-12 text-blue-400/80 stroke-[1.5]" />
+                    </div>
                   </div>
-                  <div className="absolute top-1/2 right-1/4 w-32 h-32 glass-card rounded-3xl flex items-center justify-center transform hover:scale-110 transition-transform duration-300" style={{ animationDelay: '0.4s' }}>
-                    <TrendingUp className="w-16 h-16 text-purple-400" />
+                  
+                  <div className="absolute bottom-[20%] left-[35%] group">
+                    <div className="w-24 h-24 rounded-2xl bg-white/[0.02] backdrop-blur-xl border border-purple-500/30 flex items-center justify-center hover:border-purple-500/50 transition-all duration-300 hover:scale-110">
+                      <TrendingUp className="w-12 h-12 text-purple-400/80 stroke-[1.5]" />
+                    </div>
                   </div>
                 </div>
               </div>
