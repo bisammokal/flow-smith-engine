@@ -15,15 +15,23 @@ export const TechStackSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-dark overflow-hidden">
-      <div className="container mx-auto px-4">
+    <section className="py-24 relative overflow-hidden">
+      {/* Floating Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/15 to-purple-500/15 rounded-full blur-3xl opacity-20" />
+        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-br from-primary/20 to-cyan-500/20 rounded-full blur-3xl opacity-25" />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Tools We{" "}
-            <span className="bg-gradient-primary bg-clip-text text-transparent">
-              Use
-            </span>
-          </h2>
+          <div className="glass-hero p-6 backdrop-blur-xl inline-block mb-4">
+            <h2 className="text-4xl md:text-5xl font-bold relative z-10">
+              Tools We{" "}
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                Use
+              </span>
+            </h2>
+          </div>
           
           <p className="text-lg text-muted-foreground">
             Powered by the best automation tools in the industry.
@@ -37,12 +45,12 @@ export const TechStackSection = () => {
               {[...technologies, ...technologies].map((tech, index) => (
                 <div
                   key={`${tech.name}-${index}`}
-                  className="logo-item bg-white/95 rounded-xl p-6 shadow-soft hover:shadow-medium transition-all flex items-center justify-center"
+                  className="logo-item glass-card hover:shadow-glow transition-all duration-300 hover:scale-105"
                 >
                   <img
                     src={tech.logo}
                     alt={`${tech.name} logo`}
-                    className="h-12 w-auto object-contain"
+                    className="h-12 w-auto object-contain relative z-10"
                   />
                 </div>
               ))}
