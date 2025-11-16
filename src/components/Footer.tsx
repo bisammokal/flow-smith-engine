@@ -9,8 +9,14 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="bg-background text-foreground py-12 border-t border-border">
-      <div className="container mx-auto px-4">
+    <footer className="relative py-12 border-t border-border/30 overflow-hidden">
+      {/* Floating Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/10 to-purple-500/10 rounded-full blur-3xl opacity-20" />
+        <div className="absolute top-0 right-1/4 w-80 h-80 bg-gradient-to-br from-cyan-500/10 to-blue-500/10 rounded-full blur-3xl opacity-15" />
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
