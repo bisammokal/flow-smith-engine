@@ -303,10 +303,9 @@ const Services = () => {
               Together, these workflows form a powerful end-to-end automation system that acts as your virtual sales and client-success team — running 24/7.
             </p>
             <div className="glass-card inline-block p-8 shadow-large">
-              <p className="text-2xl font-bold mb-2 relative z-10">
-                Full Suite Setup — $3,800 to $4,200 USD
+              <p className="text-2xl font-bold mb-6 relative z-10">
+                Full Suite Setup
               </p>
-              <p className="text-[#EDEDED] mb-6 relative z-10">(one-time project)</p>
               <Button
                 variant="cta"
                 size="lg"
