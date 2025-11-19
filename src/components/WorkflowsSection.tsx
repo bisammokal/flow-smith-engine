@@ -106,7 +106,7 @@ export const WorkflowsSection = () => {
         <div className="text-center">
           <div className="glass-card p-8 backdrop-blur-xl inline-block hover:shadow-glow transition-all duration-300">
             <p className="text-2xl font-bold mb-4 relative z-10 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              💡 Get the Complete Suite for $3,800 – $4,200
+              💡 Get the Complete Suite
             </p>
             <Button
               variant="hero"
