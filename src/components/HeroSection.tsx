@@ -1,8 +1,69 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-automation.jpg";
 import { ArrowRight, Sparkles } from "lucide-react";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 export const HeroSection = () => {
+  const headlineRef = useRef<HTMLDivElement>(null);
+  const ctaRef = useRef<HTMLDivElement>(null);
+  const splineRef = useRef<HTMLDivElement>(null);
+  const orb1Ref = useRef<HTMLDivElement>(null);
+  const orb2Ref = useRef<HTMLDivElement>(null);
+  const orb3Ref = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // Headline animation
+    if (headlineRef.current) {
+      gsap.fromTo(
+        headlineRef.current,
+        { opacity: 0, y: 50, filter: "blur(10px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.2, ease: "power3.out", delay: 0.3 }
+      );
+    }
+
+    // CTA animation
+    if (ctaRef.current) {
+      gsap.fromTo(
+        ctaRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.6 }
+      );
+    }
+
+    // Spline fade in from right
+    if (splineRef.current) {
+      gsap.fromTo(
+        splineRef.current,
+        { opacity: 0, x: 100 },
+        { opacity: 1, x: 0, duration: 1.5, ease: "power2.out", delay: 0.4 }
+      );
+    }
+
+    // Floating orbs animation
+    [orb1Ref, orb2Ref, orb3Ref].forEach((ref, index) => {
+      if (ref.current) {
+        gsap.to(ref.current, {
+          y: "+=30",
+          duration: 3 + index * 0.5,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          delay: index * 0.3
+        });
+        
+        gsap.to(ref.current, {
+          x: "+=20",
+          duration: 4 + index * 0.5,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          delay: index * 0.2
+        });
+      }
+    });
+  }, []);
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -10,19 +71,58 @@ export const HeroSection = () => {
     }
   };
 
+  const handleCtaHover = (e: React.MouseEvent<HTMLDivElement>) => {
+    gsap.to(e.currentTarget, {
+      scale: 1.05,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  };
+
+  const handleCtaLeave = (e: React.MouseEvent<HTMLDivElement>) => {
+    gsap.to(e.currentTarget, {
+      scale: 1,
+      duration: 0.3,
+      ease: "power2.out"
+    });
+  };
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-16">
-      {/* Floating Background Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl opacity-30" />
-        <div className="absolute bottom-32 right-20 w-80 h-80 bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-full blur-3xl opacity-20" />
-        <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-cyan-500/15 to-teal-500/15 rounded-full blur-3xl opacity-25" />
+      {/* Spline 3D Background */}
+      <div ref={splineRef} className="absolute inset-0 w-full h-full z-0">
+        <iframe 
+          src='https://my.spline.design/motiontrails-zieHbJx3Yj3UYBauUTUoSYWQ/' 
+          frameBorder='0' 
+          width='100%' 
+          height='100%'
+          className="w-full h-full"
+        />
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      {/* Floating Neon Orbs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
+        <div 
+          ref={orb1Ref}
+          className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl opacity-40" 
+        />
+        <div 
+          ref={orb2Ref}
+          className="absolute bottom-32 right-20 w-80 h-80 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-full blur-3xl opacity-30" 
+        />
+        <div 
+          ref={orb3Ref}
+          className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-cyan-500/25 to-teal-500/25 rounded-full blur-3xl opacity-35" 
+        />
+      </div>
+
+      {/* Dark overlay for better text readability */}
+      <div className="absolute inset-0 bg-background/60 backdrop-blur-sm z-[2]" />
+
+      <div className="container mx-auto px-4 py-20 relative z-[10]">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
-          <div className="space-y-8">
+          <div ref={headlineRef} className="space-y-8">
             <div className="inline-flex items-center gap-2 px-4 py-2 glass-card border-primary/30">
               <Sparkles className="w-4 h-4 text-primary" />
               <span className="text-sm font-medium text-primary relative z-10">AI-Powered Automation</span>
@@ -42,7 +142,12 @@ export const HeroSection = () => {
               We build smart systems that capture leads, send follow-ups, and onboard clients automatically — saving 20+ hours weekly. Used by 50+ Agencies & SaaS Teams.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div 
+              ref={ctaRef}
+              className="flex flex-col sm:flex-row gap-4"
+              onMouseEnter={handleCtaHover}
+              onMouseLeave={handleCtaLeave}
+            >
               <Button
                 variant="hero"
                 size="lg"
