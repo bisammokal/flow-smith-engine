@@ -7,7 +7,6 @@ export const PricingSection = () => {
     {
       type: "🟢 Coaches / Small Agencies",
       description: "Full 5-workflow suite setup",
-      price: "$2,800 – $3,200",
       features: [
         "All 5 core workflows",
         "Basic CRM integration",
@@ -19,7 +18,6 @@ export const PricingSection = () => {
     {
       type: "🟡 SaaS / B2B Startups",
       description: "End-to-end automation",
-      price: "$3,500 – $4,200",
       features: [
         "All 5 core workflows",
         "Advanced CRM integration",
@@ -33,7 +31,6 @@ export const PricingSection = () => {
     {
       type: "🔵 Enterprises",
       description: "Advanced + AI custom flows",
-      price: "$4,500 – $7,000",
       features: [
         "All 5 core workflows",
         "Custom workflow development",
@@ -92,7 +89,6 @@ export const PricingSection = () => {
               <div className="mb-6 relative z-10">
                 <h3 className="text-2xl font-bold mb-2">{plan.type}</h3>
                 <p className="text-muted-foreground mb-4">{plan.description}</p>
-                <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">{plan.price}</div>
               </div>
 
               <div className="space-y-3 mb-8 relative z-10">

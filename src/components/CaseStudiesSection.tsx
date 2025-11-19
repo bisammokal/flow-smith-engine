@@ -16,7 +16,7 @@ export const CaseStudiesSection = () => {
       industry: "🏢 Real Estate",
       title: "Lead qualification + CRM follow-ups",
       result: "Closed 2× more deals",
-      metrics: ["300+ leads qualified/month", "95% follow-up rate", "$150K additional revenue"],
+      metrics: ["300+ leads qualified/month", "95% follow-up rate", "Significant revenue increase"],
     },
     {
       icon: Building2,
