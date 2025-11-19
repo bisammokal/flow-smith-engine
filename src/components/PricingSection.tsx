@@ -117,16 +117,6 @@ export const PricingSection = () => {
           ))}
         </div>
 
-        <div className="text-center mt-12">
-          <Button
-            variant="outline"
-            size="lg"
-            onClick={() => scrollToSection("contact")}
-            className="glass-card hover:border-primary/50 hover:shadow-glow"
-          >
-            Get a Custom Quote
-          </Button>
-        </div>
       </div>
     </section>
   );
