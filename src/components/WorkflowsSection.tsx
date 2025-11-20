@@ -1,59 +1,37 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { 
+  Zap, 
+  Users, 
   Target, 
-  Mail, 
-  Calendar, 
-  UserPlus, 
-  MessageSquare,
+  TrendingUp,
   ArrowRight 
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const WorkflowsSection = () => {
-  const workflows = [
+  const features = [
     {
-      number: "1️⃣",
+      icon: Zap,
+      title: "Fully Automated Sales Engine",
+      description: "End-to-end lead capture, qualification, and follow-up.",
+    },
+    {
+      icon: Users,
+      title: "AI-Driven Customer Operations",
+      description: "Smart onboarding, reminders, and customer retention workflows.",
+    },
+    {
       icon: Target,
-      title: "Lead Capture & Qualification",
-      description: "Smart lead filtering, CRM entry, instant Slack/email alerts",
-      benefit: "Never miss a qualified lead",
+      title: "Intelligent Outreach & Engagement",
+      description: "Hyper-personalized messaging and data-driven campaign triggers.",
     },
     {
-      number: "2️⃣",
-      icon: Mail,
-      title: "Cold Outreach Automation",
-      description: "Personalized auto-emails to new leads",
-      benefit: "Scale outreach effortlessly",
-    },
-    {
-      number: "3️⃣",
-      icon: Calendar,
-      title: "Follow-Up & Meeting Scheduler",
-      description: "Auto reminders + meeting booking",
-      benefit: "Close more deals faster",
-    },
-    {
-      number: "4️⃣",
-      icon: UserPlus,
-      title: "Client Onboarding Automation",
-      description: "Client welcome emails + CRM update",
-      benefit: "Seamless client experience",
-    },
-    {
-      number: "5️⃣",
-      icon: MessageSquare,
-      title: "AI Reminder Event",
-      description: "Gemini AI follow-up suggestions via WhatsApp & email",
-      benefit: "Intelligent engagement timing",
+      icon: TrendingUp,
+      title: "Centralized Insights & Reporting",
+      description: "Real-time alerts, performance tracking, and AI suggestions.",
     },
   ];
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
 
   return (
     <section id="workflows" className="py-24 relative overflow-hidden">
@@ -66,36 +44,36 @@ export const WorkflowsSection = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="glass-hero p-6 backdrop-blur-xl inline-block mb-4">
-            <h2 className="text-4xl md:text-5xl font-bold relative z-10">
-              Our 5 AI-Powered Workflows
+            <h2 className="text-4xl md:text-5xl font-bold relative z-10 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text">
+              The Systems That Run Your Business — Automatically
             </h2>
           </div>
-          <p className="text-xl text-muted-foreground">
-            The Complete Automation Suite
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            AI-powered automation across sales, operations, support, and customer experience.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-          {workflows.map((workflow) => {
-            const Icon = workflow.icon;
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          {features.map((feature) => {
+            const Icon = feature.icon;
             return (
               <Card
-                key={workflow.title}
-                className="p-6 group hover:shadow-glow transition-all duration-300"
+                key={feature.title}
+                className="p-8 group hover:shadow-glow hover:-translate-y-2 transition-all duration-500 relative overflow-hidden"
               >
-                <div className="flex items-start gap-4 mb-4 relative z-10">
-                  <span className="text-3xl">{workflow.number}</span>
-                  <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-accent/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <Icon className="w-6 h-6 text-primary" />
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                
+                <div className="relative z-10">
+                  <div className="w-16 h-16 bg-gradient-to-br from-primary/20 to-accent/20 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-glow transition-all duration-300">
+                    <Icon className="w-8 h-8 text-primary" />
                   </div>
-                </div>
-                
-                <h3 className="text-xl font-semibold mb-3 relative z-10">{workflow.title}</h3>
-                <p className="text-muted-foreground mb-4 relative z-10">{workflow.description}</p>
-                
-                <div className="pt-4 border-t border-border/50 relative z-10">
-                  <p className="text-sm font-medium text-primary">
-                    ✓ {workflow.benefit}
+                  
+                  <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
                   </p>
                 </div>
               </Card>
@@ -104,18 +82,19 @@ export const WorkflowsSection = () => {
         </div>
 
         <div className="text-center">
-          <div className="glass-card p-8 backdrop-blur-xl inline-block hover:shadow-glow transition-all duration-300">
-            <p className="text-2xl font-bold mb-4 relative z-10 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              💡 Get the Complete Suite
+          <div className="glass-card p-10 backdrop-blur-xl inline-block hover:shadow-glow transition-all duration-500">
+            <Link to="/services">
+              <Button
+                variant="hero"
+                size="lg"
+                className="group relative z-10 text-lg px-8 py-6 shadow-glow"
+              >
+                Explore the Full Automation Suite <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              </Button>
+            </Link>
+            <p className="text-sm text-muted-foreground mt-6 relative z-10">
+              20+ specialized workflows designed to scale your business operations effortlessly.
             </p>
-            <Button
-              variant="hero"
-              size="lg"
-              onClick={() => scrollToSection("contact")}
-              className="group relative z-10"
-            >
-              Book a Free Consultation <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Button>
           </div>
         </div>
       </div>
