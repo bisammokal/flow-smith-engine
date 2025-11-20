@@ -92,7 +92,7 @@ export const HeroSection = () => {
       {/* Spline 3D Background */}
       <div ref={splineRef} className="absolute inset-0 w-full h-full z-0">
         <iframe 
-          src='https://my.spline.design/motiontrails-zieHbJx3Yj3UYBauUTUoSYWQ/' 
+          src='https://my.spline.design/orb-e26J8npyrxp59MohW96nSb0c/' 
           frameBorder='0' 
           width='100%' 
           height='100%'
