@@ -145,23 +145,23 @@ const Reviews = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-40 w-72 h-72 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-3xl opacity-30" />
           <div className="absolute bottom-40 left-20 w-96 h-96 bg-gradient-to-br from-accent/15 to-primary/15 rounded-full blur-3xl opacity-25" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="glass-hero p-8 backdrop-blur-xl inline-block mb-6">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
+            <div className="glass-hero p-4 sm:p-6 md:p-8 backdrop-blur-xl inline-block mb-4 sm:mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                 Real Stories. Real Results.{" "}
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                   Zero Extra Effort.
                 </span>
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
                 Businesses using our automation systems are saving thousands of hours and unlocking predictable growth — completely hands-off.
               </p>
             </div>
@@ -170,13 +170,13 @@ const Reviews = () => {
       </section>
 
       {/* Testimonials Grid */}
-      <section className="py-16 relative">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <section className="py-12 sm:py-16 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card 
                 key={index} 
-                className="p-8 group hover:shadow-glow transition-all duration-300 hover:scale-[1.02]"
+                className="w-full h-full p-4 sm:p-6 md:p-8 group hover:shadow-glow transition-all duration-300 hover:scale-[1.02]"
               >
                 <div className="flex gap-1 mb-4 relative z-10">
                   {[...Array(5)].map((_, i) => (
@@ -208,15 +208,15 @@ const Reviews = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 relative overflow-hidden">
+      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-full blur-3xl opacity-30" />
         </div>
 
-        <div className="container mx-auto px-4 relative z-10">
-          <div className="glass-hero p-12 max-w-3xl mx-auto text-center backdrop-blur-xl">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="glass-hero p-6 sm:p-8 md:p-12 max-w-3xl mx-auto text-center backdrop-blur-xl">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
               Ready to Create Your{" "}
               <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                 Own Success Story?
@@ -224,11 +224,13 @@ const Reviews = () => {
             </h2>
             <Button
               size="lg"
-              className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:shadow-glow transition-all duration-300"
+              className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:shadow-glow transition-all duration-300 w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base"
               onClick={() => navigate("/book-call")}
             >
-              Book a Free Demo
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+              <span className="inline-flex items-center justify-center gap-2">
+                Book a Free Demo
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform w-4 h-4 sm:w-5 sm:h-5" />
+              </span>
             </Button>
           </div>
         </div>
