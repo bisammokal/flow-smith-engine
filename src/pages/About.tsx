@@ -5,6 +5,8 @@ import { Zap, Target, Brain, Shield, TrendingUp, Users } from "lucide-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,7 +132,9 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#0D0D0F] via-[#1A1A1F] to-background">
+    <>
+      <Header />
+      <div className="min-h-screen bg-gradient-to-b from-[#0D0D0F] via-[#1A1A1F] to-background">
       {/* Floating Background Shapes */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 left-10 w-96 h-96 bg-primary/5 rounded-full blur-[120px] animate-pulse" />
@@ -296,7 +300,9 @@ const About = () => {
           </Card>
         </div>
       </section>
-    </div>
+      </div>
+      <Footer />
+    </>
   );
 };
 
