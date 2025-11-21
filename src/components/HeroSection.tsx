@@ -119,17 +119,17 @@ export const HeroSection = () => {
       {/* Dark overlay for better text readability */}
       <div className="absolute inset-0 bg-background/60 backdrop-blur-sm z-[2]" />
 
-      <div className="container mx-auto px-4 py-20 relative z-[10]">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 relative z-[10]">
+        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Left Content */}
-          <div ref={headlineRef} className="space-y-8">
-            <div className="inline-flex items-center gap-2 px-4 py-2 glass-card border-primary/30">
-              <Sparkles className="w-4 h-4 text-primary" />
-              <span className="text-sm font-medium text-primary relative z-10">AI-Powered Automation</span>
+          <div ref={headlineRef} className="space-y-6 md:space-y-8">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass-card border-primary/30">
+              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
+              <span className="text-xs sm:text-sm font-medium text-primary relative z-10">AI-Powered Automation</span>
             </div>
             
-            <div className="glass-hero p-8 backdrop-blur-xl">
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight relative z-10">
+            <div className="glass-hero p-4 sm:p-6 md:p-8 backdrop-blur-xl">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight relative z-10">
                 Build a{" "}
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                   24/7 Sales Engine
@@ -138,13 +138,13 @@ export const HeroSection = () => {
               </h1>
             </div>
             
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed px-1">
               We build smart systems that capture leads, send follow-ups, and onboard clients automatically — saving 20+ hours weekly. Used by 50+ Agencies & SaaS Teams.
             </p>
 
             <div 
               ref={ctaRef}
-              className="flex flex-col sm:flex-row gap-4"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
               onMouseEnter={handleCtaHover}
               onMouseLeave={handleCtaLeave}
             >
@@ -152,27 +152,27 @@ export const HeroSection = () => {
                 variant="hero"
                 size="lg"
                 onClick={() => scrollToSection("contact")}
-                className="text-lg group"
+                className="w-full sm:w-auto text-base sm:text-lg group px-6 sm:px-8 py-5 sm:py-6 active:scale-95"
               >
-                Book Free Demo <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
+                Book Free Demo <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform w-4 h-4 sm:w-5 sm:h-5" />
               </Button>
               <Button
                 variant="outline"
                 size="lg"
                 onClick={() => scrollToSection("workflows")}
-                className="text-lg glass-card hover:border-primary/50"
+                className="w-full sm:w-auto text-base sm:text-lg glass-card hover:border-primary/50 px-6 sm:px-8 py-5 sm:py-6 active:scale-95"
               >
                 See How It Works
               </Button>
             </div>
 
             {/* Trust Badges */}
-            <div className="pt-8">
-              <div className="glass-card p-6 backdrop-blur-xl">
-                <p className="text-sm text-muted-foreground mb-4 relative z-10">
+            <div className="pt-4 sm:pt-8">
+              <div className="glass-card p-4 sm:p-6 backdrop-blur-xl">
+                <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 relative z-10">
                   Trusted by teams in healthcare, real estate & SaaS
                 </p>
-                <div className="flex flex-wrap gap-6 text-2xl font-semibold text-foreground/60 relative z-10">
+                <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground/60 relative z-10">
                   <span>Healthcare</span>
                   <span>•</span>
                   <span>Real Estate</span>
@@ -184,7 +184,7 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Visual */}
-          <div className="relative">
+          <div className="relative mt-8 lg:mt-0">
             <div className="glass-hero relative overflow-hidden shadow-large hover:shadow-glow transition-all duration-500">
               <img
                 src={heroImage}
@@ -195,9 +195,9 @@ export const HeroSection = () => {
             </div>
             
             {/* Floating Stats */}
-            <div className="glass-card absolute -bottom-6 -left-6 p-6 shadow-medium hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
-              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent relative z-10">70-80%</div>
-              <div className="text-sm text-foreground relative z-10">Workload Reduction</div>
+            <div className="glass-card absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 p-4 sm:p-6 shadow-medium hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent relative z-10">70-80%</div>
+              <div className="text-xs sm:text-sm text-foreground relative z-10">Workload Reduction</div>
             </div>
           </div>
         </div>

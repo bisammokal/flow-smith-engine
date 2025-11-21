@@ -95,23 +95,23 @@ const BookCall = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-4 overflow-hidden">
+      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Premium Glass Panel with Content */}
             <div className="relative z-10">
-              <div className="relative p-8 lg:p-10 rounded-3xl bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] shadow-2xl">
+              <div className="relative p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] shadow-2xl">
                 {/* Gradient border glow effect */}
-                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-blue-500/10 to-purple-500/20 opacity-50 blur-xl -z-10"></div>
+                <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/20 via-blue-500/10 to-purple-500/20 opacity-50 blur-xl -z-10"></div>
                 
-                <div className="space-y-6">
+                <div className="space-y-4 sm:space-y-6">
                   {/* Badge */}
-                  <div className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/30 backdrop-blur-sm">
-                    <span className="text-primary text-sm font-medium">✨ Free Strategy Call — No Obligations</span>
+                  <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/30 backdrop-blur-sm">
+                    <span className="text-primary text-xs sm:text-sm font-medium">✨ Free Strategy Call — No Obligations</span>
                   </div>
                   
                   {/* Headline */}
-                  <h1 className="text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
                     Book Your Free{" "}
                     <span className="bg-gradient-to-r from-[#FFD43B] via-[#4A90E2] to-[#8B9DC3] bg-clip-text text-transparent">
                       Strategy Call
@@ -119,12 +119,12 @@ const BookCall = () => {
                   </h1>
                   
                   {/* Subtitle */}
-                  <p className="text-lg lg:text-xl text-foreground/70 leading-relaxed">
+                  <p className="text-base sm:text-lg lg:text-xl text-foreground/70 leading-relaxed">
                     Let's explore how automation can save you 20–80 hours per month and scale your revenue effortlessly.
                   </p>
                   
                   {/* Premium Benefits Row */}
-                  <div className="flex flex-wrap gap-3 pt-2">
+                  <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
                     <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-primary/30 transition-all duration-300 hover:bg-white/[0.05]">
                       <div className="flex items-center gap-2">
                         <div className="w-5 h-5 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
@@ -187,9 +187,9 @@ const BookCall = () => {
       </section>
 
       {/* Glassmorphism Form Section */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <Card className="glass-card p-8 lg:p-12 border-2 border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+          <Card className="glass-card p-6 sm:p-8 lg:p-12 border-2 border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div>
@@ -269,13 +269,15 @@ const BookCall = () => {
               <Button
                 type="submit"
                 size="lg"
-                className="w-full bg-gradient-to-r from-primary via-yellow-500 to-orange-500 hover:shadow-[0_0_40px_rgba(255,212,59,0.5)] transition-all duration-300 transform hover:scale-[1.02] text-lg font-semibold py-6"
+                className="w-full bg-gradient-to-r from-primary via-yellow-500 to-orange-500 hover:shadow-[0_0_40px_rgba(255,212,59,0.5)] active:scale-95 transition-all duration-300 transform hover:scale-[1.02] text-base sm:text-lg font-semibold py-5 sm:py-6"
               >
-                Book My Free Strategy Call
-                <ChevronRight className="ml-2 w-5 h-5" />
+                <span className="inline-flex items-center justify-center gap-2">
+                  Book My Free Strategy Call
+                  <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                </span>
               </Button>
 
-              <p className="text-center text-sm text-muted-foreground">
+              <p className="text-center text-xs sm:text-sm text-muted-foreground px-2">
                 We'll respond within <span className="text-primary font-medium">12–24 hours</span> • No obligations • 100% free consultation
               </p>
             </form>
@@ -284,10 +286,10 @@ const BookCall = () => {
       </section>
 
       {/* Trust & Social Proof Row */}
-      <section className="relative py-12 px-4">
+      <section className="relative py-8 sm:py-12 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="glass-card p-6 rounded-3xl border border-white/10 flex items-center gap-4 hover:scale-105 hover:shadow-[0_8px_32px_rgba(255,212,59,0.3)] transition-all duration-300">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="glass-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 flex items-center gap-3 sm:gap-4 hover:scale-105 active:scale-95 hover:shadow-[0_8px_32px_rgba(255,212,59,0.3)] transition-all duration-300">
               <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
                 <Star className="w-6 h-6 text-primary" />
               </div>
