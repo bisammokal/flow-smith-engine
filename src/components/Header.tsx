@@ -42,7 +42,7 @@ export const Header = () => {
   const menuItems = [
     { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
-    { label: "Solutions", path: "/", sectionId: "workflows" },
+    { label: "Reviews", path: "/reviews" },
     { label: "Case Studies", path: "/", sectionId: "case-studies" },
     { label: "Pricing", path: "/", sectionId: "pricing" },
     { label: "About", path: "/", sectionId: "about" },
