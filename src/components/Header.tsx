@@ -45,7 +45,7 @@ export const Header = () => {
     { label: "Reviews", path: "/reviews" },
     { label: "Case Studies", path: "/", sectionId: "case-studies" },
     { label: "Pricing", path: "/", sectionId: "pricing" },
-    { label: "About", path: "/", sectionId: "about" },
+    { label: "About", path: "/about" },
   ];
 
   return (
@@ -66,15 +66,24 @@ export const Header = () => {
 
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-8">
-            {menuItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleNavigation(item.path, item.sectionId)}
-                className="text-foreground hover:text-primary transition-colors"
-              >
-                {item.label}
-              </button>
-            ))}
+            {menuItems.map((item, index) => {
+              const isActive = item.sectionId 
+                ? location.pathname === item.path 
+                : location.pathname === item.path;
+              return (
+                <button
+                  key={index}
+                  onClick={() => handleNavigation(item.path, item.sectionId)}
+                  className={`transition-colors ${
+                    isActive 
+                      ? "text-primary font-semibold" 
+                      : "text-foreground hover:text-primary"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
           </nav>
 
           <div className="hidden md:block">
@@ -99,15 +108,24 @@ export const Header = () => {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <nav className="md:hidden py-4 space-y-4 bg-background border-t border-border">
-            {menuItems.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => handleNavigation(item.path, item.sectionId)}
-                className="block w-full text-left px-4 py-2 hover:bg-muted transition-colors"
-              >
-                {item.label}
-              </button>
-            ))}
+            {menuItems.map((item, index) => {
+              const isActive = item.sectionId 
+                ? location.pathname === item.path 
+                : location.pathname === item.path;
+              return (
+                <button
+                  key={index}
+                  onClick={() => handleNavigation(item.path, item.sectionId)}
+                  className={`block w-full text-left px-4 py-2 transition-colors ${
+                    isActive 
+                      ? "bg-muted text-primary font-semibold" 
+                      : "hover:bg-muted"
+                  }`}
+                >
+                  {item.label}
+                </button>
+              );
+            })}
             <div className="px-4 pt-2">
               <Button
                 variant="cta"
