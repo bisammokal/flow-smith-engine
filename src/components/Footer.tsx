@@ -1,4 +1,5 @@
 import { MapPin, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -70,15 +71,15 @@ export const Footer = () => {
                 </h4>
                 <ul className="space-y-3">
                   <li>
-                    <button
-                      onClick={() => scrollToSection("about")}
-                      className="group/link relative text-foreground/80 hover:text-primary transition-all duration-300 text-sm md:text-base tracking-wide"
+                    <Link
+                      to="/about"
+                      className="group/link relative text-foreground/80 hover:text-primary transition-all duration-300 text-sm md:text-base tracking-wide inline-block"
                     >
                       <span className="relative">
                         About Us
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gradient-to-r from-primary to-yellow-400 group-hover/link:w-full transition-all duration-300" />
                       </span>
-                    </button>
+                    </Link>
                   </li>
                   <li>
                     <button
@@ -237,15 +238,15 @@ export const Footer = () => {
             </p>
             
             <div className="flex items-center gap-6">
-              <button 
-                onClick={() => scrollToSection("about")}
+              <Link 
+                to="/about"
                 className="group/link relative text-sm md:text-base text-foreground/70 hover:text-primary transition-all duration-300 tracking-wide"
               >
                 <span className="relative">
                   About Us
                   <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gradient-to-r from-primary to-yellow-400 group-hover/link:w-full transition-all duration-300" />
                 </span>
-              </button>
+              </Link>
               <button className="group/link relative text-sm md:text-base text-foreground/70 hover:text-primary transition-all duration-300 tracking-wide">
                 <span className="relative">
                   Terms & Condition
