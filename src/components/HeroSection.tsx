@@ -129,7 +129,7 @@ export const HeroSection = () => {
             </div>
             
             <div className="glass-hero p-4 sm:p-6 md:p-8 backdrop-blur-xl">
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight relative z-10">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight relative z-10">
                 Build a{" "}
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                   24/7 Sales Engine
@@ -195,7 +195,7 @@ export const HeroSection = () => {
             </div>
             
             {/* Floating Stats */}
-            <div className="glass-card absolute -bottom-4 -left-4 sm:-bottom-6 sm:-left-6 p-4 sm:p-6 shadow-medium hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
+            <div className="glass-card absolute -bottom-4 left-1/2 -translate-x-1/2 sm:-bottom-6 sm:left-6 sm:translate-x-0 p-4 sm:p-6 shadow-medium hover:shadow-glow hover:-translate-y-1 transition-all duration-300">
               <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent relative z-10">70-80%</div>
               <div className="text-xs sm:text-sm text-foreground relative z-10">Workload Reduction</div>
             </div>
