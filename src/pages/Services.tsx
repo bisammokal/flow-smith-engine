@@ -434,7 +434,7 @@ const Services = () => {
               The Complete AI Automation Suite
             </h2>
             <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
-              13 premium automation workflows designed to transform every aspect of your business operations.
+              15+ premium automation workflows designed to transform every aspect of your business operations.
             </p>
           </div>
 
