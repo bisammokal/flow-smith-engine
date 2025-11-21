@@ -95,23 +95,23 @@ const BookCall = () => {
       </div>
 
       {/* Hero Section */}
-      <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 px-4 sm:px-6 overflow-hidden">
+      <section className="relative pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12 md:pb-16 px-4 sm:px-6 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Premium Glass Panel with Content */}
             <div className="relative z-10">
-              <div className="relative p-6 sm:p-8 lg:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] shadow-2xl">
+              <div className="relative p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] shadow-2xl">
                 {/* Gradient border glow effect */}
                 <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/20 via-blue-500/10 to-purple-500/20 opacity-50 blur-xl -z-10"></div>
                 
-                <div className="space-y-4 sm:space-y-6">
+                <div className="space-y-3 sm:space-y-4 md:space-y-6">
                   {/* Badge */}
                   <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/30 backdrop-blur-sm">
                     <span className="text-primary text-xs sm:text-sm font-medium">✨ Free Strategy Call — No Obligations</span>
                   </div>
                   
                   {/* Headline */}
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-[1.1]">
+                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1]">
                     Book Your Free{" "}
                     <span className="bg-gradient-to-r from-[#FFD43B] via-[#4A90E2] to-[#8B9DC3] bg-clip-text text-transparent">
                       Strategy Call
@@ -119,7 +119,7 @@ const BookCall = () => {
                   </h1>
                   
                   {/* Subtitle */}
-                  <p className="text-base sm:text-lg lg:text-xl text-foreground/70 leading-relaxed">
+                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 leading-relaxed">
                     Let's explore how automation can save you 20–80 hours per month and scale your revenue effortlessly.
                   </p>
                   
@@ -187,9 +187,9 @@ const BookCall = () => {
       </section>
 
       {/* Glassmorphism Form Section */}
-      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
+      <section className="relative py-10 sm:py-12 md:py-16 lg:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <Card className="glass-card p-6 sm:p-8 lg:p-12 border-2 border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
+          <Card className="glass-card p-4 sm:p-6 md:p-8 lg:p-12 border-2 border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-4">
                 <div>
@@ -286,46 +286,46 @@ const BookCall = () => {
       </section>
 
       {/* Trust & Social Proof Row */}
-      <section className="relative py-8 sm:py-12 px-4 sm:px-6">
+      <section className="relative py-8 sm:py-10 md:py-12 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
-            <div className="glass-card p-4 sm:p-6 rounded-2xl sm:rounded-3xl border border-white/10 flex items-center gap-3 sm:gap-4 hover:scale-105 active:scale-95 hover:shadow-[0_8px_32px_rgba(255,212,59,0.3)] transition-all duration-300">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center">
-                <Star className="w-6 h-6 text-primary" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
+            <div className="glass-card p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl border border-white/10 flex items-center gap-3 sm:gap-4 hover:scale-105 active:scale-95 hover:shadow-[0_8px_32px_rgba(255,212,59,0.3)] transition-all duration-300 w-full h-full">
+              <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/20 flex items-center justify-center">
+                <Star className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />
               </div>
-              <p className="text-sm text-foreground/90">Trusted by agencies, SaaS startups & healthcare brands</p>
+              <p className="text-xs sm:text-sm text-foreground/90">Trusted by agencies, SaaS startups & healthcare brands</p>
             </div>
 
-            <div className="glass-card p-6 rounded-3xl border border-white/10 flex items-center gap-4 hover:scale-105 hover:shadow-[0_8px_32px_rgba(59,130,246,0.3)] transition-all duration-300">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
-                <Shield className="w-6 h-6 text-blue-400" />
+            <div className="glass-card p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl border border-white/10 flex items-center gap-3 sm:gap-4 hover:scale-105 active:scale-95 hover:shadow-[0_8px_32px_rgba(59,130,246,0.3)] transition-all duration-300 w-full h-full">
+              <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-blue-500/20 flex items-center justify-center">
+                <Shield className="w-5 h-5 sm:w-6 sm:h-6 text-blue-400" />
               </div>
-              <p className="text-sm text-foreground/90">Secure data handling & enterprise-grade workflows</p>
+              <p className="text-xs sm:text-sm text-foreground/90">Secure data handling & enterprise-grade workflows</p>
             </div>
 
-            <div className="glass-card p-6 rounded-3xl border border-white/10 flex items-center gap-4 hover:scale-105 hover:shadow-[0_8px_32px_rgba(168,85,247,0.3)] transition-all duration-300">
-              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
-                <Zap className="w-6 h-6 text-purple-400" />
+            <div className="glass-card p-4 sm:p-5 md:p-6 rounded-2xl sm:rounded-3xl border border-white/10 flex items-center gap-3 sm:gap-4 hover:scale-105 active:scale-95 hover:shadow-[0_8px_32px_rgba(168,85,247,0.3)] transition-all duration-300 w-full h-full">
+              <div className="flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-purple-500/20 flex items-center justify-center">
+                <Zap className="w-5 h-5 sm:w-6 sm:h-6 text-purple-400" />
               </div>
-              <p className="text-sm text-foreground/90">Average 70–80% manual work reduction</p>
+              <p className="text-xs sm:text-sm text-foreground/90">Average 70–80% manual work reduction</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Visual Process Timeline */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
               <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
                 How It Works
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">A simple, proven process to transform your operations</p>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">A simple, proven process to transform your operations</p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-6 relative">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 relative">
             {/* Connector Lines */}
             <div className="hidden md:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/50 via-blue-500/50 to-purple-500/50 -translate-y-1/2 z-0"></div>
 
@@ -337,14 +337,14 @@ const BookCall = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="glass-card p-8 rounded-3xl border-2 border-white/10 relative z-10 hover:scale-105 hover:shadow-[0_12px_40px_rgba(255,212,59,0.3)] transition-all duration-300 group"
+                className="glass-card p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border-2 border-white/10 relative z-10 hover:scale-105 hover:shadow-[0_12px_40px_rgba(255,212,59,0.3)] transition-all duration-300 group w-full h-full"
               >
-                <div className="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-transform">
+                <div className="absolute -top-3 -left-3 sm:-top-4 sm:-left-4 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br from-primary to-orange-500 flex items-center justify-center text-white font-bold text-base sm:text-lg shadow-lg group-hover:scale-110 transition-transform">
                   {item.step}
                 </div>
-                <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform">{item.icon}</div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">{item.title}</h3>
-                <p className="text-sm text-muted-foreground">{item.desc}</p>
+                <div className="text-3xl sm:text-4xl md:text-5xl mb-3 sm:mb-4 transform group-hover:scale-110 transition-transform">{item.icon}</div>
+                <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 text-foreground">{item.title}</h3>
+                <p className="text-xs sm:text-sm text-muted-foreground">{item.desc}</p>
               </div>
             ))}
           </div>
@@ -352,19 +352,19 @@ const BookCall = () => {
       </section>
 
       {/* Why Book a Call Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
         <div className="container mx-auto max-w-7xl relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
               <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
                 The Impact
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">Real results our clients achieve</p>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">Real results our clients achieve</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             {[
               { stat: "62%", label: "Faster Lead Response Time", icon: Clock, color: "from-primary to-yellow-500" },
               { stat: "3×", label: "More Meetings Booked Automatically", icon: Target, color: "from-blue-500 to-purple-500" },
@@ -372,14 +372,14 @@ const BookCall = () => {
             ].map((item, index) => (
               <div
                 key={index}
-                className="glass-card p-10 rounded-3xl border-2 border-white/10 text-center hover:scale-105 transition-all duration-300 group relative overflow-hidden"
+                className="glass-card p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl border-2 border-white/10 text-center hover:scale-105 transition-all duration-300 group relative overflow-hidden w-full h-full"
               >
                 <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`}></div>
-                <item.icon className="w-16 h-16 mx-auto mb-6 text-primary group-hover:scale-110 transition-transform" />
-                <div className={`text-6xl font-bold mb-4 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
+                <item.icon className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 mx-auto mb-4 sm:mb-6 text-primary group-hover:scale-110 transition-transform" />
+                <div className={`text-4xl sm:text-5xl md:text-6xl font-bold mb-3 sm:mb-4 bg-gradient-to-r ${item.color} bg-clip-text text-transparent`}>
                   {item.stat}
                 </div>
-                <p className="text-lg text-foreground/90 font-medium">{item.label}</p>
+                <p className="text-sm sm:text-base md:text-lg text-foreground/90 font-medium">{item.label}</p>
               </div>
             ))}
           </div>
@@ -387,40 +387,40 @@ const BookCall = () => {
       </section>
 
       {/* Testimonial Carousel */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
               <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
                 Client Success Stories
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">See what our clients say about their strategy calls</p>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">See what our clients say about their strategy calls</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="glass-card p-8 rounded-3xl border border-white/10 hover:scale-105 hover:shadow-[0_12px_40px_rgba(255,212,59,0.3)] transition-all duration-300"
+                className="glass-card p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-white/10 hover:scale-105 hover:shadow-[0_12px_40px_rgba(255,212,59,0.3)] transition-all duration-300 w-full h-full"
               >
-                <div className="flex items-center gap-4 mb-6">
+                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-16 h-16 rounded-full object-cover border-2 border-primary/30"
+                    className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full object-cover border-2 border-primary/30 flex-shrink-0"
                   />
-                  <div>
-                    <h4 className="font-semibold text-foreground">{testimonial.name}</h4>
-                    <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                  <div className="min-w-0">
+                    <h4 className="font-semibold text-foreground text-sm sm:text-base truncate">{testimonial.name}</h4>
+                    <p className="text-xs sm:text-sm text-muted-foreground truncate">{testimonial.role}</p>
                   </div>
                 </div>
-                <div className="flex gap-1 mb-4">
+                <div className="flex gap-1 mb-3 sm:mb-4">
                   {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
                   ))}
                 </div>
-                <p className="text-foreground/90 leading-relaxed">{testimonial.text}</p>
+                <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">{testimonial.text}</p>
               </div>
             ))}
           </div>
@@ -428,18 +428,18 @@ const BookCall = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="relative py-20 px-4">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6">
         <div className="container mx-auto max-w-4xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
               <span className="bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
                 Frequently Asked Questions
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground">Everything you need to know</p>
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground">Everything you need to know</p>
           </div>
 
-          <Card className="glass-card p-8 border-2 border-white/10">
+          <Card className="glass-card p-4 sm:p-6 md:p-8 border-2 border-white/10">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
@@ -461,7 +461,7 @@ const BookCall = () => {
       </section>
 
       {/* Final CTA Footer */}
-      <section className="relative py-20 px-4 overflow-hidden">
+      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-blue-500/20 to-purple-500/20"></div>
         <div className="absolute inset-0">
           <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] animate-pulse"></div>
@@ -469,25 +469,27 @@ const BookCall = () => {
         </div>
         
         <div className="container mx-auto max-w-5xl relative z-10">
-          <Card className="glass-card p-12 lg:p-16 border-2 border-white/20 text-center shadow-[0_12px_60px_rgba(0,0,0,0.5)]">
-            <h2 className="text-4xl lg:text-6xl font-bold mb-6">
+          <Card className="glass-card p-6 sm:p-8 md:p-12 lg:p-16 border-2 border-white/20 text-center shadow-[0_12px_60px_rgba(0,0,0,0.5)]">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">
               Ready to Automate
               <span className="block bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
                 Your Business?
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto">
               Join hundreds of businesses already saving 20–80 hours per month with smart automation.
             </p>
             <Button
               size="lg"
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="bg-gradient-to-r from-primary via-yellow-500 to-orange-500 hover:shadow-[0_0_60px_rgba(255,212,59,0.6)] transition-all duration-300 transform hover:scale-105 text-xl font-bold py-8 px-12"
+              className="bg-gradient-to-r from-primary via-yellow-500 to-orange-500 hover:shadow-[0_0_60px_rgba(255,212,59,0.6)] transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-base sm:text-lg md:text-xl font-bold py-5 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12"
             >
-              Book Your Free Strategy Call
-              <ChevronRight className="ml-2 w-6 h-6" />
+              <span className="inline-flex items-center justify-center gap-2">
+                Book Your Free Strategy Call
+                <ChevronRight className="ml-2 w-5 h-5 sm:w-6 sm:h-6" />
+              </span>
             </Button>
-            <p className="text-sm text-muted-foreground mt-6">
+            <p className="text-xs sm:text-sm text-muted-foreground mt-4 sm:mt-6">
               🔒 Your information is 100% secure • No spam, ever
             </p>
           </Card>

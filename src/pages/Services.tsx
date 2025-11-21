@@ -250,15 +250,15 @@ const Services = () => {
       <Header />
       
       {/* Section 1 - Header */}
-      <section className="pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 bg-gradient-hero">
+      <section className="pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12 md:pb-16 bg-gradient-hero">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 px-4">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6">
             Our Services
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-primary mb-4 sm:mb-6 px-4">
+          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary mb-3 sm:mb-4 md:mb-6">
             Smart Automations That Drive Growth
           </p>
-          <p className="text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed px-4">
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
             We design data-driven no-code and AI automations that save 15+ hours weekly, 
             reduce costs by 60%, and increase client conversion by up to 40% — so you scale 
             faster with less effort.
@@ -267,23 +267,23 @@ const Services = () => {
       </section>
 
       {/* Section 2 - Core Automation Services */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16">
             Core Automation Services
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {coreServices.map((service) => {
               const Icon = service.icon;
               return (
                 <Card
                   key={service.title}
-                  className="p-6 sm:p-8 group hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                  className="w-full h-full p-4 sm:p-6 md:p-8 group hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                 >
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/20 transition-colors relative z-10">
-                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-primary" />
+                  <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 bg-primary/10 rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/20 transition-colors relative z-10">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 text-primary" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 relative z-10 leading-tight">{service.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 md:mb-4 relative z-10 leading-tight">{service.title}</h3>
                   <p className="text-sm sm:text-base text-[#EDEDED] leading-relaxed relative z-10">
                     {service.description}
                   </p>
@@ -295,24 +295,24 @@ const Services = () => {
       </section>
 
       {/* Section 3 - AI & Chat Solutions */}
-      <section className="py-16 md:py-24 bg-muted/30">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-muted/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16">
             AI & Chat Solutions
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {aiSolutions.map((solution) => {
               const Icon = solution.icon;
               return (
                 <Card
                   key={solution.title}
-                  className="p-6 sm:p-8 hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                  className="w-full h-full p-4 sm:p-6 md:p-8 hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                 >
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-accent/10 rounded-lg flex items-center justify-center mb-4 sm:mb-6 relative z-10">
                     <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-accent" />
                   </div>
                   <h3 className="text-base sm:text-lg font-bold mb-2 sm:mb-3 relative z-10 leading-tight">{solution.title}</h3>
-                  <p className="text-sm text-[#EDEDED] leading-relaxed relative z-10">
+                  <p className="text-sm sm:text-base text-[#EDEDED] leading-relaxed relative z-10">
                     {solution.description}
                   </p>
                 </Card>
@@ -323,9 +323,9 @@ const Services = () => {
       </section>
 
       {/* Section 4 - Custom Integration & Analytics */}
-      <section className="py-16 md:py-24">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-12 md:mb-16 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8 sm:mb-12 md:mb-16">
             Custom Integration & Analytics
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
@@ -334,12 +334,12 @@ const Services = () => {
               return (
                 <Card
                   key={service.title}
-                  className="p-6 sm:p-8 hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
+                  className="w-full h-full p-4 sm:p-6 md:p-8 hover:shadow-glow hover:scale-[1.02] active:scale-[0.98] transition-all duration-300"
                 >
                   <div className="w-12 h-12 sm:w-14 sm:h-14 bg-primary/10 rounded-lg flex items-center justify-center mb-4 sm:mb-6 relative z-10">
                     <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-primary" />
                   </div>
-                  <h3 className="text-lg sm:text-xl font-bold mb-3 sm:mb-4 relative z-10 leading-tight">{service.title}</h3>
+                  <h3 className="text-base sm:text-lg md:text-xl font-bold mb-2 sm:mb-3 md:mb-4 relative z-10 leading-tight">{service.title}</h3>
                   <p className="text-sm sm:text-base text-[#EDEDED] leading-relaxed relative z-10">
                     {service.description}
                   </p>
@@ -351,7 +351,7 @@ const Services = () => {
       </section>
 
       {/* Section 5 - The Complete AI Automation Suite */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-primary/5 to-accent/5 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-br from-primary/5 to-accent/5 relative overflow-hidden">
         {/* Floating Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute top-20 right-10 w-80 h-80 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl opacity-20" />
@@ -359,11 +359,11 @@ const Services = () => {
         </div>
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-12 md:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text px-4">
+          <div className="text-center mb-10 sm:mb-12 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text">
               The Complete AI Automation Suite
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto">
               13 premium automation workflows designed to transform every aspect of your business operations.
             </p>
           </div>
@@ -453,19 +453,19 @@ const Services = () => {
             </Accordion>
           </div>
 
-          <div className="text-center px-4">
-            <div className="glass-card p-6 sm:p-8 md:p-10 backdrop-blur-xl inline-block hover:shadow-glow transition-all duration-500 max-w-3xl mx-auto">
-              <p className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 relative z-10 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text">
+          <div className="text-center">
+            <div className="glass-card p-4 sm:p-6 md:p-8 lg:p-10 backdrop-blur-xl inline-block hover:shadow-glow transition-all duration-500 max-w-3xl mx-auto w-full">
+              <p className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 relative z-10 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text">
                 Get the Complete Suite
               </p>
-              <p className="text-sm sm:text-base text-muted-foreground mb-4 sm:mb-6 max-w-2xl relative z-10">
+              <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-4 sm:mb-6 max-w-2xl relative z-10 mx-auto">
                 Transform your entire business with our comprehensive automation package. All 13 workflows working together seamlessly.
               </p>
               <Button
                 variant="cta"
                 size="lg"
                 onClick={scrollToContact}
-                className="relative z-10 shadow-glow w-full sm:w-auto px-6 sm:px-8 py-5 sm:py-6 text-base sm:text-lg active:scale-95"
+                className="relative z-10 shadow-glow w-full sm:w-auto px-5 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg active:scale-95"
               >
                 <span className="inline-flex items-center justify-center gap-2">
                   Book a Free Demo of the Full Suite <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
@@ -477,20 +477,23 @@ const Services = () => {
       </section>
 
       {/* Section 6 - Final CTA */}
-      <section className="py-24 bg-gradient-dark">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-dark">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
             Ready to Automate Your Workflows?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
             Book a free strategy call and see how our automation experts can transform your operations.
           </p>
           <Button
             variant="cta"
             size="lg"
             onClick={scrollToContact}
+            className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base"
           >
-            Book Free Strategy Call <ArrowRight className="ml-2" />
+            <span className="inline-flex items-center justify-center gap-2">
+              Book Free Strategy Call <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
+            </span>
           </Button>
         </div>
       </section>
