@@ -355,8 +355,11 @@ const Services = () => {
               <p 
                 className="text-[18px] leading-relaxed mx-auto max-w-[760px]"
                 style={{ color: 'rgba(255, 255, 255, 0.72)' }}>
-                We design data-driven no-code and AI automations that save 15+ hours weekly, 
-                reduce costs by 60%, and increase client conversion by up to 40% — so you scale 
+                We design data-driven no-code and AI automations that save{' '}
+                <span className="font-bold" style={{ color: '#F7B731' }}>15+ hours</span> weekly, 
+                reduce costs by <span className="font-bold" style={{ color: '#F7B731' }}>60%</span>, 
+                and increase client conversion by up to{' '}
+                <span className="font-bold" style={{ color: '#F7B731' }}>40%</span> — so you scale 
                 faster with less effort.
               </p>
             </div>
