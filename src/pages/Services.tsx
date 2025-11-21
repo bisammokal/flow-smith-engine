@@ -342,7 +342,7 @@ const Services = () => {
             }}>
             
             {/* Typography Section */}
-            <div className="text-center mb-12">
+            <div className="text-center">
               <h1 
                 className="text-[52px] sm:text-[56px] md:text-[60px] font-bold mb-4 text-white">
                 Our Services
@@ -359,42 +359,6 @@ const Services = () => {
                 reduce costs by 60%, and increase client conversion by up to 40% — so you scale 
                 faster with less effort.
               </p>
-            </div>
-
-            {/* 3x2 Stat Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-              {[
-                { number: "15+", label: "Hours Saved Weekly" },
-                { number: "60%", label: "Cost Reduction" },
-                { number: "40%", label: "Conversion Increase" },
-                { number: "3-5x", label: "Revenue Growth" },
-                { number: "24/7", label: "Automated Operations" },
-                { number: "100+", label: "Tasks Automated" }
-              ].map((stat, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col justify-center items-center text-center transition-all duration-300"
-                  style={{
-                    background: 'rgba(255, 255, 255, 0.08)',
-                    borderRadius: '20px',
-                    padding: '2rem',
-                    minHeight: '170px'
-                  }}
-                  onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)'}
-                  onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'}
-                >
-                  <div 
-                    className="text-[32px] font-extrabold mb-2"
-                    style={{ color: '#F7B731' }}>
-                    {stat.number}
-                  </div>
-                  <div 
-                    className="text-[17px]"
-                    style={{ color: 'rgba(255, 255, 255, 0.75)' }}>
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
