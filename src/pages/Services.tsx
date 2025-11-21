@@ -320,19 +320,83 @@ const Services = () => {
       <Header />
       
       {/* Section 1 - Header */}
-      <section className="pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12 md:pb-16 bg-gradient-hero">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4 md:mb-6">
-            Our Services
-          </h1>
-          <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-primary mb-3 sm:mb-4 md:mb-6">
-            Smart Automations That Drive Growth
-          </p>
-          <p className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            We design data-driven no-code and AI automations that save 15+ hours weekly, 
-            reduce costs by 60%, and increase client conversion by up to 40% — so you scale 
-            faster with less effort.
-          </p>
+      <section className="pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12 md:pb-16 relative overflow-hidden">
+        {/* Dark Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0A0A0A] via-[#121212] to-[#0F0F0F]" />
+        
+        {/* Floating Background Orbs */}
+        <div className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-br from-accent/8 to-primary/8 rounded-full blur-3xl opacity-25" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          {/* Premium Glassmorphic Card */}
+          <div 
+            className="w-[85%] max-w-[1200px] mx-auto p-8 sm:p-12 md:p-16"
+            style={{
+              background: 'rgba(255, 255, 255, 0.06)',
+              borderRadius: '28px',
+              backdropFilter: 'blur(20px)',
+              WebkitBackdropFilter: 'blur(20px)',
+              border: '1px solid rgba(255, 255, 255, 0.12)',
+              boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.4)'
+            }}>
+            
+            {/* Typography Section */}
+            <div className="text-center mb-12">
+              <h1 
+                className="text-[52px] sm:text-[56px] md:text-[60px] font-bold mb-4 text-white">
+                Our Services
+              </h1>
+              <p 
+                className="text-[22px] font-semibold mb-6"
+                style={{ color: '#F7B731' }}>
+                Smart Automations That Drive Growth
+              </p>
+              <p 
+                className="text-[18px] leading-relaxed mx-auto max-w-[760px]"
+                style={{ color: 'rgba(255, 255, 255, 0.72)' }}>
+                We design data-driven no-code and AI automations that save 15+ hours weekly, 
+                reduce costs by 60%, and increase client conversion by up to 40% — so you scale 
+                faster with less effort.
+              </p>
+            </div>
+
+            {/* 3x2 Stat Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+              {[
+                { number: "15+", label: "Hours Saved Weekly" },
+                { number: "60%", label: "Cost Reduction" },
+                { number: "40%", label: "Conversion Increase" },
+                { number: "3-5x", label: "Revenue Growth" },
+                { number: "24/7", label: "Automated Operations" },
+                { number: "100+", label: "Tasks Automated" }
+              ].map((stat, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col justify-center items-center text-center transition-all duration-300"
+                  style={{
+                    background: 'rgba(255, 255, 255, 0.08)',
+                    borderRadius: '20px',
+                    padding: '2rem',
+                    minHeight: '170px'
+                  }}
+                  onMouseEnter={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.12)'}
+                  onMouseLeave={(e) => e.currentTarget.style.background = 'rgba(255, 255, 255, 0.08)'}
+                >
+                  <div 
+                    className="text-[32px] font-extrabold mb-2"
+                    style={{ color: '#F7B731' }}>
+                    {stat.number}
+                  </div>
+                  <div 
+                    className="text-[17px]"
+                    style={{ color: 'rgba(255, 255, 255, 0.75)' }}>
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
