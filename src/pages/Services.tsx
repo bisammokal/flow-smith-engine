@@ -529,7 +529,7 @@ const Services = () => {
                 Get the Complete Suite
               </p>
               <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-4 sm:mb-6 max-w-2xl relative z-10 mx-auto">
-                Transform your entire business with our comprehensive automation package. All 13 workflows working together seamlessly.
+                Transform your entire business with our comprehensive automation package. All 15+ workflows working together seamlessly.
               </p>
               <Button
                 variant="cta"
