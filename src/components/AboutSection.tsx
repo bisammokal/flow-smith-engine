@@ -30,15 +30,13 @@ export const AboutSection = () => {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-3xl mx-auto text-center space-y-6 mb-12 sm:mb-16">
-            <div className="glass-hero p-4 sm:p-6 md:p-8 backdrop-blur-xl inline-block">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold relative z-10">
-                We Help Businesses Scale Using{" "}
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                  Automation
-                </span>{" "}
-                — Not More Manpower
-              </h2>
-            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold relative z-10">
+              We Help Businesses Scale Using{" "}
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                Automation
+              </span>{" "}
+              — Not More Manpower
+            </h2>
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed">
               We empower teams to achieve more with less. Our AI-driven workflows deliver measurable impact — up to 60% more revenue, 3× faster client onboarding, and zero manual follow-ups — giving you freedom to scale with precision and confidence.
             </p>
