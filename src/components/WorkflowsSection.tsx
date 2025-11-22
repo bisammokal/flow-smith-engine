@@ -43,11 +43,9 @@ export const WorkflowsSection = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
-          <div className="glass-hero p-4 sm:p-6 backdrop-blur-xl inline-block mb-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold relative z-10 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text">
-              The Systems That Run Your Business — Automatically
-            </h2>
-          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold relative z-10 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text mb-4">
+            The Systems That Run Your Business — Automatically
+          </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             AI-powered automation across sales, operations, support, and customer experience.
           </p>
