@@ -39,14 +39,12 @@ export const TestimonialsSection = () => {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12 sm:mb-16">
-          <div className="glass-hero p-4 sm:p-6 backdrop-blur-xl inline-block mb-4">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold relative z-10">
-              What Our{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                Clients Say
-              </span>
-            </h2>
-          </div>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold relative z-10 mb-4">
+            What Our{" "}
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              Clients Say
+            </span>
+          </h2>
           <p className="text-base sm:text-lg md:text-xl text-muted-foreground">
             Real feedback from businesses we've helped automate
           </p>
