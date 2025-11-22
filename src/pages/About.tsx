@@ -145,7 +145,7 @@ const About = () => {
       {/* SECTION 1 - HERO */}
       <section ref={heroRef} className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
-          <div className="glass-hero text-center p-8 sm:p-12 lg:p-16">
+          <div className="text-center p-8 sm:p-12 lg:p-16">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
               We Build AI Systems That Help Businesses Scale — Without Hiring More People.
             </h1>
