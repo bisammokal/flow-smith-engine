@@ -180,20 +180,11 @@ export const HeroSection = () => {
           </div>
 
           {/* Right Visual */}
-          <div className="relative mt-8 lg:mt-0">
-            <div className="glass-hero relative overflow-hidden shadow-large hover:shadow-glow transition-all duration-500">
-              <img
-                src={heroImage}
-                alt="AI Automation Visualization"
-                className="w-full h-auto rounded-[20px]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent rounded-[20px]" />
-            </div>
-            
+          <div className="relative mt-8 lg:mt-0 flex items-center justify-center">
             {/* Floating Stats */}
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 sm:-bottom-6 sm:left-6 sm:translate-x-0 p-4 sm:p-6 hover:-translate-y-1 transition-all duration-300">
-              <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent relative z-10">70-80%</div>
-              <div className="text-xs sm:text-sm text-foreground relative z-10">Workload Reduction</div>
+            <div className="p-6 sm:p-8 hover:-translate-y-1 transition-all duration-300">
+              <div className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent relative z-10">70-80%</div>
+              <div className="text-base sm:text-lg text-foreground relative z-10">Workload Reduction</div>
             </div>
           </div>
         </div>
