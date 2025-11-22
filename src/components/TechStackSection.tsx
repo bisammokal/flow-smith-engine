@@ -24,14 +24,12 @@ export const TechStackSection = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
-          <div className="glass-hero p-6 backdrop-blur-xl inline-block mb-4">
-            <h2 className="text-4xl md:text-5xl font-bold relative z-10">
-              Tools We{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                Use
-              </span>
-            </h2>
-          </div>
+          <h2 className="text-4xl md:text-5xl font-bold relative z-10 mb-4">
+            Tools We{" "}
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+              Use
+            </span>
+          </h2>
           
           <p className="text-lg text-muted-foreground">
             Powered by the best automation tools in the industry.
