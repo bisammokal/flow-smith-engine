@@ -128,15 +128,13 @@ export const HeroSection = () => {
               <span className="text-xs sm:text-sm font-medium text-primary relative z-10">AI-Powered Automation</span>
             </div>
             
-            <div className="glass-hero p-4 sm:p-6 md:p-8 backdrop-blur-xl">
-              <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight relative z-10">
-                Build a{" "}
-                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                  24/7 Sales Engine
-                </span>{" "}
-                That Converts 10x Faster
-              </h1>
-            </div>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight relative z-10">
+              Build a{" "}
+              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                24/7 Sales Engine
+              </span>{" "}
+              That Converts 10x Faster
+            </h1>
             
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed px-1">
               We build smart systems that capture leads, send follow-ups, and onboard clients automatically — saving 20+ hours weekly. Used by 50+ Agencies & SaaS Teams.
