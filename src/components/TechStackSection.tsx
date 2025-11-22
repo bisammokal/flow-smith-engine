@@ -15,11 +15,11 @@ export const TechStackSection = () => {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-24 relative overflow-hidden bg-muted/30">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/15 to-purple-500/15 rounded-full blur-3xl opacity-20" />
-        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-br from-primary/20 to-cyan-500/20 rounded-full blur-3xl opacity-25" />
+        <div className="absolute top-20 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-gradient-to-br from-primary/15 to-accent/15 rounded-full blur-3xl opacity-35" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -43,12 +43,13 @@ export const TechStackSection = () => {
               {[...technologies, ...technologies].map((tech, index) => (
               <div
                 key={`${tech.name}-${index}`}
-                className="logo-item p-6 transition-all duration-300 hover:scale-110 hover:brightness-125"
+                className="logo-item p-6 transition-all duration-300 hover:scale-110"
               >
                 <img
                   src={tech.logo}
                   alt={`${tech.name} logo`}
-                  className="h-14 w-auto object-contain relative z-10 filter brightness-90 hover:brightness-110 transition-all"
+                  className="h-20 w-auto object-contain relative z-10 filter brightness-0 invert transition-all hover:brightness-0 hover:invert hover:opacity-80"
+                  style={{ mixBlendMode: 'normal' }}
                 />
                 </div>
               ))}
