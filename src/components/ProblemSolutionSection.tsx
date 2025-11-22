@@ -150,23 +150,6 @@ const ProblemSolutionSection = () => {
           </div>
         </div>
 
-        {/* CTA Section */}
-        <div className="text-center mt-12 md:mt-16">
-          <div className="glass-card p-6 md:p-8 max-w-3xl mx-auto">
-            <p className="text-lg md:text-xl font-semibold mb-6">
-              This Is Exactly Why Our Clients Gladly Pay $5k–$7k — Because the ROI Is Immediate.
-            </p>
-            <Link to="/book-call">
-              <Button
-                size="lg"
-                variant="hero"
-                className="text-base md:text-lg px-8 py-5 h-auto shadow-glow hover:scale-105 transition-all duration-300"
-              >
-                Book Your Strategy Call
-              </Button>
-            </Link>
-          </div>
-        </div>
       </div>
     </section>
   );
