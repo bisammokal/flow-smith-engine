@@ -171,8 +171,8 @@ const About = () => {
       {/* SECTION 2 - MISSION */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Mission</h2>
           <Card ref={missionRef} className="p-8 sm:p-12 hover:shadow-glow transition-all duration-300 group">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-center">Our Mission</h2>
             <div className="space-y-4 text-base sm:text-lg text-muted-foreground text-center">
               <p>
                 To design intelligent systems that simplify work, amplify performance, and unlock effortless scale.
