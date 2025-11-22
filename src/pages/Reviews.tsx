@@ -154,7 +154,7 @@ const Reviews = () => {
 
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="glass-hero p-4 sm:p-6 md:p-8 backdrop-blur-xl inline-block mb-4 sm:mb-6">
+            <div className="p-4 sm:p-6 md:p-8 mb-4 sm:mb-6">
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6">
                 Real Stories. Real Results.{" "}
                 <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
