@@ -33,30 +33,16 @@ export const TeamSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           <div className="space-y-8 lg:space-y-10">
             {/* Main Content Card */}
-            <div 
-              className="p-8 sm:p-10 rounded-3xl relative overflow-hidden"
-              style={{
-                background: 'rgba(255, 255, 255, 0.03)',
-                backdropFilter: 'blur(20px)',
-                border: '1px solid rgba(255, 255, 255, 0.08)',
-                boxShadow: '0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05)',
-              }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-br from-[#F7B731]/5 via-transparent to-blue-500/5 opacity-50" />
-              
+            <div className="p-8 sm:p-10 relative space-y-4">
               <p className="text-xl sm:text-2xl font-semibold mb-4 relative z-10" style={{ color: '#F7B731' }}>
                 We are a dedicated team of automation engineers, AI specialists, and workflow architects helping companies scale through smart systems — not more staff.
               </p>
-              
               <p className="text-base sm:text-lg leading-relaxed relative z-10" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>
                 We design, build, and manage high-performance automation systems that replace repetitive work, accelerate growth, and transform everyday operations for global teams.
               </p>
               
               {/* Trust Badge */}
-              <div 
-                className="mt-6 pt-6 border-t relative z-10"
-                style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}
-              >
+              <div className="mt-6 pt-6 border-t relative z-10" style={{ borderColor: 'rgba(255, 255, 255, 0.1)' }}>
                 <p className="text-sm font-medium" style={{ color: 'rgba(255, 255, 255, 0.6)' }}>
                   Trusted by teams in the US, UK, UAE & Europe
                 </p>
