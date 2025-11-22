@@ -41,15 +41,15 @@ export const TechStackSection = () => {
           <div className="logo-scroll">
             <div className="logo-scroll-content">
               {[...technologies, ...technologies].map((tech, index) => (
-                <div
-                  key={`${tech.name}-${index}`}
-                  className="logo-item glass-card hover:shadow-glow transition-all duration-300 hover:scale-105"
-                >
-                  <img
-                    src={tech.logo}
-                    alt={`${tech.name} logo`}
-                    className="h-12 w-auto object-contain relative z-10"
-                  />
+              <div
+                key={`${tech.name}-${index}`}
+                className="logo-item p-6 transition-all duration-300 hover:scale-110 hover:brightness-125"
+              >
+                <img
+                  src={tech.logo}
+                  alt={`${tech.name} logo`}
+                  className="h-14 w-auto object-contain relative z-10 filter brightness-90 hover:brightness-110 transition-all"
+                />
                 </div>
               ))}
             </div>
