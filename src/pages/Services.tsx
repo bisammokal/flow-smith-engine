@@ -329,19 +329,8 @@ const Services = () => {
         <div className="absolute bottom-20 left-10 w-80 h-80 bg-gradient-to-br from-accent/8 to-primary/8 rounded-full blur-3xl opacity-25" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          {/* Premium Glassmorphic Card */}
-          <div 
-            className="w-[85%] max-w-[1200px] mx-auto p-8 sm:p-12 md:p-16"
-            style={{
-              background: 'rgba(255, 255, 255, 0.06)',
-              borderRadius: '28px',
-              backdropFilter: 'blur(20px)',
-              WebkitBackdropFilter: 'blur(20px)',
-              border: '1px solid rgba(255, 255, 255, 0.12)',
-              boxShadow: 'inset 0 1px 2px rgba(255, 255, 255, 0.1), 0 8px 32px rgba(0, 0, 0, 0.4)'
-            }}>
-            
-            {/* Typography Section */}
+          {/* Typography Section */}
+          <div className="w-[85%] max-w-[1200px] mx-auto p-8 sm:p-12 md:p-16">
             <div className="text-center">
               <h1 
                 className="text-[52px] sm:text-[56px] md:text-[60px] font-bold mb-4 text-white">
