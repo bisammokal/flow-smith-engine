@@ -44,15 +44,8 @@ export const TeamSection = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-[#F7B731]/5 via-transparent to-blue-500/5 opacity-50" />
               
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-5 relative z-10 leading-tight">
-                Meet the Specialists Behind{" "}
-                <span className="bg-gradient-to-r from-[#F7B731] via-[#FFC850] to-[#F7B731] bg-clip-text text-transparent">
-                  Your Automations
-                </span>
-              </h2>
-              
               <p className="text-xl sm:text-2xl font-semibold mb-4 relative z-10" style={{ color: '#F7B731' }}>
-                A dedicated team of automation engineers, AI specialists, and workflow architects helping companies scale through smart systems — not more staff.
+                We are a dedicated team of automation engineers, AI specialists, and workflow architects helping companies scale through smart systems — not more staff.
               </p>
               
               <p className="text-base sm:text-lg leading-relaxed relative z-10" style={{ color: 'rgba(255, 255, 255, 0.75)' }}>
