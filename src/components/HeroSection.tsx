@@ -166,17 +166,15 @@ export const HeroSection = () => {
 
             {/* Trust Badges */}
             <div className="pt-4 sm:pt-8">
-              <div className="glass-card p-4 sm:p-6 backdrop-blur-xl">
-                <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 relative z-10">
-                  Trusted by teams in healthcare, real estate & SaaS
-                </p>
-                <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground/60 relative z-10">
-                  <span>Healthcare</span>
-                  <span>•</span>
-                  <span>Real Estate</span>
-                  <span>•</span>
-                  <span>SaaS</span>
-                </div>
+              <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 relative z-10">
+                Trusted by teams in healthcare, real estate & SaaS
+              </p>
+              <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground/60 relative z-10">
+                <span>Healthcare</span>
+                <span>•</span>
+                <span>Real Estate</span>
+                <span>•</span>
+                <span>SaaS</span>
               </div>
             </div>
           </div>
