@@ -152,7 +152,7 @@ const About = () => {
       </section>
 
       {/* SECTION 2 - MISSION */}
-      <section className="py-12 px-4 sm:px-6 lg:px-8">
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Mission</h2>
           <Card ref={missionRef} className="p-8 sm:p-12 hover:shadow-glow transition-all duration-300 group">
@@ -172,7 +172,7 @@ const About = () => {
       </section>
 
       {/* SECTION 3 - WHAT WE DO */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">What We Do</h2>
           <p className="text-lg sm:text-xl text-muted-foreground text-center mb-12 max-w-3xl mx-auto">
@@ -195,7 +195,7 @@ const About = () => {
       </section>
 
       {/* SECTION 4 - WHY CLIENTS CHOOSE US */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Why Clients Choose Us</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -223,7 +223,7 @@ const About = () => {
       </section>
 
       {/* SECTION 5 - VISION */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Vision</h2>
           <div ref={visionCardsRef} className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
@@ -241,7 +241,7 @@ const About = () => {
       </section>
 
       {/* SECTION 6 - OUR IMPACT */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Impact</h2>
           <div ref={statsRef} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
@@ -261,7 +261,7 @@ const About = () => {
       </section>
 
       {/* SECTION 7 - CTA */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-10 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
           <Card className="p-8 sm:p-12 lg:p-16 text-center hover:shadow-glow transition-all duration-300 relative overflow-hidden border-primary/30">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-destructive/5 animate-pulse" />
