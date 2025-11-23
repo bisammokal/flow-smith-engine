@@ -23,16 +23,13 @@ export const ContactSection = () => {
 
               {/* Heading */}
               <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Ready to{" "}
-                <span className="bg-gradient-luxury bg-clip-text text-transparent">
-                  Automate Your Business?
-                </span>
+                <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Ready to Automate Your Business?</span>
               </h2>
               
               {/* Subtext */}
               <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 Get a full breakdown of how AI can save you{" "}
-                <span className="text-primary font-semibold">7–15 hours per week</span>{" "}
+                <span className="text-primary font-semibold">35–45 hours per week</span>{" "}
                 and increase conversion rates instantly.
               </p>
 

@@ -34,11 +34,7 @@ export const WhyChooseUsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Why{" "}
-            <span className="bg-gradient-luxury bg-clip-text text-transparent">
-              High-Growth Businesses
-            </span>{" "}
-            Choose Us
+            Why <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">High-Growth Businesses Choose Us</span>
           </h2>
         </div>
 
