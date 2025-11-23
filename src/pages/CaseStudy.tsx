@@ -372,12 +372,13 @@ const CaseStudy = () => {
             <motion.div
               variants={fadeUp}
               className="max-w-6xl mx-auto mb-16 relative rounded-2xl overflow-hidden"
+              style={{ maxHeight: '400px' }}
             >
               <img 
                 src={systemArchitecture} 
                 alt="System Architecture Diagram" 
-                className="w-full h-auto"
-                style={{ filter: 'blur(8px)', opacity: 0.5 }}
+                className="w-full h-full object-cover"
+                style={{ filter: 'blur(3px)', opacity: 0.5 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
             </motion.div>
