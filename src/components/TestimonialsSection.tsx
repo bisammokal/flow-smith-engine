@@ -65,10 +65,7 @@ export const TestimonialsSection = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            What Our{" "}
-            <span className="bg-gradient-luxury bg-clip-text text-transparent">
-              Clients Say
-            </span>
+            <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">What Our Clients Say</span>
           </h2>
         </div>
 
