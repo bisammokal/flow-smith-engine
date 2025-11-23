@@ -544,10 +544,10 @@ const CaseStudy = () => {
                     >
                       <Icon className="w-8 h-8 text-background" />
                     </motion.div>
-                    <div className="text-4xl md:text-5xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-3">
+                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">
                       {result.value}
                     </div>
-                    <div className="text-sm text-muted-foreground uppercase tracking-wider">
+                    <div className="text-base text-foreground font-medium uppercase tracking-wider">
                       {result.label}
                     </div>
                     <motion.div
