@@ -120,8 +120,8 @@ const ProblemSolutionSection = () => {
                   <div className="glass-card p-6 h-full border border-primary/20 hover:border-primary/40 hover:shadow-glow transition-all duration-500 hover:scale-105">
                     {/* Step Number */}
                     <div className="relative z-10 mb-4">
-                      <div className="w-16 h-16 rounded-full bg-gradient-luxury flex items-center justify-center mx-auto mb-4 shadow-glow">
-                        <span className="text-2xl font-bold text-background">{step.number}</span>
+                      <div className="w-16 h-16 rounded-full bg-primary/10 border-2 border-primary flex items-center justify-center mx-auto mb-4 shadow-glow backdrop-blur-sm">
+                        <span className="text-2xl font-bold text-primary">{step.number}</span>
                       </div>
                     </div>
                     
