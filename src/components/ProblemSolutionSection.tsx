@@ -62,10 +62,10 @@ const ProblemSolutionSection = () => {
         <div className="mb-10 md:mb-12">
           <div className="text-center mb-10 md:mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-              Your Business Is Losing Money — And You Probably Don't Even Realize It.
+              Your Business Is <span className="text-accent">Losing Money</span> — And You Probably Don't Even Realize It.
             </h2>
             <p className="text-base md:text-lg text-muted-foreground">
-              Most businesses waste 20–40% of revenue on slow workflows and missed opportunities.
+              Most businesses waste <span className="text-accent font-bold">20–40% of revenue</span> on slow workflows and missed opportunities.
             </p>
           </div>
 
