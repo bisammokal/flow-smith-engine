@@ -28,7 +28,7 @@ export const CaseStudiesSection = () => {
   ];
 
   return (
-    <section id="case-studies" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+    <section id="case-studies" className="py-8 sm:py-10 lg:py-12 relative overflow-hidden">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-40 right-20 w-96 h-96 bg-gradient-to-br from-purple-500/15 to-pink-500/15 rounded-full blur-3xl opacity-20" />
