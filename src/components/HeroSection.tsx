@@ -103,7 +103,7 @@ export const HeroSection = () => {
               </motion.span>
               <span className="relative inline-block">
                 <motion.span 
-                  className="bg-gradient-luxury bg-clip-text text-transparent"
+                  className="text-primary"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.3, duration: 0.6, ease: motionConfig.easing.luxury }}
