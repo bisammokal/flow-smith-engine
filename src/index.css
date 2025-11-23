@@ -8,54 +8,64 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 5%;
-    --foreground: 0 0% 100%;
+    /* Premium Luxury Dark Theme - Deep Charcoal Base */
+    --background: 220 15% 8%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 100%;
+    --card: 220 15% 10%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 45 93% 58%;
-    --primary-foreground: 222 47% 11%;
+    /* Gold Metallic Primary */
+    --primary: 45 95% 62%;
+    --primary-foreground: 220 15% 8%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 100%;
+    /* Electric Blue Secondary */
+    --secondary: 210 100% 56%;
+    --secondary-foreground: 220 15% 8%;
 
-    --muted: 0 0% 12%;
-    --muted-foreground: 0 0% 93%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 45 93% 58%;
-    --accent-foreground: 222 47% 11%;
+    /* Neon Accent */
+    --accent: 51 100% 50%;
+    --accent-foreground: 220 15% 8%;
 
-    --destructive: 0 72% 51%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 45 93% 58%;
+    --border: 220 15% 18%;
+    --input: 220 15% 15%;
+    --ring: 45 95% 62%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    /* Custom design tokens - Dark tech theme */
-    --gradient-primary: linear-gradient(135deg, hsl(45 93% 58%), hsl(38 92% 50%));
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 5%), hsl(0 0% 8%));
-    --gradient-dark: linear-gradient(135deg, hsl(0 0% 5%), hsl(0 0% 10%));
-    --shadow-soft: 0 4px 6px -1px hsl(0 0% 0% / 0.3), 0 2px 4px -1px hsl(0 0% 0% / 0.2);
-    --shadow-medium: 0 10px 15px -3px hsl(0 0% 0% / 0.4), 0 4px 6px -2px hsl(0 0% 0% / 0.3);
-    --shadow-large: 0 20px 25px -5px hsl(0 0% 0% / 0.5), 0 10px 10px -5px hsl(0 0% 0% / 0.4);
-    --shadow-glow: 0 0 40px hsl(45 93% 58% / 0.2);
+    /* Premium Luxury Design Tokens */
+    --gradient-luxury: linear-gradient(135deg, hsl(45 95% 62%), hsl(38 100% 52%), hsl(45 95% 62%));
+    --gradient-neon: linear-gradient(135deg, hsl(210 100% 56%), hsl(280 100% 65%));
+    --gradient-hero: linear-gradient(180deg, hsl(220 15% 8%), hsl(220 15% 12%));
+    --gradient-metallic: linear-gradient(135deg, hsl(45 95% 62% / 0.2), hsl(210 100% 56% / 0.1));
+    
+    /* Premium Shadows with Depth */
+    --shadow-soft: 0 4px 12px hsl(220 15% 0% / 0.4);
+    --shadow-medium: 0 12px 32px hsl(220 15% 0% / 0.5);
+    --shadow-large: 0 24px 48px hsl(220 15% 0% / 0.6);
+    --shadow-glow: 0 0 48px hsl(45 95% 62% / 0.3), 0 0 96px hsl(45 95% 62% / 0.15);
+    --shadow-neon: 0 0 32px hsl(210 100% 56% / 0.4);
     
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-luxury: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
     
-    /* Glassmorphism design tokens */
-    --glass-bg: rgba(255, 255, 255, 0.08);
-    --glass-border: rgba(255, 255, 255, 0.15);
-    --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.03));
-    --glass-hero-bg: rgba(255, 255, 255, 0.06);
-    --glass-hero-gradient: linear-gradient(115deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.02));
-    --glass-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+    /* Premium Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.08);
+    --glass-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.02));
+    --glass-hero-bg: rgba(255, 255, 255, 0.04);
+    --glass-hero-gradient: linear-gradient(135deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01));
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --glass-shadow-hover: 0 16px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.1);
   }
 
   .dark {

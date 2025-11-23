@@ -1,14 +1,12 @@
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import ProblemSolutionSection from "@/components/ProblemSolutionSection";
-import { AboutSection } from "@/components/AboutSection";
-import { WorkflowsSection } from "@/components/WorkflowsSection";
-import { TechStackSection } from "@/components/TechStackSection";
+import { ScalingSection } from "@/components/ScalingSection";
 import { CaseStudiesSection } from "@/components/CaseStudiesSection";
 import { WhyChooseUsSection } from "@/components/WhyChooseUsSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactSection } from "@/components/ContactSection";
-import { TeamSection } from "@/components/TeamSection";
+import { AboutPreviewSection } from "@/components/AboutPreviewSection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
@@ -17,12 +15,12 @@ const Index = () => {
       <Header />
       <HeroSection />
       <ProblemSolutionSection />
-      <WorkflowsSection />
+      <ScalingSection />
       <CaseStudiesSection />
       <WhyChooseUsSection />
       <TestimonialsSection />
       <ContactSection />
-      <TeamSection />
+      <AboutPreviewSection />
       <Footer />
     </div>
   );
