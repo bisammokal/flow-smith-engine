@@ -23,7 +23,7 @@ const BookCall = () => {
     e.preventDefault();
     toast({
       title: "Strategy Call Requested!",
-      description: "We'll reach out within 12-24 hours to schedule your free consultation.",
+      description: "We'll reach out within 12-24 hours to schedule your consultation.",
     });
     setFormData({
       name: "",
@@ -70,8 +70,8 @@ const BookCall = () => {
       answer: "We analyze your current workflows, identify automation opportunities, discuss your goals, and create a preliminary automation roadmap. You'll leave with clear next steps.",
     },
     {
-      question: "Is the strategy call really free?",
-      answer: "Absolutely. No obligations, no hidden fees. We believe in earning your trust through value first. Even if we're not the right fit, you'll gain insights you can implement immediately.",
+      question: "Is there any cost for the strategy call?",
+      answer: "No cost whatsoever. No obligations, no hidden fees. We believe in earning your trust through value first. Even if we're not the right fit, you'll gain insights you can implement immediately.",
     },
     {
       question: "What should I prepare before the call?",
@@ -102,12 +102,12 @@ const BookCall = () => {
             <div className="relative z-10 space-y-3 sm:space-y-4 md:space-y-6">
               {/* Badge */}
               <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/30 backdrop-blur-sm">
-                <span className="text-primary text-xs sm:text-sm font-medium">✨ Free Strategy Call — No Obligations</span>
+                <span className="text-primary text-xs sm:text-sm font-medium">✨ Strategy Call — No Obligations</span>
               </div>
               
               {/* Headline */}
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1]">
-                Book Your Free{" "}
+                Book Your{" "}
                 <span className="bg-gradient-to-r from-[#FFD43B] via-[#4A90E2] to-[#8B9DC3] bg-clip-text text-transparent">
                   Strategy Call
                 </span>
@@ -265,13 +265,13 @@ const BookCall = () => {
                 className="w-full bg-gradient-to-r from-primary via-yellow-500 to-orange-500 hover:shadow-[0_0_40px_rgba(255,212,59,0.5)] active:scale-95 transition-all duration-300 transform hover:scale-[1.02] text-base sm:text-lg font-semibold py-5 sm:py-6"
               >
                 <span className="inline-flex items-center justify-center gap-2">
-                  Book My Free Strategy Call
+                  Book My Strategy Call
                   <ChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
                 </span>
               </Button>
 
               <p className="text-center text-xs sm:text-sm text-muted-foreground px-2">
-                We'll respond within <span className="text-primary font-medium">12–24 hours</span> • No obligations • 100% free consultation
+                We'll respond within <span className="text-primary font-medium">12–24 hours</span> • No obligations
               </p>
             </form>
           </Card>

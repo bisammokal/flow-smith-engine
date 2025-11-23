@@ -44,7 +44,6 @@ export const Header = () => {
     { label: "Services", path: "/services" },
     { label: "Reviews", path: "/reviews" },
     { label: "Case Studies", path: "/case-study" },
-    { label: "Pricing", path: "/", sectionId: "pricing" },
     { label: "About", path: "/about" },
   ];
 
@@ -67,13 +66,11 @@ export const Header = () => {
           {/* Desktop Menu */}
           <nav className="hidden md:flex items-center space-x-8">
             {menuItems.map((item, index) => {
-              const isActive = item.sectionId 
-                ? location.pathname === item.path 
-                : location.pathname === item.path;
+              const isActive = location.pathname === item.path;
               return (
                 <button
                   key={index}
-                  onClick={() => handleNavigation(item.path, item.sectionId)}
+                  onClick={() => handleNavigation(item.path)}
                   className={`transition-colors ${
                     isActive 
                       ? "text-primary font-semibold" 
@@ -92,7 +89,7 @@ export const Header = () => {
               size="lg"
               onClick={() => navigate("/book-call")}
             >
-              🚀 Book a Free Demo
+              🚀 Book a Demo
             </Button>
           </div>
 
@@ -109,13 +106,11 @@ export const Header = () => {
         {isMobileMenuOpen && (
           <nav className="md:hidden py-4 space-y-4 bg-background border-t border-border">
             {menuItems.map((item, index) => {
-              const isActive = item.sectionId 
-                ? location.pathname === item.path 
-                : location.pathname === item.path;
+              const isActive = location.pathname === item.path;
               return (
                 <button
                   key={index}
-                  onClick={() => handleNavigation(item.path, item.sectionId)}
+                  onClick={() => handleNavigation(item.path)}
                   className={`block w-full text-left px-4 py-2 transition-colors ${
                     isActive 
                       ? "bg-muted text-primary font-semibold" 
@@ -133,7 +128,7 @@ export const Header = () => {
                 className="w-full"
                 onClick={() => navigate("/book-call")}
               >
-                🚀 Book a Free Demo
+                🚀 Book a Demo
               </Button>
             </div>
           </nav>
