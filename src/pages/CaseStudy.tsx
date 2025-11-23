@@ -562,7 +562,7 @@ const CaseStudy = () => {
                     >
                       <Icon className="w-8 h-8 text-background" />
                     </motion.div>
-                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">
+                    <div className="text-4xl md:text-5xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-3">
                       {result.value}
                     </div>
                     <div className="text-base text-foreground font-medium uppercase tracking-wider">
@@ -580,7 +580,7 @@ const CaseStudy = () => {
               variants={fadeUp}
               className="mt-12 p-8 glass-card border-2 border-primary/30 text-center"
             >
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-2">$320k</div>
+              <div className="text-3xl md:text-4xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-2">$320k</div>
               <div className="text-xl text-muted-foreground">ARR uplift from pricing optimization</div>
             </motion.div>
           </motion.div>
@@ -1143,7 +1143,7 @@ const CaseStudy = () => {
                     >
                       <Icon className="w-8 h-8 text-background" />
                     </motion.div>
-                    <div className="text-4xl md:text-5xl font-bold text-primary mb-3">
+                    <div className="text-4xl md:text-5xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-3">
                       {result.value}
                     </div>
                     <div className="text-base text-foreground font-medium uppercase tracking-wider">
@@ -1587,105 +1587,6 @@ const CaseStudy = () => {
               <p className="text-xl md:text-2xl italic text-foreground text-center relative z-10 font-light leading-relaxed">
                 "Everything I used to do manually — finding leads, checking their ratings, cleaning data, and writing outreach — now happens automatically. It feels like I hired a full-time lead researcher and email marketer combined."
               </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Enterprise Visual Gallery - Case Study 3 */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="max-w-6xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl md:text-4xl font-bold mb-12 text-center"
-            >
-              Enterprise Visual Gallery
-            </motion.h2>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {[
-                { title: "System Architecture Overview", description: "Nodes showing Yelp → Trustpilot → Sheets → Outreach" },
-                { title: "Workflow Execution Visualization", description: "Leads entering the pipeline, AI filtering, email outbound" },
-                { title: "Productivity Impact Graph", description: "Manual hours vs. automated hours" },
-                { title: "AI Outreach Intelligence Map", description: "How the AI writes & sends personalized messages" },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  className="glass-card p-8 hover:shadow-glow transition-all duration-300"
-                >
-                  <div className="flex items-start gap-4 mb-4">
-                    <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                      <span className="text-primary font-bold">{index + 1}</span>
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </div>
-                  </div>
-                  <div className="aspect-video bg-secondary/20 rounded-lg flex items-center justify-center border border-primary/20">
-                    <FileSpreadsheet className="w-16 h-16 text-primary/40" />
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Strategic CTA - Case Study 3 */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            className="max-w-4xl mx-auto text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8"
-            >
-              <span className="bg-gradient-luxury bg-clip-text text-transparent">
-                Request an Automation Diagnostic Audit
-              </span>
-            </motion.h2>
-
-            <motion.p
-              variants={fadeUp}
-              className="text-xl md:text-2xl text-muted-foreground mb-12"
-            >
-              We'll map your workflows, identify inefficiencies, and show you the ROI of your own fully autonomous lead generation engine.
-            </motion.p>
-
-            <motion.div variants={fadeUp}>
-              <Link to="/book-call">
-                <motion.div
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 0 60px rgba(230, 184, 58, 0.5)",
-                  }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <Button
-                    size="lg"
-                    className="text-lg px-12 py-8 bg-gradient-luxury hover:shadow-glow transition-all duration-500 font-semibold group"
-                  >
-                    <span>Book a Free Strategy Call</span>
-                    <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                  </Button>
-                </motion.div>
-              </Link>
             </motion.div>
           </motion.div>
         </div>
