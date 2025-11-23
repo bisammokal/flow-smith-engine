@@ -29,11 +29,6 @@ const About = () => {
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: "power3.out" }
       );
-      gsap.fromTo(
-        heroRef.current.querySelector(".cta-buttons"),
-        { opacity: 0, y: 20 },
-        { opacity: 1, y: 0, duration: 0.8, delay: 0.4, ease: "power3.out" }
-      );
     }
 
     // Mission card scroll animation
@@ -143,33 +138,21 @@ const About = () => {
       </div>
 
       {/* SECTION 1 - HERO */}
-      <section ref={heroRef} className="relative pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+      <section ref={heroRef} className="relative pt-32 pb-8 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center p-8 sm:p-12 lg:p-16">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 bg-gradient-primary bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-foreground">
               We Build AI Systems That Help Businesses Scale — Without Hiring More People.
             </h1>
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
+            <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
               We are an end-to-end AI Automation Agency helping businesses replace manual work with intelligent workflows that increase revenue, eliminate workload, and unlock effortless scale.
             </p>
-            <div className="cta-buttons flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link to="/book-call">
-                <Button variant="hero" size="lg" className="w-full sm:w-auto">
-                  Book a Demo
-                </Button>
-              </Link>
-              <Link to="/services">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  Explore The Automation Suite
-                </Button>
-              </Link>
-            </div>
           </div>
         </div>
       </section>
 
       {/* SECTION 2 - MISSION */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 px-4 sm:px-6 lg:px-8">
         <div className="container mx-auto max-w-5xl">
           <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-center">Our Mission</h2>
           <Card ref={missionRef} className="p-8 sm:p-12 hover:shadow-glow transition-all duration-300 group">
