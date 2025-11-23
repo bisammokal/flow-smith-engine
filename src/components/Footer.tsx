@@ -1,5 +1,7 @@
 import { MapPin, Facebook, Linkedin, Twitter, Instagram } from "lucide-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { fadeUp } from "@/lib/motion";
 
 export const Footer = () => {
   const scrollToSection = (id: string) => {
@@ -10,7 +12,13 @@ export const Footer = () => {
   };
 
   return (
-    <footer className="relative py-16 md:py-20 lg:py-24 overflow-hidden">
+    <motion.footer 
+      className="relative py-16 md:py-20 lg:py-24 overflow-hidden"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={fadeUp}
+    >
       {/* Multi-Layer Glassmorphism Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         {/* Outer Glass Layer - Light transparency */}
@@ -307,6 +315,6 @@ export const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
