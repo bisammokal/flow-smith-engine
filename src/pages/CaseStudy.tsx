@@ -1237,312 +1237,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Client Snapshot - Case Study 3 */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            {[
-              { label: "Industry", value: "B2B Digital Marketing / Lead Gen" },
-              { label: "Team Size", value: "Solo Founder" },
-              { label: "Monthly Revenue", value: "$12k/month" },
-              { label: "Primary Challenge", value: "No scalable method to find, qualify, and contact leads consistently" },
-            ].map((item, index) => (
-              <motion.div
-                key={index}
-                variants={fadeUp}
-                className="glass-card p-6 hover:shadow-glow transition-all duration-300"
-              >
-                <p className="text-sm text-muted-foreground mb-2">{item.label}</p>
-                <p className="text-lg font-semibold text-foreground">{item.value}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Core Business Problem - Case Study 3 */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="max-w-4xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl md:text-4xl font-bold mb-12 text-center"
-            >
-              The Core Business Problem
-            </motion.h2>
-
-            <motion.div variants={fadeUp} className="glass-card p-8 mb-8">
-              <p className="text-lg text-muted-foreground mb-6">
-                Before implementing the automation, lead acquisition was slow, manual, and inconsistent:
-              </p>
-
-              <ul className="space-y-4">
-                {[
-                  "Manual searching on Yelp every day",
-                  "No way to filter by sub-locations precisely",
-                  "Trustpilot credibility checks done manually",
-                  "Lead data scattered across tabs & spreadsheets",
-                  "Outreach emails written from scratch for each lead",
-                  "Hours wasted switching tools",
-                  "Zero automation — everything depended on human effort",
-                ].map((point, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <AlertCircle className="w-5 h-5 text-destructive flex-shrink-0 mt-1" />
-                    <span className="text-base text-foreground">{point}</span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-8 pt-8 border-t border-border">
-                <p className="text-lg font-semibold text-primary">
-                  The founder didn't need a "lead list."<br />
-                  He needed an Autonomous Lead Pipeline that discovers, qualifies, and contacts leads on its own.
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* What Was at Stake - Case Study 3 */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-secondary/10 to-background relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(230,184,58,0.1)_0%,transparent_70%)]" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            className="max-w-4xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl md:text-4xl font-bold mb-12 text-center"
-            >
-              What Was at Stake
-            </motion.h2>
-
-            <motion.div variants={fadeUp} className="glass-card p-8">
-              <p className="text-lg text-muted-foreground mb-6">If nothing changed:</p>
-
-              <div className="space-y-4">
-                {[
-                  "Lead volume would cap due to manual bottlenecks",
-                  "Opportunities lost to competitors with faster outreach",
-                  "Founder stuck doing research instead of selling",
-                  "Revenue growth plateau due to inconsistent pipeline",
-                  "High mental load caused by repetitive tasks",
-                  "Scaling was impossible without automation leverage",
-                ].map((risk, index) => (
-                  <div key={index} className="flex items-start gap-4 p-4 rounded-lg bg-destructive/5 border border-destructive/20">
-                    <AlertCircle className="w-6 h-6 text-destructive flex-shrink-0 mt-1" />
-                    <p className="text-base font-medium text-foreground">{risk}</p>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Diagnostic Process - Case Study 3 */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="max-w-5xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl md:text-4xl font-bold mb-12 text-center"
-            >
-              Our Diagnostic Process
-            </motion.h2>
-
-            <motion.p
-              variants={fadeUp}
-              className="text-lg text-muted-foreground text-center mb-12"
-            >
-              We performed a deep operational audit of the client's lead workflow:
-            </motion.p>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  step: "Step 1",
-                  title: "Lead Source Mapping",
-                  description: "Identified all platforms where ideal clients appear (Yelp, Trustpilot, industry directories).",
-                },
-                {
-                  step: "Step 2",
-                  title: "Workflow Breakdown",
-                  description: "Mapped every step: location discovery → scraping → validation → data entry → outreach.",
-                },
-                {
-                  step: "Step 3",
-                  title: "Automation Feasibility Scan",
-                  description: "Tracked inefficiencies, friction points, and repetitive tasks.",
-                },
-              ].map((item, index) => (
-                <motion.div
-                  key={index}
-                  variants={fadeUp}
-                  className="glass-card p-6 hover:shadow-glow transition-all duration-300"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <span className="text-primary font-bold">{index + 1}</span>
-                    </div>
-                    <h3 className="text-xl font-semibold">{item.title}</h3>
-                  </div>
-                  <p className="text-muted-foreground">{item.description}</p>
-                </motion.div>
-              ))}
-            </div>
-
-            <motion.div
-              variants={fadeUp}
-              className="mt-12 p-6 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg border border-primary/20"
-            >
-              <p className="text-lg font-semibold text-center text-primary">
-                We identified 19 major workflow gaps, costing 45–55 hours/month in manual research, data cleaning, and messaging.
-              </p>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Solution Architecture - Case Study 3 */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-secondary/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="max-w-5xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl md:text-4xl font-bold mb-12 text-center"
-            >
-              Solution Architecture
-            </motion.h2>
-
-            <motion.div variants={fadeUp} className="glass-card p-8 mb-8">
-              <div className="text-center mb-8">
-                <h3 className="text-2xl font-bold mb-4 bg-gradient-luxury bg-clip-text text-transparent">
-                  Autonomous Lead Engine Core
-                </h3>
-                <p className="text-muted-foreground">
-                  A fully automated system that discovers, qualifies, and contacts leads on autopilot
-                </p>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {[
-                  { icon: Database, title: "Yelp Data Harvester" },
-                  { icon: Star, title: "Trustpilot Review Intelligence" },
-                  { icon: MapPin, title: "Sub-Location AI Analyzer" },
-                  { icon: Filter, title: "Data Cleaning & Deduplication Layer" },
-                  { icon: FileSpreadsheet, title: "Google Sheets Sync Module" },
-                  { icon: Mail, title: "AI Email Writer (Personalized Outreach)" },
-                  { icon: Send, title: "Automated Gmail Sender" },
-                  { icon: RefreshCw, title: "Continuous Lead Loop (Batches + Progress Checks)" },
-                ].map((module, index) => (
-                  <div
-                    key={index}
-                    className="p-4 rounded-lg bg-secondary/20 border border-primary/20 hover:border-primary/40 transition-all duration-300"
-                  >
-                    <module.icon className="w-8 h-8 text-primary mb-3" />
-                    <p className="text-sm font-medium">{module.title}</p>
-                  </div>
-                ))}
-              </div>
-
-              {/* System Architecture Image */}
-              <div className="mt-8 relative rounded-xl overflow-hidden border border-primary/20">
-                <img 
-                  src={caseStudyLeadSystemArchitecture} 
-                  alt="Lead Engine System Architecture"
-                  className="w-full h-auto"
-                  style={{
-                    filter: 'blur(3px)',
-                    opacity: 0.5,
-                    maxHeight: '400px',
-                    objectFit: 'contain'
-                  }}
-                />
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Transformation - Case Study 3 */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            className="max-w-5xl mx-auto"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl md:text-4xl font-bold mb-12 text-center"
-            >
-              The Transformation
-            </motion.h2>
-
-            <motion.div variants={fadeUp} className="glass-card p-8 overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="text-left py-4 px-4 text-lg font-semibold text-destructive">Before</th>
-                    <th className="text-left py-4 px-4 text-lg font-semibold text-primary">After</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {[
-                    ["Manual Yelp searches daily", "Fully automated Yelp scraping via BrightData"],
-                    ["No way to segment sub-locations", "AI generates location clusters automatically"],
-                    ["Trustpilot credibility checks done manually", "Automated Trustpilot review extraction"],
-                    ["Hours spent copy-pasting into spreadsheets", "Structured Google Sheets sync"],
-                    ["Outreach emails written from scratch", "AI generates personalized email copy"],
-                    ["Outreach sent 1-by-1", "Gmail auto-sends to unique leads"],
-                    ["15–20 hours/week wasted", "System runs entirely on autopilot"],
-                  ].map((row, index) => (
-                    <tr key={index} className="border-b border-border/50">
-                      <td className="py-4 px-4 text-destructive/80">{row[0]}</td>
-                      <td className="py-4 px-4 text-primary/80">{row[1]}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Quantified Results - Case Study 3 */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-secondary/10 to-background">
+      <section className="py-16 md:py-20 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-6xl mx-auto"
@@ -1551,10 +1246,399 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.h2
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Client Snapshot
+            </motion.h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: Building2, label: "Industry", value: "B2B Digital Marketing / Lead Gen", color: "primary" },
+                { icon: User, label: "Team Size", value: "Solo Founder", color: "secondary" },
+                { icon: DollarSign, label: "Monthly Revenue", value: "$12k/month", color: "accent" },
+                { icon: AlertCircle, label: "Primary Challenge", value: "No scalable method to find, qualify, and contact leads consistently", color: "primary" },
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    variants={fadeUp}
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 20px 40px rgba(230, 184, 58, 0.2)",
+                    }}
+                    className="glass-card p-6 border border-primary/10 hover:border-primary/30 transition-all duration-500"
+                  >
+                    <div className={`w-14 h-14 bg-${item.color}/10 rounded-xl flex items-center justify-center mb-4`}>
+                      <Icon className={`w-7 h-7 text-${item.color}`} />
+                    </div>
+                    <div className="text-sm font-bold text-primary mb-2 uppercase tracking-wider">
+                      {item.label}
+                    </div>
+                    <div className="text-base text-foreground font-medium">
+                      {item.value}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Business Problem - Case Study 3 */}
+      <section className="py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent pointer-events-none" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="max-w-5xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              The Core Business Problem
+            </motion.h2>
+            
+            <motion.p variants={fadeUp} className="text-xl text-muted-foreground mb-12">
+              Before implementing the automation, lead acquisition was slow, manual, and inconsistent:
+            </motion.p>
+
+            <div className="space-y-4">
+              {[
+                "Manual searching on Yelp every day",
+                "No way to filter by sub-locations precisely",
+                "Trustpilot credibility checks done manually",
+                "Lead data scattered across tabs & spreadsheets",
+                "Outreach emails written from scratch for each lead",
+                "Hours wasted switching tools",
+                "Zero automation — everything depended on human effort",
+              ].map((problem, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{ x: 8 }}
+                  className="flex items-start gap-4 p-5 glass-card border border-destructive/20 hover:border-destructive/40 transition-all duration-300"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <AlertCircle className="w-5 h-5 text-destructive" />
+                  </div>
+                  <p className="text-lg text-foreground">{problem}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
               variants={fadeUp}
-              className="text-3xl md:text-4xl font-bold mb-12 text-center"
+              className="mt-12 p-8 glass-card border-2 border-primary/30 text-center"
             >
+              <p className="text-2xl md:text-3xl font-bold text-primary">
+                The founder didn't need a "lead list."
+                <br />
+                <span className="text-foreground">He needed an Autonomous Lead Pipeline that discovers, qualifies, and contacts leads on its own.</span>
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* What Was at Stake - Case Study 3 */}
+      <section className="py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-background" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="max-w-4xl mx-auto text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+              What Was at Stake
+            </motion.h2>
+
+            <motion.div
+              variants={scaleIn}
+              className="glass-card p-8 md:p-12 border border-destructive/30 space-y-6"
+            >
+              {[
+                "Lead volume would cap due to manual bottlenecks",
+                "Opportunities lost to competitors with faster outreach",
+                "Founder stuck doing research instead of selling",
+                "Revenue growth plateau due to inconsistent pipeline",
+                "High mental load caused by repetitive tasks",
+                "Scaling was impossible without automation leverage",
+              ].map((stake, index) => (
+                <motion.p
+                  key={index}
+                  variants={fadeUp}
+                  className="text-xl md:text-2xl text-foreground leading-relaxed font-medium"
+                >
+                  {stake}
+                </motion.p>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Diagnostic Process - Case Study 3 */}
+      <section className="py-16 md:py-20 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="max-w-6xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12">
+              Our Diagnostic Process
+            </motion.h2>
+
+            <motion.p variants={fadeUp} className="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+              We performed a deep operational audit of the client's lead workflow:
+            </motion.p>
+
+            <div className="relative">
+              {/* Connection Lines */}
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent hidden lg:block" />
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+                {[
+                  {
+                    step: "01",
+                    title: "Lead Source Mapping",
+                    description: "Identified all platforms where ideal clients appear (Yelp, Trustpilot, industry directories)",
+                  },
+                  {
+                    step: "02",
+                    title: "Workflow Breakdown",
+                    description: "Mapped every step: location discovery → scraping → validation → data entry → outreach",
+                  },
+                  {
+                    step: "03",
+                    title: "Automation Feasibility Scan",
+                    description: "Tracked inefficiencies, friction points, and repetitive tasks",
+                  },
+                ].map((step, index) => (
+                  <motion.div
+                    key={index}
+                    variants={fadeUp}
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    className="glass-card p-8 border border-primary/20 hover:border-primary/40 transition-all duration-500 text-center"
+                  >
+                    <motion.div
+                      className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary flex items-center justify-center backdrop-blur-sm"
+                      animate={{
+                        boxShadow: [
+                          "0 0 20px rgba(230, 184, 58, 0.3)",
+                          "0 0 40px rgba(230, 184, 58, 0.5)",
+                          "0 0 20px rgba(230, 184, 58, 0.3)",
+                        ],
+                      }}
+                      transition={{ duration: 3, repeat: Infinity }}
+                    >
+                      <span className="text-2xl font-bold text-primary">{step.step}</span>
+                    </motion.div>
+                    <h3 className="text-xl font-bold mb-4">{step.title}</h3>
+                    <p className="text-muted-foreground">{step.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <motion.div
+              variants={scaleIn}
+              className="mt-16 p-8 glass-card border-2 border-primary/30 text-center"
+            >
+              <p className="text-2xl md:text-3xl font-bold">
+                We identified{" "}
+                <span className="text-primary">19 major workflow gaps</span>{" "}
+                costing{" "}
+                <span className="text-primary">45–55 hours/month</span>{" "}
+                in manual research, data cleaning, and messaging.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Solution Architecture - Case Study 3 */}
+      <section className="py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent pointer-events-none" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="max-w-6xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">
+              The Solution Architecture
+            </motion.h2>
+            
+            <motion.p variants={fadeUp} className="text-xl text-muted-foreground text-center mb-4">
+              Autonomous Lead Engine
+            </motion.p>
+
+            <motion.p variants={fadeUp} className="text-lg text-foreground text-center mb-16 max-w-4xl mx-auto">
+              We built an Autonomous Lead Engine that discovers, qualifies, and contacts leads on autopilot.
+              <br />
+              <span className="text-primary font-semibold">The system included:</span>
+            </motion.p>
+
+            {/* System Architecture Visualization */}
+            <motion.div
+              variants={fadeUp}
+              className="max-w-6xl mx-auto mb-16 relative rounded-2xl overflow-hidden"
+              style={{ maxHeight: '400px' }}
+            >
+              <img 
+                src={caseStudyLeadSystemArchitecture} 
+                alt="Lead Engine System Architecture Diagram" 
+                className="w-full h-full object-cover"
+                style={{ filter: 'blur(3px)', opacity: 0.5 }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
+            </motion.div>
+
+            {/* Central Engine Core */}
+            <motion.div variants={scaleIn} className="mb-12">
+              <div className="glass-card p-8 border-2 border-primary/40 text-center max-w-md mx-auto">
+                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-luxury flex items-center justify-center">
+                  <Database className="w-10 h-10 text-background" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-2">Autonomous Lead Engine Core</h3>
+                <p className="text-muted-foreground">Orchestrates all lead discovery and outreach</p>
+              </div>
+            </motion.div>
+
+            {/* Connected Modules */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { icon: Database, title: "Yelp Data Harvester", desc: "Automated platform scraping" },
+                { icon: Star, title: "Trustpilot Review Intelligence", desc: "Credibility verification" },
+                { icon: MapPin, title: "Sub-Location AI Analyzer", desc: "Geographic segmentation" },
+                { icon: Filter, title: "Data Cleaning & Deduplication", desc: "Quality assurance layer" },
+                { icon: FileSpreadsheet, title: "Google Sheets Sync", desc: "Real-time data updates" },
+                { icon: Mail, title: "AI Email Writer", desc: "Personalized outreach generation" },
+                { icon: Send, title: "Automated Gmail Sender", desc: "Batch email automation" },
+                { icon: RefreshCw, title: "Continuous Lead Loop", desc: "Ongoing pipeline management" },
+              ].map((module, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  className="glass-card p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300"
+                >
+                  <module.icon className="w-10 h-10 text-primary mb-4" />
+                  <h4 className="text-lg font-bold mb-2">{module.title}</h4>
+                  <p className="text-sm text-muted-foreground">{module.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              variants={fadeUp}
+              className="mt-16 p-8 glass-card border-2 border-primary/30 text-center"
+            >
+              <p className="text-xl text-foreground">
+                Everything worked in parallel as a single coordinated{" "}
+                <span className="text-primary font-bold">"Lead Acquisition Brain"</span>
+                {" "}to generate, qualify, and contact leads automatically — eliminating spreadsheets, manual research, and waiting on data entry.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Transformation - Case Study 3 */}
+      <section className="py-16 md:py-20 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="max-w-5xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
+              The Transformation
+            </motion.h2>
+
+            <motion.div variants={scaleIn} className="glass-card p-8 md:p-12 overflow-x-auto border border-primary/20">
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Before Column */}
+                <div>
+                  <h3 className="text-2xl font-bold text-destructive mb-6 flex items-center gap-3">
+                    <AlertCircle className="w-6 h-6" />
+                    Before
+                  </h3>
+                  <div className="space-y-4">
+                    {[
+                      "Manual Yelp searches daily",
+                      "No way to segment sub-locations",
+                      "Trustpilot credibility checks done manually",
+                      "Hours spent copy-pasting into spreadsheets",
+                      "Outreach emails written from scratch",
+                      "Outreach sent 1-by-1",
+                      "15–20 hours/week wasted",
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3 p-4 glass-card border border-destructive/20">
+                        <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
+                        <p className="text-base text-foreground">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* After Column */}
+                <div>
+                  <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
+                    <CheckCircle className="w-6 h-6" />
+                    After
+                  </h3>
+                  <div className="space-y-4">
+                    {[
+                      "Fully automated Yelp scraping via BrightData",
+                      "AI generates location clusters automatically",
+                      "Automated Trustpilot review extraction",
+                      "Structured Google Sheets sync",
+                      "AI generates personalized email copy",
+                      "Gmail auto-sends to unique leads",
+                      "System runs entirely on autopilot",
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3 p-4 glass-card border border-primary/20">
+                        <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                        <p className="text-base text-foreground font-medium">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Quantified Results - Case Study 3 */}
+      <section className="py-16 md:py-20 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-background pointer-events-none" />
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="max-w-6xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
               Quantified Results
             </motion.h2>
 
@@ -1569,13 +1653,14 @@ const CaseStudy = () => {
               ].map((metric, index) => (
                 <motion.div
                   key={index}
-                  variants={fadeUp}
-                  className="glass-card p-8 text-center hover:shadow-glow transition-all duration-300"
+                  variants={scaleIn}
+                  whileHover={{ scale: 1.05, y: -8 }}
+                  className="glass-card p-8 border border-primary/20 hover:border-primary/40 transition-all duration-500 text-center"
                 >
-                  <div className="text-4xl md:text-5xl font-bold text-accent mb-4">
+                  <div className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-luxury bg-clip-text text-transparent">
                     {metric.value}
                   </div>
-                  <p className="text-foreground text-base">{metric.label}</p>
+                  <p className="text-base text-foreground font-medium leading-relaxed">{metric.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -1584,7 +1669,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Client Feedback - Case Study 3 */}
-      <section className="py-16 md:py-24">
+      <section className="py-16 md:py-20 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -1593,15 +1678,20 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Client Feedback
+            </motion.h2>
+
             <motion.div
-              variants={fadeUp}
-              className="glass-card p-8 md:p-12 relative"
+              variants={scaleIn}
+              whileHover={{ scale: 1.02 }}
+              className="glass-card p-12 md:p-16 border-2 border-primary/30 relative"
             >
-              <Quote className="absolute top-6 left-6 w-16 h-16 text-primary/20" />
-              <Quote className="absolute bottom-6 right-6 w-16 h-16 text-primary/20 rotate-180" />
+              <div className="absolute top-8 left-8 text-8xl text-primary/20 font-serif leading-none">"</div>
+              <div className="absolute bottom-8 right-8 text-8xl text-primary/20 font-serif leading-none">"</div>
               
-              <p className="text-xl md:text-2xl italic text-foreground text-center relative z-10 font-light leading-relaxed">
-                "Everything I used to do manually — finding leads, checking their ratings, cleaning data, and writing outreach — now happens automatically. It feels like I hired a full-time lead researcher and email marketer combined."
+              <p className="text-2xl md:text-3xl text-foreground leading-relaxed text-center font-light italic relative z-10">
+                Everything I used to do manually — finding leads, checking their ratings, cleaning data, and writing outreach — now happens automatically. It feels like I hired a full-time lead researcher and email marketer combined.
               </p>
             </motion.div>
           </motion.div>
