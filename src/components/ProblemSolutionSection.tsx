@@ -50,7 +50,7 @@ const ProblemSolutionSection = () => {
   ];
 
   return (
-    <section className="py-16 md:py-20 relative overflow-hidden">
+    <section className="py-8 md:py-12 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full blur-3xl opacity-30" />
@@ -59,7 +59,7 @@ const ProblemSolutionSection = () => {
 
       <div className="container mx-auto px-4 relative z-10 max-w-6xl">
         {/* PART 1 - Problem Section */}
-        <div className="mb-16 md:mb-20">
+        <div className="mb-10 md:mb-12">
           <div className="text-center mb-10 md:mb-12">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
               Your Business Is Losing Money — And You Probably Don't Even Realize It.
@@ -98,14 +98,14 @@ const ProblemSolutionSection = () => {
         </div>
 
         {/* Transition Line */}
-        <div className="text-center my-12 md:my-16">
+        <div className="text-center my-8 md:my-10">
           <p className="text-xl md:text-2xl font-semibold text-foreground">
             Here's How We Fix All of This — Automatically.
           </p>
         </div>
 
         {/* PART 2 - Solution Section */}
-        <div className="mb-12 md:mb-16">
+        <div className="mb-0">
           <div className="text-center mb-8 md:mb-10">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
               The Fluxyn Automation Engine™

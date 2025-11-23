@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const WorkflowsSection = () => {
   return (
-    <section id="workflows" className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
+    <section id="workflows" className="py-8 sm:py-10 lg:py-12 relative overflow-hidden">
       {/* Floating Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-80 h-80 bg-gradient-to-br from-cyan-500/15 to-teal-500/15 rounded-full blur-3xl opacity-20" />
