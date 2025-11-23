@@ -7,6 +7,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { fadeUp, fadeIn, scaleIn, staggerContainer, motionConfig } from "@/lib/motion";
 import systemArchitecture from "@/assets/case-study-system-architecture.png";
+import aiAssistantArchitecture from "@/assets/case-study-ai-assistant-architecture.png";
 
 // Counter animation hook
 const useCountUp = (end: number, duration: number = 2, prefix: string = "", suffix: string = "") => {
@@ -947,6 +948,21 @@ const CaseStudy = () => {
               <br />
               <span className="text-primary font-semibold">The system included:</span>
             </motion.p>
+
+            {/* System Architecture Visualization */}
+            <motion.div
+              variants={fadeUp}
+              className="max-w-6xl mx-auto mb-16 relative rounded-2xl overflow-hidden"
+              style={{ maxHeight: '400px' }}
+            >
+              <img 
+                src={aiAssistantArchitecture} 
+                alt="AI Assistant System Architecture Diagram" 
+                className="w-full h-full object-cover"
+                style={{ filter: 'blur(3px)', opacity: 0.5 }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
+            </motion.div>
 
             {/* Central AI Core */}
             <motion.div variants={scaleIn} className="mb-12">
