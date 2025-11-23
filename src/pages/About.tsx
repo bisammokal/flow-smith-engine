@@ -270,12 +270,12 @@ const About = () => {
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-10">
               <Link to="/book-call">
-                <Button variant="hero" size="lg" className="w-full sm:w-auto">
+                <Button variant="hero" size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-background font-semibold shadow-lg hover:shadow-accent/50 transition-all">
                   Book a Demo
                 </Button>
               </Link>
               <Link to="/services">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto border-accent text-accent hover:bg-accent hover:text-background transition-all">
                   Explore The Automation Suite
                 </Button>
               </Link>
