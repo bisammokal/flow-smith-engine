@@ -1556,7 +1556,7 @@ const CaseStudy = () => {
                   variants={fadeUp}
                   className="glass-card p-8 text-center hover:shadow-glow transition-all duration-300"
                 >
-                  <div className="text-4xl md:text-5xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-4">
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-4">
                     {metric.value}
                   </div>
                   <p className="text-foreground text-base">{metric.label}</p>
