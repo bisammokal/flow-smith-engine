@@ -1189,65 +1189,6 @@ const CaseStudy = () => {
         </div>
       </section>
 
-      {/* Strategic CTA - Case Study 2 */}
-      <section className="py-16 md:py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <motion.div
-            className="max-w-4xl mx-auto text-center"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={staggerContainer}
-          >
-            <motion.h2
-              variants={fadeUp}
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8"
-            >
-              Ready for Your Own{" "}
-              <span className="bg-gradient-luxury bg-clip-text text-transparent">
-                AI Personal Assistant?
-              </span>
-            </motion.h2>
-
-            <motion.p
-              variants={fadeUp}
-              className="text-xl md:text-2xl text-muted-foreground mb-12"
-            >
-              If you want your own AI Personal Assistant to run your daily operations, request an Automation Diagnostic Audit.
-            </motion.p>
-
-            <motion.div variants={fadeUp}>
-              <Link to="/book-call">
-                <motion.div
-                  whileHover={{
-                    scale: 1.05,
-                    boxShadow: "0 0 60px rgba(230, 184, 58, 0.5)",
-                  }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <Button
-                    size="lg"
-                    className="text-lg px-12 py-8 bg-gradient-luxury hover:shadow-glow transition-all duration-500 font-semibold group"
-                  >
-                    <span>Request an Automation Diagnostic Audit</span>
-                    <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
-                  </Button>
-                </motion.div>
-              </Link>
-            </motion.div>
-
-            <motion.p
-              variants={fadeUp}
-              className="mt-8 text-base text-muted-foreground"
-            >
-              We'll diagnose your workflows, quantify the ROI, and design your fully autonomous system.
-            </motion.p>
-          </motion.div>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
