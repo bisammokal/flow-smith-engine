@@ -6,6 +6,7 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { fadeUp, fadeIn, scaleIn, staggerContainer, motionConfig } from "@/lib/motion";
+import systemArchitecture from "@/assets/case-study-system-architecture.png";
 
 // Counter animation hook
 const useCountUp = (end: number, duration: number = 2, prefix: string = "", suffix: string = "") => {
@@ -366,6 +367,20 @@ const CaseStudy = () => {
               <br />
               <span className="text-primary font-semibold">The system operated like a full-time Revenue Ops team:</span>
             </motion.p>
+
+            {/* System Architecture Visualization */}
+            <motion.div
+              variants={fadeUp}
+              className="max-w-6xl mx-auto mb-16 relative rounded-2xl overflow-hidden"
+            >
+              <img 
+                src={systemArchitecture} 
+                alt="System Architecture Diagram" 
+                className="w-full h-auto"
+                style={{ filter: 'blur(8px)', opacity: 0.5 }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
+            </motion.div>
 
             {/* Central CRO Agent */}
             <motion.div variants={scaleIn} className="mb-12">
