@@ -566,28 +566,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Section 6 - Final CTA */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-dark">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-            Ready to Automate Your Workflows?
-          </h2>
-          <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 max-w-2xl mx-auto">
-            Book a free strategy call and see how our automation experts can transform your operations.
-          </p>
-          <Button
-            variant="cta"
-            size="lg"
-            onClick={scrollToContact}
-            className="w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base"
-          >
-            <span className="inline-flex items-center justify-center gap-2">
-              Book Free Strategy Call <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5" />
-            </span>
-          </Button>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
