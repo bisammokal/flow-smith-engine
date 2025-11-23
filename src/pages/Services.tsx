@@ -525,7 +525,7 @@ const Services = () => {
 
                         <div className="pt-4">
                           <Button
-                            variant="hero"
+                            variant="cta"
                             size="lg"
                             onClick={scrollToContact}
                             className="w-full group shadow-glow px-4 sm:px-6 py-4 sm:py-5 text-sm sm:text-base active:scale-95"
