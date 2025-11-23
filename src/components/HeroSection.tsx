@@ -81,7 +81,7 @@ export const HeroSection = () => {
             {/* Premium Badge */}
             <div className="inline-flex items-center gap-3 px-6 py-3 glass-card border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-glow">
               <Sparkles className="w-5 h-5 text-primary animate-pulse" />
-              <span className="text-sm font-semibold bg-gradient-luxury bg-clip-text text-transparent">Enterprise-Grade AI Automation</span>
+              <span className="text-sm font-semibold text-primary">Enterprise-Grade AI Automation</span>
             </div>
             
             {/* Hero Headline */}
