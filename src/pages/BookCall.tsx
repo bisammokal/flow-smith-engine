@@ -453,42 +453,6 @@ const BookCall = () => {
         </div>
       </section>
 
-      {/* Final CTA Footer */}
-      <section className="relative py-12 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/20 via-blue-500/20 to-purple-500/20"></div>
-        <div className="absolute inset-0">
-          <div className="absolute top-1/2 left-1/4 w-96 h-96 bg-primary/30 rounded-full blur-[120px] animate-pulse"></div>
-          <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-blue-500/30 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: '1s' }}></div>
-        </div>
-        
-        <div className="container mx-auto max-w-5xl relative z-10">
-          <Card className="glass-card p-6 sm:p-8 md:p-12 lg:p-16 border-2 border-white/20 text-center shadow-[0_12px_60px_rgba(0,0,0,0.5)]">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 sm:mb-6">
-              Ready to Automate
-              <span className="block bg-gradient-to-r from-primary via-blue-500 to-purple-500 bg-clip-text text-transparent">
-                Your Business?
-              </span>
-            </h2>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-muted-foreground mb-6 sm:mb-8 md:mb-10 max-w-2xl mx-auto">
-              Join hundreds of businesses already saving 20–80 hours per month with smart automation.
-            </p>
-            <Button
-              size="lg"
-              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-              className="bg-gradient-to-r from-primary via-yellow-500 to-orange-500 hover:shadow-[0_0_60px_rgba(255,212,59,0.6)] transition-all duration-300 transform hover:scale-105 w-full sm:w-auto text-base sm:text-lg md:text-xl font-bold py-5 sm:py-6 md:py-8 px-6 sm:px-8 md:px-12"
-            >
-              <span className="inline-flex items-center justify-center gap-2">
-                Book Your Free Strategy Call
-                <ChevronRight className="ml-2 w-5 h-5 sm:w-6 sm:h-6" />
-              </span>
-            </Button>
-            <p className="text-xs sm:text-sm text-muted-foreground mt-4 sm:mt-6">
-              🔒 Your information is 100% secure • No spam, ever
-            </p>
-          </Card>
-        </div>
-      </section>
-
       <Footer />
     </div>
   );
