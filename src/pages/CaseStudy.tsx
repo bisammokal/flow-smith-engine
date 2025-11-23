@@ -562,7 +562,7 @@ const CaseStudy = () => {
                     >
                       <Icon className="w-8 h-8 text-background" />
                     </motion.div>
-                    <div className="text-4xl md:text-5xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-3">
+                    <div className="text-4xl md:text-5xl font-bold text-accent mb-3">
                       {result.value}
                     </div>
                     <div className="text-base text-foreground font-medium uppercase tracking-wider">
@@ -580,7 +580,7 @@ const CaseStudy = () => {
               variants={fadeUp}
               className="mt-12 p-8 glass-card border-2 border-primary/30 text-center"
             >
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-2">$320k</div>
+              <div className="text-3xl md:text-4xl font-bold text-accent mb-2">$320k</div>
               <div className="text-xl text-muted-foreground">ARR uplift from pricing optimization</div>
             </motion.div>
           </motion.div>
@@ -1143,7 +1143,7 @@ const CaseStudy = () => {
                     >
                       <Icon className="w-8 h-8 text-background" />
                     </motion.div>
-                    <div className="text-4xl md:text-5xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-3">
+                    <div className="text-4xl md:text-5xl font-bold text-accent mb-3">
                       {result.value}
                     </div>
                     <div className="text-base text-foreground font-medium uppercase tracking-wider">
