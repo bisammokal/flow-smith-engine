@@ -1,24 +1,22 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-automation.jpg";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
+import { Link } from "react-router-dom";
 
 export const HeroSection = () => {
   const headlineRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLDivElement>(null);
-  const splineRef = useRef<HTMLDivElement>(null);
-  const orb1Ref = useRef<HTMLDivElement>(null);
-  const orb2Ref = useRef<HTMLDivElement>(null);
-  const orb3Ref = useRef<HTMLDivElement>(null);
+  const statsRef = useRef<HTMLDivElement>(null);
+  const particlesRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Headline animation
+    // Headline animation with parallax
     if (headlineRef.current) {
       gsap.fromTo(
         headlineRef.current,
-        { opacity: 0, y: 50, filter: "blur(10px)" },
-        { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.2, ease: "power3.out", delay: 0.3 }
+        { opacity: 0, y: 60, filter: "blur(12px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.4, ease: "power3.out", delay: 0.2 }
       );
     }
 
@@ -26,165 +24,128 @@ export const HeroSection = () => {
     if (ctaRef.current) {
       gsap.fromTo(
         ctaRef.current,
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, ease: "power2.out", delay: 0.6 }
+        { opacity: 0, y: 40, scale: 0.9 },
+        { opacity: 1, y: 0, scale: 1, duration: 1, ease: "power2.out", delay: 0.6 }
       );
     }
 
-    // Spline fade in from right
-    if (splineRef.current) {
+    // Stats animation
+    if (statsRef.current) {
       gsap.fromTo(
-        splineRef.current,
-        { opacity: 0, x: 100 },
-        { opacity: 1, x: 0, duration: 1.5, ease: "power2.out", delay: 0.4 }
+        statsRef.current,
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 1, ease: "power2.out", delay: 0.8 }
       );
     }
 
-    // Floating orbs animation
-    [orb1Ref, orb2Ref, orb3Ref].forEach((ref, index) => {
-      if (ref.current) {
-        gsap.to(ref.current, {
-          y: "+=30",
-          duration: 3 + index * 0.5,
-          repeat: -1,
-          yoyo: true,
-          ease: "sine.inOut",
-          delay: index * 0.3
-        });
-        
-        gsap.to(ref.current, {
-          x: "+=20",
-          duration: 4 + index * 0.5,
+    // Particles floating animation
+    if (particlesRef.current) {
+      const particles = particlesRef.current.querySelectorAll('.particle');
+      particles.forEach((particle, index) => {
+        gsap.to(particle, {
+          y: "random(-40, 40)",
+          x: "random(-40, 40)",
+          duration: "random(3, 6)",
           repeat: -1,
           yoyo: true,
           ease: "sine.inOut",
           delay: index * 0.2
         });
-      }
-    });
+      });
+    }
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  const handleCtaHover = (e: React.MouseEvent<HTMLDivElement>) => {
-    gsap.to(e.currentTarget, {
-      scale: 1.05,
-      duration: 0.3,
-      ease: "power2.out"
-    });
-  };
-
-  const handleCtaLeave = (e: React.MouseEvent<HTMLDivElement>) => {
-    gsap.to(e.currentTarget, {
-      scale: 1,
-      duration: 0.3,
-      ease: "power2.out"
-    });
-  };
-
   return (
-    <section id="hero" className="relative min-h-screen flex items-center overflow-hidden pt-16">
-      {/* Spline 3D Background */}
-      <div ref={splineRef} className="absolute inset-0 w-full h-full z-0">
-        <iframe 
-          src='https://my.spline.design/orb-e26J8npyrxp59MohW96nSb0c/' 
-          frameBorder='0' 
-          width='100%' 
-          height='100%'
-          className="w-full h-full"
-        />
+    <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-20">
+      {/* Animated Neural Network Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background">
+        {/* Animated Particles */}
+        <div ref={particlesRef} className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="particle absolute top-20 left-[10%] w-2 h-2 bg-primary/40 rounded-full blur-sm" />
+          <div className="particle absolute top-40 right-[15%] w-3 h-3 bg-secondary/30 rounded-full blur-sm" />
+          <div className="particle absolute top-60 left-[25%] w-2 h-2 bg-accent/40 rounded-full blur-sm" />
+          <div className="particle absolute bottom-40 right-[30%] w-3 h-3 bg-primary/30 rounded-full blur-sm" />
+          <div className="particle absolute bottom-60 left-[40%] w-2 h-2 bg-secondary/40 rounded-full blur-sm" />
+        </div>
+
+        {/* Large Gradient Orbs */}
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/20 via-accent/10 to-transparent rounded-full blur-3xl opacity-30" />
+        <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-gradient-to-tr from-secondary/15 via-primary/10 to-transparent rounded-full blur-3xl opacity-25" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-accent/10 to-secondary/10 rounded-full blur-3xl opacity-20" />
       </div>
 
-      {/* Floating Neon Orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-[1]">
-        <div 
-          ref={orb1Ref}
-          className="absolute top-20 left-10 w-96 h-96 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl opacity-40" 
-        />
-        <div 
-          ref={orb2Ref}
-          className="absolute bottom-32 right-20 w-80 h-80 bg-gradient-to-br from-blue-500/30 to-purple-500/30 rounded-full blur-3xl opacity-30" 
-        />
-        <div 
-          ref={orb3Ref}
-          className="absolute top-1/2 left-1/3 w-64 h-64 bg-gradient-to-br from-cyan-500/25 to-teal-500/25 rounded-full blur-3xl opacity-35" 
-        />
-      </div>
-
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-background/60 backdrop-blur-sm z-[2]" />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 relative z-[10]">
-        <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Left Content */}
-          <div ref={headlineRef} className="space-y-6 md:space-y-8">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 sm:px-4 sm:py-2 glass-card border-primary/30">
-              <Sparkles className="w-3 h-3 sm:w-4 sm:h-4 text-primary flex-shrink-0" />
-              <span className="text-xs sm:text-sm font-medium text-primary relative z-10">AI-Powered Automation</span>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="max-w-6xl mx-auto">
+          {/* Main Content */}
+          <div ref={headlineRef} className="text-center space-y-8 mb-16">
+            {/* Premium Badge */}
+            <div className="inline-flex items-center gap-3 px-6 py-3 glass-card border border-primary/20 hover:border-primary/40 transition-all duration-500 hover:shadow-glow">
+              <Sparkles className="w-5 h-5 text-primary animate-pulse" />
+              <span className="text-sm font-semibold bg-gradient-luxury bg-clip-text text-transparent">Enterprise-Grade AI Automation</span>
             </div>
             
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight relative z-10">
+            {/* Hero Headline */}
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold leading-[1.1] tracking-tight">
               Build a{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                24/7 Sales Engine
-              </span>{" "}
-              That Converts 10x Faster
+              <span className="relative inline-block">
+                <span className="bg-gradient-luxury bg-clip-text text-transparent">
+                  24/7 AI-Powered
+                </span>
+                <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-luxury opacity-40 blur-sm" />
+              </span>
+              <br />
+              Sales Engine That Scales Without You
             </h1>
             
-            <p className="text-base sm:text-lg md:text-xl text-muted-foreground leading-relaxed px-1">
-              We build smart systems that capture leads, send follow-ups, and onboard clients automatically — saving 20+ hours weekly. Used by 50+ Agencies & SaaS Teams.
+            {/* Subheadline */}
+            <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed font-light">
+              We automate your lead generation, funnels, follow-ups, and operations using{" "}
+              <span className="text-primary font-semibold">enterprise-grade AI systems</span>{" "}
+              — helping you grow faster with fewer human resources.
             </p>
+          </div>
 
-            <div 
-              ref={ctaRef}
-              className="flex flex-col sm:flex-row gap-3 sm:gap-4"
-              onMouseEnter={handleCtaHover}
-              onMouseLeave={handleCtaLeave}
-            >
+          {/* CTA Buttons */}
+          <div ref={ctaRef} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20">
+            <Link to="/book-call" className="w-full sm:w-auto">
               <Button
-                variant="hero"
                 size="lg"
-                onClick={() => scrollToSection("contact")}
-                className="w-full sm:w-auto text-base sm:text-lg group px-6 sm:px-8 py-5 sm:py-6 active:scale-95"
+                className="w-full sm:w-auto text-lg px-10 py-7 bg-gradient-luxury hover:shadow-glow transition-all duration-500 hover:scale-105 font-semibold"
               >
-                Book Free Demo <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform w-4 h-4 sm:w-5 sm:h-5" />
+                Book Your Automation Audit
+                <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
+            </Link>
+            <Link to="/services" className="w-full sm:w-auto">
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => scrollToSection("workflows")}
-                className="w-full sm:w-auto text-base sm:text-lg glass-card hover:border-primary/50 px-6 sm:px-8 py-5 sm:py-6 active:scale-95"
+                className="w-full sm:w-auto text-lg px-10 py-7 glass-card border-primary/30 hover:border-primary/60 hover:bg-primary/5 transition-all duration-500 hover:shadow-neon font-semibold"
               >
-                See How It Works
+                See Live Demo
               </Button>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="pt-4 sm:pt-8">
-              <p className="text-xs sm:text-sm text-muted-foreground mb-3 sm:mb-4 relative z-10">
-                Trusted by teams in healthcare, real estate & SaaS
-              </p>
-              <div className="flex flex-wrap gap-3 sm:gap-4 md:gap-6 text-base sm:text-lg md:text-xl lg:text-2xl font-semibold text-foreground/60 relative z-10">
-                <span>Healthcare</span>
-                <span>•</span>
-                <span>Real Estate</span>
-                <span>•</span>
-                <span>SaaS</span>
-              </div>
-            </div>
+            </Link>
           </div>
 
-          {/* Right Visual */}
-          <div className="relative mt-8 lg:mt-0 flex items-center justify-center">
-            {/* Floating Stats */}
-            <div className="p-6 sm:p-8 hover:-translate-y-1 transition-all duration-300">
-              <div className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent relative z-10">70-80%</div>
-              <div className="text-base sm:text-lg text-foreground relative z-10">Workload Reduction</div>
+          {/* Trust Metrics */}
+          <div ref={statsRef} className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            <div className="glass-card p-6 text-center hover:scale-105 transition-all duration-500 hover:shadow-glow border border-primary/10">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-2">
+                70–80%
+              </div>
+              <div className="text-sm text-muted-foreground font-medium">Process Automation</div>
+            </div>
+            <div className="glass-card p-6 text-center hover:scale-105 transition-all duration-500 hover:shadow-neon border border-secondary/10">
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent mb-2">
+                3–5x
+              </div>
+              <div className="text-sm text-muted-foreground font-medium">Faster Response Time</div>
+            </div>
+            <div className="glass-card p-6 text-center hover:scale-105 transition-all duration-500 hover:shadow-glow border border-accent/10">
+              <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                10x
+              </div>
+              <div className="text-sm text-muted-foreground font-medium">Sales Pipeline Expansion</div>
             </div>
           </div>
         </div>
