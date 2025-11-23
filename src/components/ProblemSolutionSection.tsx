@@ -102,10 +102,7 @@ const ProblemSolutionSection = () => {
         <div className="mb-0">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              The{" "}
-              <span className="bg-gradient-luxury bg-clip-text text-transparent">
-                FluXyn AI Automation Engine™
-              </span>
+              The <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">FluXyn AI Automation Engine™</span>
             </h2>
             <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
               Our proven 4-step process transforms chaos into compounding growth
