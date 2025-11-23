@@ -135,7 +135,7 @@ export const HeroSection = () => {
               </div>
               <div className="text-sm text-muted-foreground font-medium">Process Automation</div>
             </div>
-            <div className="glass-card p-6 text-center hover:scale-105 transition-all duration-500 hover:shadow-neon border border-secondary/10">
+            <div className="glass-card p-6 text-center hover:scale-105 transition-all duration-500 hover:shadow-glow border border-secondary/10">
               <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-secondary to-primary bg-clip-text text-transparent mb-2">
                 3–5x
               </div>
