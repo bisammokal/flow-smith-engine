@@ -98,57 +98,50 @@ const BookCall = () => {
       <section className="relative pt-20 sm:pt-24 md:pt-28 pb-10 sm:pb-12 md:pb-16 px-4 sm:px-6 overflow-hidden">
         <div className="container mx-auto max-w-7xl">
           <div className="grid lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
-            {/* Premium Glass Panel with Content */}
-            <div className="relative z-10">
-              <div className="relative p-4 sm:p-6 md:p-8 lg:p-10 rounded-2xl sm:rounded-3xl bg-white/[0.02] backdrop-blur-xl border border-white/[0.05] shadow-2xl">
-                {/* Gradient border glow effect */}
-                <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-primary/20 via-blue-500/10 to-purple-500/20 opacity-50 blur-xl -z-10"></div>
-                
-                <div className="space-y-3 sm:space-y-4 md:space-y-6">
-                  {/* Badge */}
-                  <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/30 backdrop-blur-sm">
-                    <span className="text-primary text-xs sm:text-sm font-medium">✨ Free Strategy Call — No Obligations</span>
+            {/* Content */}
+            <div className="relative z-10 space-y-3 sm:space-y-4 md:space-y-6">
+              {/* Badge */}
+              <div className="inline-block px-3 py-1.5 sm:px-4 sm:py-2 rounded-full bg-gradient-to-r from-primary/10 to-blue-500/10 border border-primary/30 backdrop-blur-sm">
+                <span className="text-primary text-xs sm:text-sm font-medium">✨ Free Strategy Call — No Obligations</span>
+              </div>
+              
+              {/* Headline */}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1]">
+                Book Your Free{" "}
+                <span className="bg-gradient-to-r from-[#FFD43B] via-[#4A90E2] to-[#8B9DC3] bg-clip-text text-transparent">
+                  Strategy Call
+                </span>
+              </h1>
+              
+              {/* Subtitle */}
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 leading-relaxed">
+                Let's explore how automation can save you 20–80 hours per month and scale your revenue effortlessly.
+              </p>
+              
+              {/* Premium Benefits Row */}
+              <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
+                <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-primary/30 transition-all duration-300 hover:bg-white/[0.05]">
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
+                      <Clock className="w-3 h-3 text-primary" />
+                    </div>
+                    <span className="text-sm text-foreground/80 font-medium">30-45 min call</span>
                   </div>
-                  
-                  {/* Headline */}
-                  <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-[1.1]">
-                    Book Your Free{" "}
-                    <span className="bg-gradient-to-r from-[#FFD43B] via-[#4A90E2] to-[#8B9DC3] bg-clip-text text-transparent">
-                      Strategy Call
-                    </span>
-                  </h1>
-                  
-                  {/* Subtitle */}
-                  <p className="text-sm sm:text-base md:text-lg lg:text-xl text-foreground/70 leading-relaxed">
-                    Let's explore how automation can save you 20–80 hours per month and scale your revenue effortlessly.
-                  </p>
-                  
-                  {/* Premium Benefits Row */}
-                  <div className="flex flex-wrap gap-2 sm:gap-3 pt-2">
-                    <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-primary/30 transition-all duration-300 hover:bg-white/[0.05]">
-                      <div className="flex items-center gap-2">
-                        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
-                          <Clock className="w-3 h-3 text-primary" />
-                        </div>
-                        <span className="text-sm text-foreground/80 font-medium">30-45 min call</span>
-                      </div>
+                </div>
+                <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-blue-500/30 transition-all duration-300 hover:bg-white/[0.05]">
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center">
+                      <Target className="w-3 h-3 text-blue-400" />
                     </div>
-                    <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-blue-500/30 transition-all duration-300 hover:bg-white/[0.05]">
-                      <div className="flex items-center gap-2">
-                        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-blue-500/20 to-blue-500/5 flex items-center justify-center">
-                          <Target className="w-3 h-3 text-blue-400" />
-                        </div>
-                        <span className="text-sm text-foreground/80 font-medium">Actionable insights</span>
-                      </div>
+                    <span className="text-sm text-foreground/80 font-medium">Actionable insights</span>
+                  </div>
+                </div>
+                <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-purple-500/30 transition-all duration-300 hover:bg-white/[0.05]">
+                  <div className="flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-500/5 flex items-center justify-center">
+                      <TrendingUp className="w-3 h-3 text-purple-400" />
                     </div>
-                    <div className="group px-4 py-2.5 rounded-xl bg-white/[0.03] backdrop-blur-sm border border-white/[0.08] hover:border-purple-500/30 transition-all duration-300 hover:bg-white/[0.05]">
-                      <div className="flex items-center gap-2">
-                        <div className="w-5 h-5 rounded-full bg-gradient-to-br from-purple-500/20 to-purple-500/5 flex items-center justify-center">
-                          <TrendingUp className="w-3 h-3 text-purple-400" />
-                        </div>
-                        <span className="text-sm text-foreground/80 font-medium">Custom roadmap</span>
-                      </div>
-                    </div>
+                    <span className="text-sm text-foreground/80 font-medium">Custom roadmap</span>
                   </div>
                 </div>
               </div>
