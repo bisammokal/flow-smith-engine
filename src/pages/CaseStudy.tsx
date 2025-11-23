@@ -679,7 +679,7 @@ const CaseStudy = () => {
               className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-8"
             >
               How an Early-Stage Founder Eliminated{" "}
-              <span className="bg-gradient-luxury bg-clip-text text-transparent">
+              <span className="text-primary">
                 50+ Hours of Manual Work Monthly
               </span>{" "}
               Using a Fully Autonomous AI Personal Assistant OS
