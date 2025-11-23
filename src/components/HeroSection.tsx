@@ -130,8 +130,8 @@ export const HeroSection = () => {
           {/* Trust Metrics */}
           <div ref={statsRef} className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
             <div className="glass-card p-6 text-center hover:scale-105 transition-all duration-500 hover:shadow-glow border border-primary/10">
-              <div className="text-4xl md:text-5xl font-bold mb-2">
-                <span className="bg-gradient-luxury bg-clip-text text-transparent">70–80%</span>
+              <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
+                70–80%
               </div>
               <div className="text-sm text-muted-foreground font-medium">Process Automation</div>
             </div>
