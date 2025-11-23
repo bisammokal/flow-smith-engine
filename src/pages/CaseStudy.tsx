@@ -51,7 +51,7 @@ const CaseStudy = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-32 pb-20">
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden pt-24 pb-12">
         {/* Background Image with Overlay - User will provide image */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90 z-10" />
@@ -86,10 +86,10 @@ const CaseStudy = () => {
             initial="hidden"
             animate={controls}
           >
-            <motion.div variants={fadeIn} className="mb-8">
+            <motion.div variants={fadeIn} className="mb-4">
               <motion.div
                 variants={scaleIn}
-                className="inline-flex items-center gap-2 px-6 py-3 glass-card border border-primary/20"
+                className="inline-flex items-center gap-2 px-4 py-2 glass-card border border-primary/20"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(230, 184, 58, 0.3)" }}
               >
                 <Target className="w-4 h-4 text-primary" />
@@ -99,7 +99,7 @@ const CaseStudy = () => {
 
             <motion.h1
               variants={fadeUp}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-8"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-4"
             >
               How a Mid-Market SaaS Company Unlocked{" "}
               <span className="bg-gradient-luxury bg-clip-text text-transparent">
@@ -110,7 +110,7 @@ const CaseStudy = () => {
 
             <motion.p
               variants={fadeUp}
-              className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             >
               A transformation from revenue chaos to complete predictability in 90 days
             </motion.p>
@@ -119,7 +119,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Client Snapshot */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-6xl mx-auto"
@@ -128,11 +128,11 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold text-center mb-6">
               Client Snapshot
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
               {[
                 { icon: Building2, label: "Industry", value: "B2B SaaS (Productivity & Workflow mgmt)", color: "primary" },
                 { icon: Users, label: "Team Size", value: "85", color: "secondary" },
@@ -148,10 +148,10 @@ const CaseStudy = () => {
                       scale: 1.05,
                       boxShadow: "0 20px 40px rgba(230, 184, 58, 0.2)",
                     }}
-                    className="glass-card p-6 border border-primary/10 hover:border-primary/30 transition-all duration-500"
+                    className="glass-card p-4 border border-primary/10 hover:border-primary/30 transition-all duration-500"
                   >
-                    <div className={`w-14 h-14 bg-${item.color}/10 rounded-xl flex items-center justify-center mb-4`}>
-                      <Icon className={`w-7 h-7 text-${item.color}`} />
+                    <div className={`w-12 h-12 bg-${item.color}/10 rounded-xl flex items-center justify-center mb-3`}>
+                      <Icon className={`w-6 h-6 text-${item.color}`} />
                     </div>
                     <div className="text-sm font-bold text-primary mb-2 uppercase tracking-wider">
                       {item.label}
@@ -168,7 +168,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Core Business Problem */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -179,15 +179,15 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold mb-4">
               The Core Business Problem
             </motion.h2>
             
-            <motion.p variants={fadeUp} className="text-xl text-muted-foreground mb-12">
+            <motion.p variants={fadeUp} className="text-lg text-muted-foreground mb-6">
               Before working with us, the company's revenue engine was fragmented and unstable:
             </motion.p>
 
-            <div className="space-y-4">
+            <div className="grid md:grid-cols-2 gap-3">
               {[
                 "CRO couldn't make fast decisions due to disconnected data",
                 "Sales, marketing, and ops were operating on contradicting numbers",
@@ -200,21 +200,21 @@ const CaseStudy = () => {
                   key={index}
                   variants={fadeUp}
                   whileHover={{ x: 8 }}
-                  className="flex items-start gap-4 p-5 glass-card border border-destructive/20 hover:border-destructive/40 transition-all duration-300"
+                  className="flex items-start gap-3 p-4 glass-card border border-destructive/20 hover:border-destructive/40 transition-all duration-300"
                 >
-                  <div className="w-8 h-8 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-1">
-                    <AlertCircle className="w-5 h-5 text-destructive" />
+                  <div className="w-6 h-6 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <AlertCircle className="w-4 h-4 text-destructive" />
                   </div>
-                  <p className="text-lg text-foreground">{problem}</p>
+                  <p className="text-base text-foreground">{problem}</p>
                 </motion.div>
               ))}
             </div>
 
             <motion.div
               variants={fadeUp}
-              className="mt-12 p-8 glass-card border-2 border-primary/30 text-center"
+              className="mt-6 p-6 glass-card border-2 border-primary/30 text-center md:col-span-2"
             >
-              <p className="text-2xl md:text-3xl font-bold text-primary">
+              <p className="text-xl md:text-2xl font-bold text-primary">
                 They didn't need another dashboard.
                 <br />
                 <span className="text-foreground">They needed a central brain to run their revenue engine.</span>
@@ -225,7 +225,7 @@ const CaseStudy = () => {
       </section>
 
       {/* What Was at Stake */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-background" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -236,13 +236,13 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+            <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold mb-6">
               What Was at Stake
             </motion.h2>
 
             <motion.div
               variants={scaleIn}
-              className="glass-card p-8 md:p-12 border border-destructive/30 space-y-6"
+              className="glass-card p-6 md:p-8 border border-destructive/30 space-y-4"
             >
               {[
                 "The business was on track to miss their annual revenue target by ~$3.2M due to blind spots in forecasting and funnel analytics.",
@@ -253,7 +253,7 @@ const CaseStudy = () => {
                 <motion.p
                   key={index}
                   variants={fadeUp}
-                  className="text-xl md:text-2xl text-foreground leading-relaxed font-medium"
+                  className="text-lg md:text-xl text-foreground leading-relaxed font-medium"
                 >
                   {stake}
                 </motion.p>
@@ -264,7 +264,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Diagnostic Process */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-6xl mx-auto"
@@ -273,11 +273,11 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12">
+            <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold text-center mb-6">
               Our Diagnostic Process
             </motion.h2>
 
-            <motion.p variants={fadeUp} className="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+            <motion.p variants={fadeUp} className="text-lg text-muted-foreground text-center mb-8 max-w-3xl mx-auto">
               We conducted a complete revenue operations investigation:
             </motion.p>
 
@@ -285,7 +285,7 @@ const CaseStudy = () => {
               {/* Connection Lines */}
               <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent hidden lg:block" />
 
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 relative z-10">
                 {[
                   {
                     step: "01",
@@ -307,10 +307,10 @@ const CaseStudy = () => {
                     key={index}
                     variants={fadeUp}
                     whileHover={{ y: -8, scale: 1.02 }}
-                    className="glass-card p-8 border border-primary/20 hover:border-primary/40 transition-all duration-500 text-center"
+                    className="glass-card p-6 border border-primary/20 hover:border-primary/40 transition-all duration-500 text-center"
                   >
                     <motion.div
-                      className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary flex items-center justify-center backdrop-blur-sm"
+                      className="w-14 h-14 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary flex items-center justify-center backdrop-blur-sm"
                       animate={{
                         boxShadow: [
                           "0 0 20px rgba(230, 184, 58, 0.3)",
@@ -320,10 +320,10 @@ const CaseStudy = () => {
                       }}
                       transition={{ duration: 3, repeat: Infinity }}
                     >
-                      <span className="text-2xl font-bold text-primary">{step.step}</span>
+                      <span className="text-xl font-bold text-primary">{step.step}</span>
                     </motion.div>
-                    <h3 className="text-xl font-bold mb-4">{step.title}</h3>
-                    <p className="text-muted-foreground">{step.description}</p>
+                    <h3 className="text-lg font-bold mb-3">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground">{step.description}</p>
                   </motion.div>
                 ))}
               </div>
@@ -331,9 +331,9 @@ const CaseStudy = () => {
 
             <motion.div
               variants={scaleIn}
-              className="mt-16 p-8 glass-card border-2 border-primary/30 text-center"
+              className="mt-8 p-6 glass-card border-2 border-primary/30 text-center"
             >
-              <p className="text-2xl md:text-3xl font-bold">
+              <p className="text-xl md:text-2xl font-bold">
                 We uncovered{" "}
                 <span className="text-primary">23 critical failure points</span>{" "}
                 costing the company an estimated{" "}
@@ -346,7 +346,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Solution Architecture */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -357,15 +357,15 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">
+            <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold text-center mb-4">
               The Solution Architecture
             </motion.h2>
             
-            <motion.p variants={fadeUp} className="text-xl text-muted-foreground text-center mb-4">
+            <motion.p variants={fadeUp} className="text-lg text-muted-foreground text-center mb-3">
               Revenue OS
             </motion.p>
 
-            <motion.p variants={fadeUp} className="text-lg text-foreground text-center mb-16 max-w-4xl mx-auto">
+            <motion.p variants={fadeUp} className="text-base text-foreground text-center mb-8 max-w-4xl mx-auto">
               We built a CRO-led Multi-Agent Revenue Operating System™, powered by a coordinated team of specialized AI analysts working together.
               <br />
               <span className="text-primary font-semibold">The system operated like a full-time Revenue Ops team:</span>
@@ -374,8 +374,8 @@ const CaseStudy = () => {
             {/* System Architecture Visualization */}
             <motion.div
               variants={fadeUp}
-              className="max-w-6xl mx-auto mb-16 relative rounded-2xl overflow-hidden"
-              style={{ maxHeight: '400px' }}
+              className="max-w-6xl mx-auto mb-8 relative rounded-2xl overflow-hidden"
+              style={{ maxHeight: '300px' }}
             >
               <img 
                 src={systemArchitecture} 
@@ -520,7 +520,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Quantified Results */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -531,11 +531,11 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
+            <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold text-center mb-8">
               Quantified Results
             </motion.h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
               {[
                 { value: "$1.8M", label: "projected revenue unlocked", icon: DollarSign },
                 { value: "37%", label: "pipeline conversion lift", icon: TrendingUp },
@@ -589,7 +589,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Client Feedback */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -598,19 +598,19 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold text-center mb-6">
               Client Feedback
             </motion.h2>
 
             <motion.div
               variants={scaleIn}
               whileHover={{ scale: 1.02 }}
-              className="glass-card p-12 md:p-16 border-2 border-primary/30 relative"
+              className="glass-card p-8 md:p-10 border-2 border-primary/30 relative"
             >
-              <div className="absolute top-8 left-8 text-8xl text-primary/20 font-serif leading-none">"</div>
-              <div className="absolute bottom-8 right-8 text-8xl text-primary/20 font-serif leading-none">"</div>
+              <div className="absolute top-6 left-6 text-6xl text-primary/20 font-serif leading-none">"</div>
+              <div className="absolute bottom-6 right-6 text-6xl text-primary/20 font-serif leading-none">"</div>
               
-              <p className="text-2xl md:text-3xl text-foreground leading-relaxed text-center font-light italic relative z-10">
+              <p className="text-lg md:text-xl text-foreground leading-relaxed text-center font-light italic relative z-10">
                 This was not automation — this became our entire revenue command center. Every strategic decision now comes with instant clarity and data we trust.
               </p>
             </motion.div>
@@ -619,7 +619,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Case Study Divider */}
-      <section className="py-16 relative overflow-hidden">
+      <section className="py-8 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
@@ -631,7 +631,7 @@ const CaseStudy = () => {
       {/* ============================================== */}
 
       {/* Hero Section - Case Study 2 */}
-      <section className="relative min-h-[70vh] flex items-center overflow-hidden pt-32 pb-20">
+      <section className="relative min-h-[50vh] flex items-center overflow-hidden pt-24 pb-12">
         {/* Background Image with Overlay - Placeholder for user's image */}
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-br from-background via-background/95 to-background/90 z-10" />
@@ -666,10 +666,10 @@ const CaseStudy = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <motion.div variants={fadeIn} className="mb-8">
+            <motion.div variants={fadeIn} className="mb-4">
               <motion.div
                 variants={scaleIn}
-                className="inline-flex items-center gap-2 px-6 py-3 glass-card border border-secondary/20"
+                className="inline-flex items-center gap-2 px-4 py-2 glass-card border border-secondary/20"
                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(230, 184, 58, 0.3)" }}
               >
                 <User className="w-4 h-4 text-secondary" />
@@ -679,7 +679,7 @@ const CaseStudy = () => {
 
             <motion.h1
               variants={fadeUp}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight mb-8"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-4"
             >
               How an Early-Stage Founder Eliminated{" "}
               <span className="text-primary">
@@ -690,7 +690,7 @@ const CaseStudy = () => {
 
             <motion.p
               variants={fadeUp}
-              className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
+              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed"
             >
               From operational overwhelm to autonomous execution in 60 days
             </motion.p>
@@ -699,7 +699,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Client Snapshot - Case Study 2 */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-6xl mx-auto"
@@ -748,7 +748,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Core Business Problem - Case Study 2 */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -805,7 +805,7 @@ const CaseStudy = () => {
       </section>
 
       {/* What Was at Stake - Case Study 2 */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-background" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -844,7 +844,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Diagnostic Process - Case Study 2 */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-6xl mx-auto"
@@ -926,7 +926,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Solution Architecture - Case Study 2 */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1101,7 +1101,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Quantified Results - Case Study 2 */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-secondary/10 pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1162,7 +1162,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Client Feedback - Case Study 2 */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto"
@@ -1217,7 +1217,7 @@ const CaseStudy = () => {
           >
             <motion.h1
               variants={fadeUp}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-4"
             >
               How an{" "}
               <span className="text-primary">
@@ -1228,7 +1228,7 @@ const CaseStudy = () => {
 
             <motion.p
               variants={fadeUp}
-              className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto"
+              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto"
             >
               From scattered lead searches to a fully hands-off acquisition system running end-to-end on autopilot.
             </motion.p>
@@ -1237,7 +1237,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Client Snapshot - Case Study 3 */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-6xl mx-auto"
@@ -1286,7 +1286,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Core Business Problem - Case Study 3 */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1344,7 +1344,7 @@ const CaseStudy = () => {
       </section>
 
       {/* What Was at Stake - Case Study 3 */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-background" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1385,7 +1385,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Diagnostic Process - Case Study 3 */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-6xl mx-auto"
@@ -1467,7 +1467,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Solution Architecture - Case Study 3 */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1534,20 +1534,20 @@ const CaseStudy = () => {
                   key={index}
                   variants={fadeUp}
                   whileHover={{ scale: 1.05, y: -4 }}
-                  className="glass-card p-6 border border-primary/20 hover:border-primary/40 transition-all duration-300"
+                  className="glass-card p-4 border border-primary/20 hover:border-primary/40 transition-all duration-300"
                 >
-                  <module.icon className="w-10 h-10 text-primary mb-4" />
-                  <h4 className="text-lg font-bold mb-2">{module.title}</h4>
-                  <p className="text-sm text-muted-foreground">{module.desc}</p>
+                  <module.icon className="w-8 h-8 text-primary mb-3" />
+                  <h4 className="text-base font-bold mb-1">{module.title}</h4>
+                  <p className="text-xs text-muted-foreground">{module.desc}</p>
                 </motion.div>
               ))}
             </div>
 
             <motion.div
               variants={fadeUp}
-              className="mt-16 p-8 glass-card border-2 border-primary/30 text-center"
+              className="mt-8 p-6 glass-card border-2 border-primary/30 text-center"
             >
-              <p className="text-xl text-foreground">
+              <p className="text-base text-foreground">
                 Everything worked in parallel as a single coordinated{" "}
                 <span className="text-primary font-bold">"Lead Acquisition Brain"</span>
                 {" "}to generate, qualify, and contact leads automatically — eliminating spreadsheets, manual research, and waiting on data entry.
@@ -1558,7 +1558,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Transformation - Case Study 3 */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-5xl mx-auto"
@@ -1567,19 +1567,19 @@ const CaseStudy = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={staggerContainer}
           >
-            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
+            <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold text-center mb-8">
               The Transformation
             </motion.h2>
 
-            <motion.div variants={scaleIn} className="glass-card p-8 md:p-12 overflow-x-auto border border-primary/20">
-              <div className="grid md:grid-cols-2 gap-8">
+            <motion.div variants={scaleIn} className="glass-card p-6 md:p-8 overflow-x-auto border border-primary/20">
+              <div className="grid md:grid-cols-2 gap-6">
                 {/* Before Column */}
                 <div>
-                  <h3 className="text-2xl font-bold text-destructive mb-6 flex items-center gap-3">
-                    <AlertCircle className="w-6 h-6" />
+                  <h3 className="text-xl font-bold text-destructive mb-4 flex items-center gap-3">
+                    <AlertCircle className="w-5 h-5" />
                     Before
                   </h3>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {[
                       "Manual Yelp searches daily",
                       "No way to segment sub-locations",
@@ -1589,9 +1589,9 @@ const CaseStudy = () => {
                       "Outreach sent 1-by-1",
                       "15–20 hours/week wasted",
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3 p-4 glass-card border border-destructive/20">
-                        <div className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
-                        <p className="text-base text-foreground">{item}</p>
+                      <div key={index} className="flex items-start gap-2 p-3 glass-card border border-destructive/20">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-1.5 flex-shrink-0" />
+                        <p className="text-sm text-foreground">{item}</p>
                       </div>
                     ))}
                   </div>
@@ -1599,11 +1599,11 @@ const CaseStudy = () => {
 
                 {/* After Column */}
                 <div>
-                  <h3 className="text-2xl font-bold text-primary mb-6 flex items-center gap-3">
-                    <CheckCircle className="w-6 h-6" />
+                  <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5" />
                     After
                   </h3>
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {[
                       "Fully automated Yelp scraping via BrightData",
                       "AI generates location clusters automatically",
@@ -1613,9 +1613,9 @@ const CaseStudy = () => {
                       "Gmail auto-sends to unique leads",
                       "System runs entirely on autopilot",
                     ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3 p-4 glass-card border border-primary/20">
-                        <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
-                        <p className="text-base text-foreground font-medium">{item}</p>
+                      <div key={index} className="flex items-start gap-2 p-3 glass-card border border-primary/20">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                        <p className="text-sm text-foreground font-medium">{item}</p>
                       </div>
                     ))}
                   </div>
@@ -1627,7 +1627,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Quantified Results - Case Study 3 */}
-      <section className="py-16 md:py-20 relative overflow-hidden">
+      <section className="py-8 md:py-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-background pointer-events-none" />
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -1655,12 +1655,12 @@ const CaseStudy = () => {
                   key={index}
                   variants={scaleIn}
                   whileHover={{ scale: 1.05, y: -8 }}
-                  className="glass-card p-8 border border-primary/20 hover:border-primary/40 transition-all duration-500 text-center"
+                  className="glass-card p-4 border border-primary/20 hover:border-primary/40 transition-all duration-500 text-center"
                 >
-                  <div className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-luxury bg-clip-text text-transparent">
+                  <div className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-luxury bg-clip-text text-transparent">
                     {metric.value}
                   </div>
-                  <p className="text-base text-foreground font-medium leading-relaxed">{metric.label}</p>
+                  <p className="text-xs text-foreground font-medium leading-snug">{metric.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -1669,7 +1669,7 @@ const CaseStudy = () => {
       </section>
 
       {/* Client Feedback - Case Study 3 */}
-      <section className="py-16 md:py-20 relative">
+      <section className="py-8 md:py-12 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             className="max-w-4xl mx-auto"
