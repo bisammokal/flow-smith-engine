@@ -70,7 +70,7 @@ export const CaseStudiesSection = () => {
                   </h3>
 
                   <div className="inline-block px-4 py-2 mb-6 rounded-lg bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20">
-                    <p className="text-lg font-bold bg-gradient-luxury bg-clip-text text-transparent">
+                    <p className="text-lg font-bold text-primary">
                       {caseStudy.result}
                     </p>
                   </div>
