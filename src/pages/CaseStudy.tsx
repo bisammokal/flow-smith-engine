@@ -102,7 +102,7 @@ const CaseStudy = () => {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-4"
             >
               How a Mid-Market SaaS Company Unlocked{" "}
-              <span className="bg-gradient-luxury bg-clip-text text-transparent">
+              <span className="text-accent">
                 $1.8M in Predictable Revenue Growth
               </span>{" "}
               by Deploying a CRO-Led Multi-Agent Revenue Operating System
