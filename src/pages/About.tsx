@@ -250,10 +250,10 @@ const About = () => {
                 key={index}
                 className="stat-card p-6 sm:p-8 text-center hover:shadow-glow hover:scale-105 transition-all duration-300 group border-primary/20"
               >
-                <div className="text-3xl sm:text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
+                <div className="text-3xl sm:text-4xl font-bold text-accent mb-2">
                   {stat.value}
                 </div>
-                <p className="text-xs sm:text-sm text-muted-foreground">{stat.label}</p>
+                <p className="text-xs sm:text-sm text-foreground/80">{stat.label}</p>
               </Card>
             ))}
           </div>
