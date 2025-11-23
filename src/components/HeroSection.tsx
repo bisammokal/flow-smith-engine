@@ -57,21 +57,16 @@ export const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-20">
-      {/* Animated Neural Network Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background">
-        {/* Animated Particles */}
-        <div ref={particlesRef} className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="particle absolute top-20 left-[10%] w-2 h-2 bg-primary/40 rounded-full blur-sm" />
-          <div className="particle absolute top-40 right-[15%] w-3 h-3 bg-secondary/30 rounded-full blur-sm" />
-          <div className="particle absolute top-60 left-[25%] w-2 h-2 bg-accent/40 rounded-full blur-sm" />
-          <div className="particle absolute bottom-40 right-[30%] w-3 h-3 bg-primary/30 rounded-full blur-sm" />
-          <div className="particle absolute bottom-60 left-[40%] w-2 h-2 bg-secondary/40 rounded-full blur-sm" />
-        </div>
-
-        {/* Large Gradient Orbs */}
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-primary/20 via-accent/10 to-transparent rounded-full blur-3xl opacity-30" />
-        <div className="absolute bottom-0 left-0 w-[700px] h-[700px] bg-gradient-to-tr from-secondary/15 via-primary/10 to-transparent rounded-full blur-3xl opacity-25" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-gradient-to-r from-accent/10 to-secondary/10 rounded-full blur-3xl opacity-20" />
+      {/* Spline 3D Background */}
+      <div className="absolute inset-0">
+        <iframe 
+          src='https://my.spline.design/orb-riUGpmZH4FJmMSkxzOGBreWK/' 
+          frameBorder='0' 
+          width='100%' 
+          height='100%'
+          className="absolute inset-0"
+        />
+        <div className="absolute inset-0 bg-background/20" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
