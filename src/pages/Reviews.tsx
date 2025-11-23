@@ -2,9 +2,11 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Star, ArrowRight } from "lucide-react";
+import { Star, ArrowRight, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { motionConfig } from "@/lib/motion";
 
 const Reviews = () => {
   const navigate = useNavigate();
@@ -194,34 +196,81 @@ const Reviews = () => {
       {/* Testimonials Grid */}
       <section className="py-12 sm:py-16 relative">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {testimonials.map((testimonial, index) => (
-              <Card 
-                key={index} 
-                className="glass-card w-full h-full p-4 sm:p-6 md:p-8 rounded-2xl sm:rounded-3xl border border-white/10 hover:scale-105 hover:shadow-[0_12px_40px_rgba(255,212,59,0.3)] transition-all duration-300"
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.05 }}
               >
-                <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6">
-                  <Avatar className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 border-2 border-primary/30 flex-shrink-0">
-                    <AvatarImage src={testimonial.image} alt={testimonial.name} className="object-cover" />
-                    <AvatarFallback className="text-lg font-semibold">{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                  </Avatar>
-                  <div className="min-w-0">
-                    <h4 className="font-semibold text-foreground text-sm sm:text-base truncate">{testimonial.name}</h4>
-                    <p className="text-xs sm:text-sm text-muted-foreground truncate">{testimonial.role}</p>
-                  </div>
-                </div>
+                <Card 
+                  className="glass-card p-8 border border-primary/10 hover:border-primary/30 h-full"
+                >
+                  <motion.div 
+                    className="relative h-full flex flex-col"
+                    whileHover={{ 
+                      y: -8,
+                      boxShadow: "0 20px 50px rgba(230, 184, 58, 0.25)",
+                    }}
+                    transition={{ duration: motionConfig.duration.normal }}
+                  >
+                    {/* Quote Icon */}
+                    <Quote className="absolute -top-2 -left-2 w-10 h-10 text-primary/20" />
+                    
+                    <div className="relative z-10 flex-1 flex flex-col">
+                      {/* Stars */}
+                      <motion.div 
+                        className="flex gap-1 mb-4"
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        {[...Array(Math.floor(testimonial.rating))].map((_, i) => (
+                          <motion.div
+                            key={i}
+                            initial={{ opacity: 0, rotate: -180 }}
+                            whileInView={{ opacity: 1, rotate: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.05 + i * 0.05 }}
+                          >
+                            <Star className="w-5 h-5 fill-primary text-primary" />
+                          </motion.div>
+                        ))}
+                        {testimonial.rating % 1 !== 0 && (
+                          <Star className="w-5 h-5 fill-primary/50 text-primary" />
+                        )}
+                      </motion.div>
 
-                <div className="flex gap-1 mb-3 sm:mb-4">
-                  {[...Array(Math.floor(testimonial.rating))].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 sm:w-5 sm:h-5 fill-primary text-primary" />
-                  ))}
-                  {testimonial.rating % 1 !== 0 && (
-                    <Star className="w-4 h-4 sm:w-5 sm:h-5 fill-primary/50 text-primary" />
-                  )}
-                </div>
+                      {/* Testimonial Text */}
+                      <p className="text-foreground/90 leading-relaxed mb-6 text-lg flex-1">
+                        "{testimonial.text}"
+                      </p>
 
-                <p className="text-sm sm:text-base text-foreground/90 leading-relaxed">{testimonial.text}</p>
-              </Card>
+                      {/* Client Info */}
+                      <div className="flex items-center gap-4">
+                        <motion.div
+                          whileHover={{ scale: 1.1, rotate: 5 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <Avatar className="w-12 h-12 border-2 border-primary/30">
+                            <AvatarImage src={testimonial.image} alt={testimonial.name} className="object-cover" />
+                            <AvatarFallback className="text-lg font-semibold bg-gradient-luxury">
+                              {testimonial.name.split(' ')[0][0]}
+                            </AvatarFallback>
+                          </Avatar>
+                        </motion.div>
+                        <div>
+                          <h4 className="font-bold text-foreground">{testimonial.name}</h4>
+                          <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
