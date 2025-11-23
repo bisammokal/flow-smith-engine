@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, Users, DollarSign, AlertCircle, Target, Zap, TrendingUp, CheckCircle, ShieldCheck, BarChart3, Activity, Brain, Mail, Clock, Search, Database, Calendar, User, Star, MapPin, Filter, FileSpreadsheet, Send, RefreshCw, Quote } from "lucide-react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams, Navigate } from "react-router-dom";
 import { fadeUp, fadeIn, scaleIn, staggerContainer, motionConfig } from "@/lib/motion";
 import systemArchitecture from "@/assets/case-study-system-architecture.png";
 import aiAssistantArchitecture from "@/assets/case-study-ai-assistant-architecture.png";
@@ -36,6 +36,9 @@ const useCountUp = (end: number, duration: number = 2, prefix: string = "", suff
 };
 
 const CaseStudy = () => {
+  const { id } = useParams<{ id: string }>();
+  const caseStudyId = id ? parseInt(id) : 1;
+  
   const controls = useAnimation();
   const containerRef = useRef<HTMLDivElement>(null);
   const inView = useInView(containerRef, { once: true, amount: 0.2 });
@@ -46,9 +49,19 @@ const CaseStudy = () => {
     }
   }, [controls, inView]);
 
+  // Redirect to index if invalid ID
+  if (!id || caseStudyId < 1 || caseStudyId > 3) {
+    return <Navigate to="/case-study" replace />;
+  }
+
   return (
     <div className="min-h-screen">
       <Header />
+
+      <main className="pt-20">
+        {/* === CASE STUDY 1: REVENUE OPERATING SYSTEM === */}
+        {caseStudyId === 1 && (
+        <>
 
       {/* Hero Section */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden pt-24 pb-12">
@@ -618,17 +631,14 @@ const CaseStudy = () => {
         </div>
       </section>
 
-      {/* Case Study Divider */}
-      <section className="py-8 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="h-px bg-gradient-to-r from-transparent via-primary to-transparent" />
-        </div>
-      </section>
+      </>
+      )}
 
       {/* ============================================== */}
       {/* CASE STUDY 2: AI PERSONAL ASSISTANT OS */}
       {/* ============================================== */}
+      {caseStudyId === 2 && (
+        <>
 
       {/* Hero Section - Case Study 2 */}
       <section className="relative min-h-[50vh] flex items-center overflow-hidden pt-24 pb-12">
@@ -1191,7 +1201,12 @@ const CaseStudy = () => {
         </div>
       </section>
 
+      </>
+      )}
+
       {/* CASE STUDY 3 - AUTOMATED LEAD ENGINE */}
+      {caseStudyId === 3 && (
+        <>
       
       {/* Hero Section - Case Study 3 */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
@@ -1697,6 +1712,10 @@ const CaseStudy = () => {
           </motion.div>
         </div>
       </section>
+
+      </>
+      )}
+      </main>
 
       <Footer />
     </div>
