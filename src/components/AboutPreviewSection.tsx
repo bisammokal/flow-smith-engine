@@ -51,7 +51,7 @@ export const AboutPreviewSection = () => {
                     <div className="w-14 h-14 mx-auto mb-4 rounded-xl bg-gradient-to-br from-primary/20 to-primary/5 flex items-center justify-center">
                       <Icon className="w-7 h-7 text-primary" />
                     </div>
-                    <div className="text-4xl font-bold bg-gradient-luxury bg-clip-text text-transparent mb-2">
+                    <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
                       {stat.value}
                     </div>
                     <div className="text-sm text-muted-foreground font-medium">
