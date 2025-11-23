@@ -1657,7 +1657,7 @@ const CaseStudy = () => {
                   whileHover={{ scale: 1.05, y: -8 }}
                   className="glass-card p-4 border border-primary/20 hover:border-primary/40 transition-all duration-500 text-center"
                 >
-                  <div className="text-3xl md:text-4xl font-bold mb-2 bg-gradient-luxury bg-clip-text text-transparent">
+                  <div className="text-3xl md:text-4xl font-bold mb-2 text-accent">
                     {metric.value}
                   </div>
                   <p className="text-xs text-foreground font-medium leading-snug">{metric.label}</p>
