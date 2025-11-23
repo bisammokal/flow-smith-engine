@@ -37,7 +37,7 @@ export const CaseStudiesSection = () => {
         <div className="text-center mb-16 max-w-4xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
             See How Businesses Are{" "}
-            <span className="bg-gradient-luxury bg-clip-text text-transparent">
+            <span className="text-accent">
               Scaling with Automation
             </span>
           </h2>
