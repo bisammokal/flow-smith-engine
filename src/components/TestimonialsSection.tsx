@@ -1,4 +1,5 @@
 import { Card } from "@/components/ui/card";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star, Quote } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -12,24 +13,28 @@ export const TestimonialsSection = () => {
       role: "Marketing Agency Owner",
       text: "Our entire onboarding is now 100% automated. Saved 15 hours/week easily! The team at Fluxyn understood our needs perfectly.",
       rating: 5,
+      image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop",
     },
     {
       name: "Michael C.",
       role: "Real Estate Broker",
       text: "The lead qualification system alone doubled our conversion rate. We never miss a hot lead anymore. Best investment we've made.",
       rating: 5,
+      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop",
     },
     {
       name: "Dr. Emily R.",
       role: "Healthcare Practice Manager",
       text: "Patient appointment automation has transformed our practice. Zero no-shows, perfect record-keeping, and our staff loves it.",
       rating: 5,
+      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop",
     },
     {
       name: "David P.",
       role: "SaaS Founder",
       text: "The AI follow-up system is incredible. It knows exactly when to reach out. Our response rates went up 3x in the first month.",
       rating: 5,
+      image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop",
     },
   ];
 
@@ -94,11 +99,12 @@ export const TestimonialsSection = () => {
 
                   {/* Client Info */}
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 rounded-full bg-gradient-luxury flex items-center justify-center">
-                      <span className="text-background font-bold text-lg">
+                    <Avatar className="w-12 h-12 border-2 border-primary/30">
+                      <AvatarImage src={testimonial.image} alt={testimonial.name} className="object-cover" />
+                      <AvatarFallback className="text-lg font-semibold bg-gradient-luxury">
                         {testimonial.name.split(' ')[0][0]}
-                      </span>
-                    </div>
+                      </AvatarFallback>
+                    </Avatar>
                     <div>
                       <h4 className="font-bold text-foreground">{testimonial.name}</h4>
                       <p className="text-sm text-muted-foreground">{testimonial.role}</p>
