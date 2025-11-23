@@ -9,6 +9,7 @@ import { fadeUp, fadeIn, scaleIn, staggerContainer, motionConfig } from "@/lib/m
 import systemArchitecture from "@/assets/case-study-system-architecture.png";
 import aiAssistantArchitecture from "@/assets/case-study-ai-assistant-architecture.png";
 import caseStudyLeadEngineWorkflow from "@/assets/case-study-lead-engine-workflow.png";
+import caseStudyLeadSystemArchitecture from "@/assets/case-study-lead-system-architecture.png";
 
 // Counter animation hook
 const useCountUp = (end: number, duration: number = 2, prefix: string = "", suffix: string = "") => {
@@ -1472,6 +1473,21 @@ const CaseStudy = () => {
                     <p className="text-sm font-medium">{module.title}</p>
                   </div>
                 ))}
+              </div>
+
+              {/* System Architecture Image */}
+              <div className="mt-8 relative rounded-xl overflow-hidden border border-primary/20">
+                <img 
+                  src={caseStudyLeadSystemArchitecture} 
+                  alt="Lead Engine System Architecture"
+                  className="w-full h-auto"
+                  style={{
+                    filter: 'blur(3px)',
+                    opacity: 0.5,
+                    maxHeight: '400px',
+                    objectFit: 'contain'
+                  }}
+                />
               </div>
             </motion.div>
           </motion.div>
