@@ -16,7 +16,7 @@ const Reviews = () => {
     {
       name: "Sarah Johnson",
       role: "Marketing Agency Owner",
-      text: "Our entire onboarding is now 100% automated. Saved 15 hours/week easily! The team at Fluxyn understood our needs perfectly.",
+      text: "Our entire onboarding is now 100% automated. Saved 15 hours/week easily! The team at Nexotica understood our needs perfectly.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop",
     },
@@ -45,7 +45,7 @@ const Reviews = () => {
     {
       name: "Sarah Mitchell",
       role: "Agency Owner",
-      text: "We built a complete AI sales funnel with Fluxyn in under 3 weeks. Our close rate increased by 45% and we're scaling faster than ever.",
+      text: "We built a complete AI sales funnel with Nexotica in under 3 weeks. Our close rate increased by 45% and we're scaling faster than ever.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop",
     },
@@ -67,7 +67,7 @@ const Reviews = () => {
     {
       name: "Sarah J.",
       role: "Marketing Agency Owner",
-      text: "Fluxyn automated our entire client onboarding. We're saving around 18 hours/week and deliver projects faster. Clients are impressed with how smooth everything feels.",
+      text: "Nexotica automated our entire client onboarding. We're saving around 18 hours/week and deliver projects faster. Clients are impressed with how smooth everything feels.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop",
     },
@@ -102,7 +102,7 @@ const Reviews = () => {
     {
       name: "Tommy K.",
       role: "Agency Owner",
-      text: "I added Fluxyn's outreach workflow and started booking 7–10 meetings weekly on autopilot. My agency revenue grew 3x in 60 days.",
+      text: "I added Nexotica's outreach workflow and started booking 7–10 meetings weekly on autopilot. My agency revenue grew 3x in 60 days.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop",
     },
@@ -151,7 +151,7 @@ const Reviews = () => {
     {
       name: "Hassan A.",
       role: "Local Services Business Owner",
-      text: "I didn't even know automation could help my type of business. But Fluxyn cut my manual work in half and increased bookings.",
+      text: "I didn't even know automation could help my type of business. But Nexotica cut my manual work in half and increased bookings.",
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop",
     },
