@@ -20,7 +20,7 @@ export const TestimonialsSection = () => {
     {
       name: "Sarah J.",
       role: "Marketing Agency Owner",
-      text: "Our entire onboarding is now 100% automated. Saved 15 hours/week easily! The team at Fluxyn understood our needs perfectly.",
+      text: "Our entire onboarding is now 100% automated. Saved 15 hours/week easily! The team at Nexotica understood our needs perfectly.",
       rating: 5,
       image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop",
     },

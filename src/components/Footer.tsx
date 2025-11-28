@@ -59,10 +59,10 @@ export const Footer = () => {
               
               <div className="relative z-10">
                 <h3 className="text-2xl md:text-3xl font-bold bg-gradient-to-r from-primary via-yellow-400 to-primary bg-clip-text text-transparent mb-4 tracking-wide">
-                  Fluxyn
+                  Nexotica
                 </h3>
                 <p className="text-foreground/70 leading-relaxed text-sm md:text-base tracking-wide">
-                  Fluxyn truly believes in customer satisfaction. Share your burden with us, we will provide you quality services. Trust us, you will have unbreakable bond with Fluxyn.
+                  Nexotica truly believes in customer satisfaction. Share your burden with us, we will provide you quality services. Trust us, you will have unbreakable bond with Nexotica.
                 </p>
               </div>
             </div>
@@ -166,15 +166,15 @@ export const Footer = () => {
                 <div className="space-y-3">
                   <div>
                     <span className="text-primary font-medium text-sm md:text-base tracking-wide bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">Inquiry:</span>
-                    <p className="text-foreground/80 break-all text-sm md:text-base tracking-wide">hello@fluxyn.com</p>
+                    <p className="text-foreground/80 break-all text-sm md:text-base tracking-wide">hello@nexotica.com</p>
                   </div>
                   <div>
                     <span className="text-primary font-medium text-sm md:text-base tracking-wide bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">Resume:</span>
-                    <p className="text-foreground/80 break-all text-sm md:text-base tracking-wide">careers@fluxyn.com</p>
+                    <p className="text-foreground/80 break-all text-sm md:text-base tracking-wide">careers@nexotica.com</p>
                   </div>
                   <div>
                     <span className="text-primary font-medium text-sm md:text-base tracking-wide bg-gradient-to-r from-primary to-yellow-400 bg-clip-text text-transparent">Quotation:</span>
-                    <p className="text-foreground/80 break-all text-sm md:text-base tracking-wide">sales@fluxyn.com</p>
+                    <p className="text-foreground/80 break-all text-sm md:text-base tracking-wide">sales@nexotica.com</p>
                   </div>
                 </div>
               </div>
@@ -242,7 +242,7 @@ export const Footer = () => {
           
           <div className="flex flex-col md:flex-row justify-between items-center gap-6 md:gap-4 pt-8">
             <p className="text-sm md:text-base text-foreground/70 tracking-wide">
-              Copyright © 2025 | Fluxyn. All rights reserved.
+              Copyright © 2025 | Nexotica. All rights reserved.
             </p>
             
             <div className="flex items-center gap-6">
