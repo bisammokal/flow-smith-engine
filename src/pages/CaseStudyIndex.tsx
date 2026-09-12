@@ -139,13 +139,15 @@ export default function CaseStudyIndex() {
               <p className="text-lg text-muted-foreground mb-8">
                 See how AI automation can transform your business operations
               </p>
-              <Link
-                to="/book-call"
+              <a
+                href="https://www.upwork.com/freelancers/~01ae02475a9e9fcbd4?mp_source=share"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-accent to-primary text-foreground font-semibold rounded-lg hover:shadow-glow transition-all duration-300 hover:scale-105"
               >
-                Book a Free Demo
+                Hire me on Upwork
                 <ArrowRight className="w-5 h-5" />
-              </Link>
+              </a>
             </div>
           </motion.div>
         </div>
