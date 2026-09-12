@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
@@ -26,7 +25,6 @@ import {
   TrendingUp,
   Shield,
   Repeat,
-  ArrowRight,
   FileText,
   Users,
   Headphones,
@@ -42,9 +40,6 @@ import {
 } from "lucide-react";
 
 const Services = () => {
-  const scrollToContact = () => {
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-  };
 
   const coreServices = [
     {
