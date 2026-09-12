@@ -276,34 +276,6 @@ const Reviews = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 sm:py-20 lg:py-24 relative overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-primary/20 via-accent/20 to-primary/20 rounded-full blur-3xl opacity-30" />
-        </div>
-
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="glass-hero p-6 sm:p-8 md:p-12 max-w-3xl mx-auto text-center backdrop-blur-xl">
-            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
-              Ready to Create Your{" "}
-              <span className="bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                Own Success Story?
-              </span>
-            </h2>
-            <Button
-              size="lg"
-              className="group relative overflow-hidden bg-gradient-to-r from-primary to-accent hover:shadow-glow transition-all duration-300 w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 text-sm sm:text-base"
-              onClick={() => navigate("/book-call")}
-            >
-              <span className="inline-flex items-center justify-center gap-2">
-                Book a Free Demo
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform w-4 h-4 sm:w-5 sm:h-5" />
-              </span>
-            </Button>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>
