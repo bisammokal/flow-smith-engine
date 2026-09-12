@@ -117,7 +117,7 @@ export const ContactSection = () => {
               className="pt-6 flex justify-center"
               variants={scaleIn}
             >
-              <Link to="/book-call">
+              <a href="https://www.upwork.com/freelancers/~01ae02475a9e9fcbd4?mp_source=share" target="_blank" rel="noopener noreferrer">
                 <motion.div
                   whileHover={{ 
                     scale: 1.05,
@@ -141,11 +141,11 @@ export const ContactSection = () => {
                         ease: "linear",
                       }}
                     />
-                    <span className="relative z-10">Start Your Strategy Call</span>
+                    <span className="relative z-10">Hire me on Upwork</span>
                     <ArrowRight className="ml-3 w-6 h-6 relative z-10 group-hover:translate-x-2 transition-transform" />
                   </Button>
                 </motion.div>
-              </Link>
+              </a>
             </motion.div>
 
             {/* Trust Line */}
