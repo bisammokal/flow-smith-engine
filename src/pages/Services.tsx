@@ -522,19 +522,6 @@ const Services = () => {
                             <span className="font-medium text-accent">Why businesses love it:</span> {workflow.whyLoveIt}
                           </p>
                         </div>
-
-                        <div className="pt-4">
-                          <Button
-                            variant="cta"
-                            size="lg"
-                            onClick={scrollToContact}
-                            className="w-full group shadow-glow px-4 sm:px-6 py-4 sm:py-5 text-sm sm:text-base active:scale-95"
-                          >
-                            <span className="inline-flex items-center justify-center gap-2">
-                              Book a Demo for This Workflow <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                            </span>
-                          </Button>
-                        </div>
                       </div>
                     </AccordionContent>
                   </AccordionItem>
