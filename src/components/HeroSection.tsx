@@ -143,7 +143,7 @@ export const HeroSection = () => {
             variants={fadeUp}
             className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20"
           >
-            <Link to="/book-call" className="w-full sm:w-auto">
+            <a href="https://www.upwork.com/freelancers/~01ae02475a9e9fcbd4?mp_source=share" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
               <motion.div
                 whileHover={{ 
                   scale: 1.05,
@@ -167,11 +167,11 @@ export const HeroSection = () => {
                       ease: "linear",
                     }}
                   />
-                  <span className="relative z-10">Book Your Automation Audit</span>
+                  <span className="relative z-10">Hire me on Upwork</span>
                   <ArrowRight className="ml-2 w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </motion.div>
-            </Link>
+            </a>
             <Link to="/services" className="w-full sm:w-auto">
               <motion.div
                 whileHover={{ 
