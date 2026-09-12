@@ -529,27 +529,6 @@ const Services = () => {
               })}
             </Accordion>
           </div>
-
-          <div className="text-center">
-            <div className="glass-card p-4 sm:p-6 md:p-8 lg:p-10 backdrop-blur-xl inline-block hover:shadow-glow transition-all duration-500 max-w-3xl mx-auto w-full">
-              <p className="text-lg sm:text-xl md:text-2xl font-bold mb-3 sm:mb-4 relative z-10 bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text">
-                Get the Complete Suite
-              </p>
-              <p className="text-xs sm:text-sm md:text-base text-muted-foreground mb-4 sm:mb-6 max-w-2xl relative z-10 mx-auto">
-                Transform your entire business with our comprehensive automation package. All 15+ workflows working together seamlessly.
-              </p>
-              <Button
-                variant="cta"
-                size="lg"
-                onClick={scrollToContact}
-                className="relative z-10 shadow-glow w-full sm:w-auto px-5 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 text-sm sm:text-base md:text-lg active:scale-95"
-              >
-                <span className="inline-flex items-center justify-center gap-2">
-                  Book a Free Demo of the Full Suite <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
-                </span>
-              </Button>
-            </div>
-          </div>
         </div>
       </section>
 
