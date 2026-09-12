@@ -87,9 +87,9 @@ export const Header = () => {
             <Button
               variant="cta"
               size="lg"
-              onClick={() => navigate("/book-call")}
+              onClick={() => window.open("https://www.upwork.com/freelancers/~01ae02475a9e9fcbd4?mp_source=share", "_blank", "noopener,noreferrer")}
             >
-              🚀 Book a Demo
+              🚀 Hire me on Upwork
             </Button>
           </div>
 
@@ -126,9 +126,9 @@ export const Header = () => {
                 variant="cta"
                 size="lg"
                 className="w-full"
-                onClick={() => navigate("/book-call")}
+                onClick={() => window.open("https://www.upwork.com/freelancers/~01ae02475a9e9fcbd4?mp_source=share", "_blank", "noopener,noreferrer")}
               >
-                🚀 Book a Demo
+                🚀 Hire me on Upwork
               </Button>
             </div>
           </nav>
