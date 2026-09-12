@@ -260,29 +260,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* SECTION 7 - CTA */}
-      <section className="py-10 px-4 sm:px-6 lg:px-8">
-        <div className="container mx-auto max-w-5xl">
-          <Card className="p-8 sm:p-12 lg:p-16 text-center hover:shadow-glow transition-all duration-300 relative overflow-hidden border-primary/30">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-destructive/5 animate-pulse" />
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 relative z-10">
-              Ready to Automate Your Entire Business?
-            </h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center relative z-10">
-              <Link to="/book-call">
-                <Button variant="hero" size="lg" className="w-full sm:w-auto bg-accent hover:bg-accent/90 text-background font-semibold shadow-lg hover:shadow-accent/50 transition-all">
-                  Book a Demo
-                </Button>
-              </Link>
-              <Link to="/services">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto border-accent text-accent hover:bg-accent hover:text-background transition-all">
-                  Explore The Automation Suite
-                </Button>
-              </Link>
-            </div>
-          </Card>
-        </div>
-      </section>
       </div>
       <Footer />
     </>
