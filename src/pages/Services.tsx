@@ -1,6 +1,6 @@
 import { Card } from "@/components/ui/card";
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+
 import {
   Accordion,
   AccordionContent,
@@ -527,7 +527,6 @@ const Services = () => {
         </div>
       </section>
 
-      <Footer />
     </div>
   );
 };

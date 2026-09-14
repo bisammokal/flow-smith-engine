@@ -1,5 +1,5 @@
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, Users, DollarSign, AlertCircle, Target, Zap, TrendingUp, CheckCircle, ShieldCheck, BarChart3, Activity, Brain, Mail, Clock, Search, Database, Calendar, User, Star, MapPin, Filter, FileSpreadsheet, Send, RefreshCw, Quote } from "lucide-react";
 import { motion, useInView, useAnimation } from "framer-motion";
@@ -1717,7 +1717,6 @@ const CaseStudy = () => {
       )}
       </main>
 
-      <Footer />
     </div>
   );
 };
