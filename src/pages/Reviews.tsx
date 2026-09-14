@@ -1,5 +1,5 @@
 import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+
 import { Card } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star, ArrowRight, Quote } from "lucide-react";
@@ -277,7 +277,6 @@ const Reviews = () => {
       </section>
 
 
-      <Footer />
     </div>
   );
 };
