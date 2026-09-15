@@ -1,0 +1,12 @@
+# Sab text files repo mein LF ke saath store hon (Windows/Mac/Linux ka farq khatam)
+* text=auto eol=lf
+
+# Binary files ko chhaid-chhaad se bachao
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.lockb binary
