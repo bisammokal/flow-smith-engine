@@ -43,7 +43,7 @@ export const Header = () => {
     { label: "Home", path: "/" },
     { label: "Services", path: "/services" },
     { label: "Reviews", path: "/reviews" },
-    { label: "Case Studies", path: "/case-study" },
+    { label: "Projects", path: "/case-study" },
     { label: "About", path: "/about" },
   ];
 
