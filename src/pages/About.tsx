@@ -2,13 +2,9 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Zap, Target, Brain, Shield, TrendingUp, Users } from "lucide-react";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRef } from "react";
 import { Header } from "@/components/Header";
 
-
-gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -16,81 +12,10 @@ const About = () => {
   const visionCardsRef = useRef<HTMLDivElement>(null);
   const statsRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    // Hero animations
-    if (heroRef.current) {
-      gsap.fromTo(
-        heroRef.current.querySelector("h1"),
-        { opacity: 0, y: 50, filter: "blur(10px)" },
-        { opacity: 1, y: 0, filter: "blur(0px)", duration: 1, ease: "power3.out" }
-      );
-      gsap.fromTo(
-        heroRef.current.querySelector("p"),
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 0.8, delay: 0.2, ease: "power3.out" }
-      );
-    }
-
-    // Mission card scroll animation
-    if (missionRef.current) {
-      gsap.fromTo(
-        missionRef.current,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.8,
-          scrollTrigger: {
-            trigger: missionRef.current,
-            start: "top 80%",
-          },
-        }
-      );
-    }
-
-    // Vision cards stagger animation
-    if (visionCardsRef.current) {
-      const cards = visionCardsRef.current.querySelectorAll(".vision-card");
-      gsap.fromTo(
-        cards,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
-          stagger: 0.2,
-          scrollTrigger: {
-            trigger: visionCardsRef.current,
-            start: "top 80%",
-          },
-        }
-      );
-    }
-
-    // Stats cards stagger animation
-    if (statsRef.current) {
-      const statCards = statsRef.current.querySelectorAll(".stat-card");
-      gsap.fromTo(
-        statCards,
-        { opacity: 0, scale: 0.9 },
-        {
-          opacity: 1,
-          scale: 1,
-          duration: 0.5,
-          stagger: 0.1,
-          scrollTrigger: {
-            trigger: statsRef.current,
-            start: "top 80%",
-          },
-        }
-      );
-    }
-  }, []);
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "auto" });
     }
   };
 

@@ -1,32 +1,7 @@
 import { Award, Target, Zap } from "lucide-react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { fadeUp, staggerContainer, motionConfig } from "@/lib/motion";
-
-// Counter animation hook
-const useCountUp = (end: number, duration: number = 2) => {
-  const [count, setCount] = useState(0);
-  const countRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(countRef, { once: true });
-
-  useEffect(() => {
-    if (inView) {
-      let startTime: number;
-      const endValue = parseInt(end.toString().replace('+', ''));
-      const animate = (timestamp: number) => {
-        if (!startTime) startTime = timestamp;
-        const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-        setCount(Math.floor(progress * endValue));
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        }
-      };
-      requestAnimationFrame(animate);
-    }
-  }, [inView, end, duration]);
-
-  return { count, countRef };
-};
 
 export const AboutPreviewSection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -111,12 +86,10 @@ export const AboutPreviewSection = () => {
             >
               {stats.map((stat, index) => {
                 const Icon = stat.icon;
-                const { count, countRef } = useCountUp(stat.value, 2);
                 
                 return (
                   <motion.div
                     key={index}
-                    ref={countRef}
                     variants={fadeUp}
                     className="glass-card p-6 text-center border border-primary/10 hover:border-primary/30"
                     whileHover={{ 
@@ -136,7 +109,7 @@ export const AboutPreviewSection = () => {
                       <Icon className="w-7 h-7 text-primary" />
                     </motion.div>
                     <div className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent mb-2">
-                      {count}+
+                      {stat.value}+
                     </div>
                     <div className="text-sm text-muted-foreground font-medium">
                       {stat.label}

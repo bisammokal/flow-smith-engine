@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Building2, Users, DollarSign, AlertCircle, Target, Zap, TrendingUp, CheckCircle, ShieldCheck, BarChart3, Activity, Brain, Mail, Clock, Search, Database, Calendar, User, Star, MapPin, Filter, FileSpreadsheet, Send, RefreshCw, Quote } from "lucide-react";
 import { motion, useInView, useAnimation } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
 import { fadeUp, fadeIn, scaleIn, staggerContainer, motionConfig } from "@/lib/motion";
 import systemArchitecture from "@/assets/case-study-system-architecture.png";
@@ -13,26 +13,8 @@ import caseStudyLeadSystemArchitecture from "@/assets/case-study-lead-system-arc
 
 // Counter animation hook
 const useCountUp = (end: number, duration: number = 2, prefix: string = "", suffix: string = "") => {
-  const [count, setCount] = useState(0);
   const countRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(countRef, { once: true });
-
-  useEffect(() => {
-    if (inView) {
-      let startTime: number;
-      const animate = (timestamp: number) => {
-        if (!startTime) startTime = timestamp;
-        const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-        setCount(Math.floor(progress * end));
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        }
-      };
-      requestAnimationFrame(animate);
-    }
-  }, [inView, end, duration]);
-
-  return { count: `${prefix}${count}${suffix}`, countRef };
+  return { count: `${prefix}${end}${suffix}`, countRef };
 };
 
 const CaseStudy = () => {

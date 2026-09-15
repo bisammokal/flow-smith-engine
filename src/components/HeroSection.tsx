@@ -1,33 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { Link } from "react-router-dom";
 import { fadeUp, fadeIn, scaleIn, staggerContainer, motionConfig } from "@/lib/motion";
-
-// Counter animation hook
-const useCountUp = (end: number, duration: number = 2) => {
-  const [count, setCount] = useState(0);
-  const countRef = useRef<HTMLDivElement>(null);
-  const inView = useInView(countRef, { once: true });
-
-  useEffect(() => {
-    if (inView) {
-      let startTime: number;
-      const animate = (timestamp: number) => {
-        if (!startTime) startTime = timestamp;
-        const progress = Math.min((timestamp - startTime) / (duration * 1000), 1);
-        setCount(Math.floor(progress * end));
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        }
-      };
-      requestAnimationFrame(animate);
-    }
-  }, [inView, end, duration]);
-
-  return { count, countRef };
-};
+import heroAutomation from "@/assets/hero-automation.jpg";
 
 export const HeroSection = () => {
   const controls = useAnimation();
@@ -42,14 +19,12 @@ export const HeroSection = () => {
 
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center overflow-hidden pt-24 pb-20">
-      {/* Spline 3D Background */}
+      {/* Static AI automation background */}
       <div className="absolute inset-0">
-        <iframe 
-          src='https://my.spline.design/orb-riUGpmZH4FJmMSkxzOGBreWK/' 
-          frameBorder='0' 
-          width='100%' 
-          height='100%'
-          className="absolute inset-0"
+        <img
+          src={heroAutomation}
+          alt="AI automation network"
+          className="absolute inset-0 h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-background/20" />
       </div>

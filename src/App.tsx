@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { MotionConfig } from "framer-motion";
 import Index from "./pages/Index";
 import Services from "./pages/Services";
 import BookCall from "./pages/BookCall";
@@ -26,26 +27,28 @@ const ScrollToTop = () => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/book-call" element={<BookCall />} />
-          <Route path="/reviews" element={<Reviews />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/case-study" element={<CaseStudyIndex />} />
-          <Route path="/case-study/:id" element={<CaseStudy />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  <MotionConfig reducedMotion="always" transition={{ duration: 0 }}>
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/book-call" element={<BookCall />} />
+            <Route path="/reviews" element={<Reviews />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/case-study" element={<CaseStudyIndex />} />
+            <Route path="/case-study/:id" element={<CaseStudy />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  </MotionConfig>
 );
 
 export default App;
