@@ -46,7 +46,7 @@ export default function CaseStudyIndex() {
             className="text-center mb-16 max-w-4xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Client Success Stories
+              Our Project Catalogue
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
               Real transformations. Measurable results. Zero manual work.
