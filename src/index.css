@@ -124,6 +124,16 @@ All colors MUST be HSL.
     filter: none !important;
   }
 
+  [style*="background-position"] {
+    background-position: 0 0 !important;
+  }
+
+  *:hover,
+  *:focus,
+  *:active {
+    transform: none !important;
+  }
+
   body {
     @apply bg-background text-foreground;
   }
