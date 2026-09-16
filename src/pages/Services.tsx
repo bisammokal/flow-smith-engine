@@ -454,7 +454,7 @@ const Services = () => {
           </div>
 
           <div className="max-w-5xl mx-auto mb-8 md:mb-12">
-            <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
+            <Accordion type="multiple" className="space-y-3 sm:space-y-4">
               {workflows.map((workflow, index) => {
                 const Icon = workflow.icon;
                 return (
