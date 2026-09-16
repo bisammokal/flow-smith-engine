@@ -53,7 +53,7 @@ function Navigation() {
     </div>
   </nav></header>;
 }
-function Footer() { return <footer className="p-footer"><div className="p-container p-footer-inner"><p>© {new Date().getFullYear()} {identity.name}. The builder behind Nexotica.</p><div><Link to="/reviews">Client feedback</Link><a href={identity.upwork} target="_blank" rel="noreferrer">Upwork <ArrowUpRight size={13}/></a><a href={`mailto:${identity.email}`}>Email <ArrowUpRight size={13}/></a></div></div></footer>; }
+function Footer() { return <footer className="p-footer"><div className="p-container p-footer-inner"><p>© {new Date().getFullYear()} {identity.name}</p><div><a href={identity.upwork} target="_blank" rel="noreferrer">Upwork <ArrowUpRight size={13}/></a></div></div></footer>; }
 function Shell({ children, title = 'AI & Automation Portfolio' }: {
     children: ReactNode;
     title?: string;
