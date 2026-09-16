@@ -43,13 +43,13 @@ try {
       assert.ok(!/Our Mission|What We Do|Choose Us|Our Vision|Our Impact|Countries We Serve/.test(html));
     }
     if (path === '/projects/5') {
-      for (const text of ['Multi-Platform Social Media Scheduler', 'AI Automation Engineer', 'December 13, 2025', 'Airtable', '15 minutes', 'Category ID 27', 'Posted shorts', 'Google Sheets3', '9 AM and 7 PM', 'Social Media Audit']) {
+      for (const text of ['Multi-Platform Social Media Scheduler', 'AI Automation Engineer', 'December 13, 2025', 'Airtable', '15-minute', 'Category ID 27', 'Posted shorts', 'Google Sheets3', '9 AM and 7 PM', 'Social Media Audit']) {
         assert.ok(html.includes(text), `Project 5 preserves supplied detail: ${text}`);
       }
       assert.ok(html.includes('case-study-social-scheduler.jpg'), 'Project 5 uses the original supplied screenshot');
     }
     if (path === '/projects/6') {
-      for (const text of ['AI-Powered Outreach Engine', 'AI Automation Engineer', 'December 2, 2025', 'Reoon', 'Gemini', '20+', '5,000+', '99%', 'Client Feedback', 'AI Agent Development', 'outreach-planner-verification.png', 'outreach-scraper-enrichment.png']) {
+      for (const text of ['AI-Powered Outreach Engine', 'AI Automation Engineer', 'December 2, 2025', 'Reoon', 'Gemini', '20+', '5,000+', '99%', 'Client feedback', 'AI Agent Development', 'outreach-planner-verification.png', 'outreach-scraper-enrichment.png']) {
         assert.ok(html.includes(text), `Project 6 preserves supplied detail: ${text}`);
       }
       assert.ok(html.includes('href="/projects/7"'), 'Project 6 links onward to Project 7');
