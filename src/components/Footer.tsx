@@ -106,7 +106,7 @@ export const Footer = () => {
                       className="group/link relative text-foreground/80 hover:text-primary transition-all duration-300 text-sm md:text-base tracking-wide"
                     >
                       <span className="relative">
-                        Case Studies
+                        Projects
                         <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-gradient-to-r from-primary to-yellow-400 group-hover/link:w-full transition-all duration-300" />
                       </span>
                     </button>

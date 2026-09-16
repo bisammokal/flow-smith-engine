@@ -1,0 +1,1401 @@
+{
+  "services": {
+    "coreServices": [
+      {
+        "title": "Workflow Automation (n8n / Make / Zapier)",
+        "description": "We connect your favorite apps and build automated workflows that eliminate repetitive manual work — from lead entry to report generation — saving teams 15+ hours every week and increasing overall revenue by 40–45% through faster lead response and process efficiency."
+      },
+      {
+        "title": "CRM Automation (Zoho, ClickUp, Monday, Close)",
+        "description": "Automate your entire sales pipeline — from lead capture to follow-ups — and keep your CRM always updated in real time. Businesses using our CRM automation see 30–50% faster deal closures, 20% higher conversion rates, and save 10+ hours per week on manual data entry and task management."
+      },
+      {
+        "title": "E-Commerce Automation (Shopify / WooCommerce / WordPress)",
+        "description": "Streamline your entire store workflow by automating orders, inventory updates, refunds, and customer notifications through Make or n8n. Stores using our automations report 35–50% faster order processing, 40% fewer fulfillment errors, and 20–30% revenue growth from improved response time and customer satisfaction."
+      }
+    ],
+    "aiSolutions": [
+      {
+        "title": "AI Content Automation (OpenAI / Flowise)",
+        "description": "Auto-generate and publish blogs, social posts, and emails using AI-driven workflows — perfect for content teams and agencies."
+      },
+      {
+        "title": "Chatbot & AI Agent Development (Dialogflow / Flowise / Rasa)",
+        "description": "Deploy intelligent chatbots for websites and CRMs that answer FAQs, qualify leads, and guide visitors 24/7."
+      },
+      {
+        "title": "Voice AI Automation",
+        "description": "Create voice-to-voice or speech-to-text assistants that can greet, qualify, and support customers hands-free."
+      }
+    ],
+    "customServices": [
+      {
+        "title": "API & Webhook Integrations",
+        "description": "Connect tools that don't natively integrate. We design secure API pipelines that move data seamlessly between systems."
+      },
+      {
+        "title": "Reporting & Dashboard Automation",
+        "description": "Build live dashboards and automated performance reports inside Google Sheets or Data Studio — always accurate, always up-to-date."
+      }
+    ],
+    "workflows": [
+      {
+        "title": "AI-Powered Email Reply Automation",
+        "hook": "Respond to every lead instantly with personalized, context-aware emails powered by your CRM data.",
+        "overview": "This workflow turns your inbox into a smart AI system that drafts perfect email responses using full HubSpot context — including lead history, deal stage, notes, and past conversations — then sends it for quick approval via Slack.",
+        "problem": "Slow or inconsistent email replies, manual composing of repetitive messages, missed leads due to delayed responses, team overwhelmed with inbox volume.",
+        "howItWorks": "When an email arrives, the system pulls full HubSpot data for that lead. AI drafts a highly personalized, professional response. You get a Slack notification to approve or edit. Once approved, the email is automatically sent.",
+        "benefits": "10× faster response times, professional consistent messaging every time, zero missed leads, higher close rates due to instant engagement.",
+        "visualization": "Every email is answered instantly and perfectly — without manually typing a single line.",
+        "whyLoveIt": "Because it makes their team look ultra-responsive and reliable, increasing trust and conversions effortlessly."
+      },
+      {
+        "title": "AI Account Intelligence Briefs",
+        "hook": "Get instant, ultra-clear account summaries for smarter outreach and faster deal closing.",
+        "overview": "This workflow creates clean, actionable account briefs using Salesforce + MadKudu scoring + AI analysis so your sales team always knows exactly what to say and who to prioritize.",
+        "problem": "Sales team wasting hours researching every lead, reps not knowing which accounts deserve priority, weak personalization in cold outreach.",
+        "howItWorks": "Pulls all account data from Salesforce, adds MadKudu scoring, AI converts the data into a 1-page brief with insights, risks, and talking points.",
+        "benefits": "Faster, richer preparation, hyper-personalized messages, higher meeting-booking rate, sales reps become dramatically more effective.",
+        "visualization": "Your reps open Salesforce and instantly see a clean, AI-generated brief telling them exactly what to say and how to win the account.",
+        "whyLoveIt": "Because it upgrades their sales team's intelligence without increasing headcount."
+      },
+      {
+        "title": "Automated AI Customer Support",
+        "hook": "Cut support workload instantly with an AI that replies using your own documentation.",
+        "overview": "This workflow reads your Mintlify documentation and answers customer support tickets intelligently through Zendesk — only escalating complex cases.",
+        "problem": "High support cost, repetitive questions draining your team, delayed responses, poor customer satisfaction.",
+        "howItWorks": "AI detects new tickets, looks up your documentation for accurate answers, replies instantly within 3 messages, escalates automatically when needed.",
+        "benefits": "Support team workload drops by 40–70%, faster replies → happier customers, more accurate and consistent answers.",
+        "visualization": "Your documentation becomes a 24/7 support agent that never sleeps.",
+        "whyLoveIt": "Because it delivers instant support without hiring more staff."
+      },
+      {
+        "title": "AI-Driven HVAC Appointment Scheduler",
+        "hook": "Let AI handle service booking, reminders, and email communication automatically.",
+        "overview": "This workflow fully automates HVAC scheduling — from customer request to technician assignment to reminders — using AI, Gmail, and Google Calendar.",
+        "problem": "Missed or double-booked appointments, manual scheduling chaos, slow response times, inefficient technician planning.",
+        "howItWorks": "AI chats with the customer, finds available slots, books automatically in Google Calendar, sends confirmation emails + reminders.",
+        "benefits": "Smooth operations, fewer booking mistakes, better customer experience, no wasted technician time.",
+        "visualization": "Customers request service, and the system handles everything automatically.",
+        "whyLoveIt": "Because it eliminates scheduling chaos and improves service delivery."
+      },
+      {
+        "title": "Fully Automated Lead Generation Engine",
+        "hook": "Find prospects, enrich data, and send personalized cold emails — all on autopilot.",
+        "overview": "This workflow handles lead sourcing, qualification, personalization, and cold email outreach automatically using Apify, AI, Gmail, and Telegram alerts.",
+        "problem": "Slow manual lead scraping, zero personalization, low campaign results, wasting hours on admin work.",
+        "howItWorks": "Scrapes fresh leads from the web, enriches profiles, creates AI-personalized emails, sends outreach via Gmail, notifies you on Telegram for hot leads.",
+        "benefits": "Consistent leads daily, personalized emails → higher replies, no manual effort, predictable sales pipeline.",
+        "visualization": "Your outreach runs 24/7 while you focus on selling.",
+        "whyLoveIt": "Because it removes 90% of the manual work in lead generation."
+      },
+      {
+        "title": "Automated Review & Sentiment System",
+        "hook": "Collect reviews automatically and instantly know customer happiness levels.",
+        "overview": "This workflow collects client reviews, analyzes sentiment using AI, and shares insights instantly through Slack + HighLevel.",
+        "problem": "Low review collection rate, not knowing when a customer becomes unhappy, missing opportunities to improve services.",
+        "howItWorks": "Sends automated review requests, AI analyzes tone, keywords, and satisfaction, flags negative reviews instantly, sends insights to Slack.",
+        "benefits": "More consistent 5-star reviews, immediate alerts for unhappy clients, stronger online reputation.",
+        "visualization": "You see customer satisfaction in real time — automatically.",
+        "whyLoveIt": "Because it protects their reputation and increases retention."
+      },
+      {
+        "title": "Done-For-You Onboarding Automation",
+        "hook": "Deliver a smooth, guided onboarding journey without manual follow-ups.",
+        "overview": "This workflow creates a complete onboarding experience using HubSpot, personalized emails, and team alerts to ensure every new customer feels taken care of.",
+        "problem": "Missing onboarding steps, customers confused after purchase, low activation rate, too many manual emails.",
+        "howItWorks": "Detects a new customer, sends step-by-step onboarding emails, alerts your team when needed, tracks progress inside HubSpot.",
+        "benefits": "Better customer experience, higher activation, fewer support issues, streamlined operations.",
+        "visualization": "Every new customer gets the perfect onboarding journey automatically.",
+        "whyLoveIt": "Because great onboarding increases lifetime value."
+      },
+      {
+        "title": "AI-Written Personalized Icebreakers",
+        "hook": "Turn cold emails warm with ultra-personalized opening lines built in seconds.",
+        "overview": "This workflow analyzes your prospect's online presence and generates custom icebreakers for higher cold email responses.",
+        "problem": "Low cold email reply rate, generic intros, manual research taking hours.",
+        "howItWorks": "Pulls prospect data from Instantly, AI analyzes content, generates a unique 1–2 sentence opener.",
+        "benefits": "Higher reply rate, strong first impression, emails feel human and researched.",
+        "visualization": "Every email starts with a personalized intro that instantly grabs attention.",
+        "whyLoveIt": "Because personalization dramatically boosts conversions."
+      },
+      {
+        "title": "AI Meeting Follow-Up Assistant",
+        "hook": "Never forget a follow-up again — AI creates perfect next-step suggestions after every meeting.",
+        "overview": "This workflow scans your Google Calendar events, understands context, and generates tailored follow-up messages delivered via WhatsApp and email.",
+        "problem": "Forgetting to follow up, weak or delayed communication, losing deals after a good meeting.",
+        "howItWorks": "Detects meeting completion, AI analyzes meeting notes, creates follow-up message options, sends through WhatsApp & email.",
+        "benefits": "Stronger relationships, higher deal conversion, perfect follow-ups every time.",
+        "visualization": "Meetings end — and follow-ups are sent automatically.",
+        "whyLoveIt": "Because follow-ups are the key to closing more deals."
+      },
+      {
+        "title": "AI Churn Prediction System",
+        "hook": "Identify customers at risk of leaving — before they actually leave.",
+        "overview": "This workflow analyzes customer behavior using HubSpot + Google Sheets and predicts which customers are likely to churn.",
+        "problem": "Customers leaving without warning, no visibility into customer satisfaction, declining recurring revenue.",
+        "howItWorks": "Pulls behavioral data, AI scores churn probability, sends alerts for high-risk customers.",
+        "benefits": "Saves at-risk clients, higher retention, more predictable revenue.",
+        "visualization": "You get a list of customers who need attention — before they leave.",
+        "whyLoveIt": "Because saving one client is often more valuable than acquiring three."
+      },
+      {
+        "title": "AI Multi-Agent Revenue Strategy Engine",
+        "hook": "AI specialists analyze your funnel and generate an actionable plan to boost conversions.",
+        "overview": "This workflow uses multiple AI agents to review your customer journey, identify bottlenecks, and generate a CRO-focused growth strategy.",
+        "problem": "Low conversions, no clarity on what to fix, guesswork in marketing decisions.",
+        "howItWorks": "AI agents analyze your funnel, identify friction points, give prioritized recommendations.",
+        "benefits": "Higher revenue per visitor, clear action steps, data-driven decisions.",
+        "visualization": "AI tells you exactly what to fix in your funnel and why.",
+        "whyLoveIt": "Because it highlights the highest-impact revenue opportunities instantly."
+      },
+      {
+        "title": "Instant Lead Qualification System",
+        "hook": "Turn raw leads into fully qualified opportunities with automatic scoring and routing.",
+        "overview": "This workflow qualifies leads based on their Typeform responses, enriches data, and routes them to the right team instantly inside HubSpot.",
+        "problem": "Sales team wasting time on weak leads, no scoring system, slow response from the right team.",
+        "howItWorks": "Lead submits a form, AI analyzes answers, lead is scored and enriched, automatically routed to the right owner.",
+        "benefits": "Higher close rate, faster response to high-value leads, organized and efficient pipeline.",
+        "visualization": "Every lead instantly gets qualified and assigned to the perfect salesperson.",
+        "whyLoveIt": "Because it eliminates guesswork and speeds up growth."
+      },
+      {
+        "title": "Smart Website Knowledge Chatbot",
+        "hook": "Give visitors instant answers using an AI trained on your documents.",
+        "overview": "This workflow creates a website chatbot that pulls knowledge directly from your Google Drive files to answer customer questions with accuracy.",
+        "problem": "High dependency on support team, visitors leaving because answers aren't clear, slow manual replies.",
+        "howItWorks": "AI reads your Google Drive documents, understands your product/services, answers customer questions instantly.",
+        "benefits": "Lower support workload, fewer abandoned visitors, more conversions from your website.",
+        "visualization": "A knowledgeable chatbot that instantly answers like your best team member.",
+        "whyLoveIt": "Because every visitor gets answers immediately — boosting trust and conversions."
+      },
+      {
+        "title": "AI-Powered Personal Executive Assistant",
+        "hook": "Manage emails, meetings, and priorities automatically — like having a full-time personal assistant.",
+        "overview": "This workflow turns your inbox, calendar, and Slack into a unified AI-powered executive assistant that manages tasks, flags priorities, drafts messages, and keeps you organized 24/7.",
+        "problem": "Too many emails and messages slowing decision-making, missing important follow-ups, manual checking of Slack, calendar, and inbox, overloaded executives who need clarity fast.",
+        "howItWorks": "AI scans email + Slack + calendar, detects important conversations, missed messages, deadlines, creates summaries, tasks, reminders, suggests replies and sends priority alerts.",
+        "benefits": "Ultra-fast decision-making, zero missed follow-ups, better communication and workflow, total clarity in daily priorities.",
+        "visualization": "An AI assistant that tells you what matters and what needs your attention — before you even ask.",
+        "whyLoveIt": "Because it eliminates chaos and gives executives peace of mind with automated clarity."
+      },
+      {
+        "title": "Automated Email Discovery Engine",
+        "hook": "Find verified company emails instantly — fully automated.",
+        "overview": "This workflow searches for company domains, finds valid emails using Anymail Finder, stores results in Google Sheets, and sends alerts through Telegram.",
+        "problem": "Manual search for emails, low accuracy, time wasted on enrichment, slower outreach due to missing contacts.",
+        "howItWorks": "User enters company name, AI finds the domain, Anymail Finder finds verified emails, logs them in Sheets, sends alerts to Telegram.",
+        "benefits": "Faster prospecting, verified email accuracy, zero manual research, easy spreadsheet tracking.",
+        "visualization": "You enter a company — the system instantly gives you a verified email with no manual effort.",
+        "whyLoveIt": "Because it unlocks new prospects without wasting hours on research."
+      },
+      {
+        "title": "AI-Powered Voice Chatbot",
+        "hook": "Talk to your knowledge base using a natural, human-like AI voice.",
+        "overview": "This workflow creates a voice-based AI chatbot using ElevenLabs + InfraNodus that speaks answers pulled from your knowledge database.",
+        "problem": "Complex documentation customers don't want to read, slow support, text-only chatbots that feel robotic.",
+        "howItWorks": "User talks to the bot, ElevenLabs handles natural voice input/output, InfraNodus provides deep knowledge reasoning, AI replies instantly with accurate info.",
+        "benefits": "Human-like voice interactions, faster customer support, more engaging experience, reduces load on support teams.",
+        "visualization": "A friendly AI voice that answers your questions instantly with perfect accuracy.",
+        "whyLoveIt": "Because customers prefer talking instead of reading long documents — and this AI delivers that experience."
+      },
+      {
+        "title": "AI Deep Research Sales Agent",
+        "hook": "Generate lead magnet-ready research reports automatically.",
+        "overview": "This workflow performs deep research on any topic, competitor, or industry and converts it into a clean, actionable lead magnet or summary using AI.",
+        "problem": "Hours wasted on manual research, low-quality sales content, difficulty preparing lead magnets, slow content production.",
+        "howItWorks": "AI collects public data, analyzes trends, opportunities, and insights, summarizes into clean reports, outputs ready-to-use PDF or text content.",
+        "benefits": "Instant research reports, higher-quality lead magnets, saves hours of manual research, helps create authority-building content.",
+        "visualization": "You type a topic — the system delivers a full research report ready to use in your marketing.",
+        "whyLoveIt": "Because it boosts content output and positions them as experts without extra work."
+      },
+      {
+        "title": "Automated Lead Scraping & Outreach Engine",
+        "hook": "Scrape leads, analyze reviews, and send personalized outreach automatically.",
+        "overview": "This workflow scrapes potential leads from Yelp & Trustpilot, enriches them, and sends AI-personalized cold emails — fully automated.",
+        "problem": "Manual scraping taking hours, no personalization in emails, unpredictable outreach results, low conversion from generic messaging.",
+        "howItWorks": "Scrapes businesses with filters, extracts review insights, enriches business details, AI drafts personalized cold emails, sends via Gmail or SMTP.",
+        "benefits": "Daily fresh leads, higher reply rates, personalized emails at scale, no manual work.",
+        "visualization": "A system that finds new businesses and sends perfect personalized offers automatically.",
+        "whyLoveIt": "Because lead generation + outreach becomes effortless and scalable."
+      },
+      {
+        "title": "Smart Website Knowledge Chatbot",
+        "hook": "Turn your Google Drive documents into a powerful AI chatbot.",
+        "overview": "This system converts your Google Drive PDFs, docs, and files into a fully functional website chatbot powered by GPT-4 and Mistral.",
+        "problem": "Visitors leave when they can't find info, support team overloaded with repetitive questions, slow responses reduce conversions.",
+        "howItWorks": "Reads all documents in Google Drive, builds an AI knowledge base, chatbot embedded on your website, visitors ask questions → instant answers.",
+        "benefits": "24/7 instant support, fewer support tickets, higher conversions, accurate answers based on your own files.",
+        "visualization": "Your website gets a smart AI chatbot that answers like your best team member.",
+        "whyLoveIt": "Because it boosts trust, improves user experience, and reduces support cost."
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "name": "Sarah Johnson",
+      "role": "Marketing Agency Owner",
+      "text": "Our entire onboarding is now 100% automated. Saved 15 hours/week easily! The team at Nexotica understood our needs perfectly.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Michael Chen",
+      "role": "Real Estate Broker",
+      "text": "The lead qualification system alone doubled our conversion rate. We never miss a hot lead anymore. Best investment we've made.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Emily Rodriguez",
+      "role": "Healthcare Practice Manager",
+      "text": "Patient appointment automation has transformed our practice. Zero no-shows, perfect record-keeping, and our staff loves it.",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "David Park",
+      "role": "SaaS Founder",
+      "text": "The AI follow-up system is incredible. It knows exactly when to reach out. Our response rates went up 3x in the first month.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Sarah Mitchell",
+      "role": "Agency Owner",
+      "text": "We built a complete AI sales funnel with Nexotica in under 3 weeks. Our close rate increased by 45% and we're scaling faster than ever.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "James Rodriguez",
+      "role": "SaaS Co-Founder",
+      "text": "The automation workflows saved us 20+ hours weekly. Our team can finally focus on growth instead of repetitive tasks.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Priya Sharma",
+      "role": "E-commerce Director",
+      "text": "Customer engagement went through the roof. The AI handles support tickets, follow-ups, and upsells automatically. Revenue up 60%.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Sarah J.",
+      "role": "Marketing Agency Owner",
+      "text": "Nexotica automated our entire client onboarding. We're saving around 18 hours/week and deliver projects faster. Clients are impressed with how smooth everything feels.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Michael C.",
+      "role": "Real Estate Broker",
+      "text": "The lead qualification automation doubled our conversion rate within 3 weeks. I no longer waste time chasing cold leads. This was honestly a game-changer.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "David P.",
+      "role": "SaaS Founder",
+      "text": "Our follow-up workflow improved response rates by 3x in the first month. It messages leads exactly at the right time without me doing anything.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Dr. Emily R.",
+      "role": "Healthcare Practice Manager",
+      "text": "Appointment automation eliminated no-shows completely. Our staff workload went down drastically. Patients love the reminders.",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Lena M.",
+      "role": "Executive Coach",
+      "text": "We automated our client enrollment and saved at least 25 hours weekly. I spend my time coaching instead of texting prospects. Worth every dollar.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Tommy K.",
+      "role": "Agency Owner",
+      "text": "I added Nexotica's outreach workflow and started booking 7–10 meetings weekly on autopilot. My agency revenue grew 3x in 60 days.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Diana P.",
+      "role": "E-Commerce Store Founder",
+      "text": "Order updates, abandoned cart follow-ups, and email flows are now fully automated. Our repeat customer rate increased massively.",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Ahmed F.",
+      "role": "Business Consultant",
+      "text": "The CRM automation keeps everything clean — no missed tasks anymore. I literally close clients faster because nothing slips.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1506277886164-e25aa3f4ef7f?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Jason & Mia",
+      "role": "Real Estate Team",
+      "text": "We reduced manual admin work by over 70%. Notifications, reminders, follow-up — all automated. My team finally focuses on closing.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Robert H.",
+      "role": "Sales Manager",
+      "text": "Our sales reps save around 20 hours weekly. Automated lead routing and follow-ups increased pipeline velocity significantly.",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Ayesha Q.",
+      "role": "Legal Firm Partner",
+      "text": "Document requests, case reminders, and client updates are automatic now. Our clients notice the professionalism instantly.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Jake M.",
+      "role": "Online Fitness Coach",
+      "text": "Onboarding automation alone freed up so much time. My clients get a premium experience without me doing any of the repetitive work.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Hassan A.",
+      "role": "Local Services Business Owner",
+      "text": "I didn't even know automation could help my type of business. But Nexotica cut my manual work in half and increased bookings.",
+      "rating": 4.9,
+      "image": "https://images.unsplash.com/photo-1633332755192-727a05c4013d?w=100&h=100&fit=crop"
+    },
+    {
+      "name": "Maya R.",
+      "role": "Course Creator",
+      "text": "My enrollment, reminders, and follow-ups run automatically. I scaled to 40+ paid students without hiring anyone.",
+      "rating": 5,
+      "image": "https://images.unsplash.com/photo-1489424731084-a5d8b219a5bb?w=100&h=100&fit=crop"
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "tag": "B2B SaaS",
+      "title": "CRO-Led Multi-Agent Revenue Operating System",
+      "before": [
+        "Revenue forecasts took 3–5 days",
+        "Teams working on contradicting numbers",
+        "Pipeline leakages invisible for weeks"
+      ],
+      "after": [
+        "60-second forecasts",
+        "Unified revenue brain",
+        "$1.8M predictable growth unlocked"
+      ],
+      "color": "from-primary/20 to-accent/20"
+    },
+    {
+      "id": 2,
+      "tag": "Solo Founder",
+      "title": "Fully Autonomous AI Personal Assistant OS",
+      "before": [
+        "50+ hours monthly on manual tasks",
+        "Delayed email responses",
+        "High mental load from task switching"
+      ],
+      "after": [
+        "52+ hours saved monthly",
+        "70% email load reduction",
+        "Autonomous operations 24/7"
+      ],
+      "color": "from-secondary/20 to-primary/20"
+    },
+    {
+      "id": 3,
+      "tag": "B2B Lead Gen",
+      "title": "Automated Lead Engine with AI-Driven Prospecting",
+      "before": [
+        "Manual Yelp & Trustpilot searches",
+        "15–20 hours/week on lead research",
+        "Inconsistent pipeline"
+      ],
+      "after": [
+        "120+ leads monthly on autopilot",
+        "100% elimination of manual work",
+        "2× higher email send volume"
+      ],
+      "color": "from-accent/20 to-secondary/20"
+    },
+    {
+      "id": 4,
+      "tag": "AI Chatbot / RAG",
+      "title": "Website Chatbot with Google Drive Knowledge Base",
+      "before": [
+        "Chatbot couldn't read PDFs or internal docs",
+        "Knowledge updated by manual copy-paste",
+        "Repeat questions filling the support inbox"
+      ],
+      "after": [
+        "68% of doc questions answered automatically",
+        "New Drive files searchable the same day",
+        "100% of replies grounded in real documents"
+      ],
+      "color": "from-primary/20 to-secondary/20"
+    },
+    {
+      "id": 5,
+      "tag": "Social Media Automation",
+      "title": "Automated Multi-Platform Social Media Scheduler & Publisher",
+      "before": [
+        "Manual uploads to 4 platforms every day",
+        "Optimal posting windows missed",
+        "Duplicate posts from messy tracking"
+      ],
+      "after": [
+        "Hands-free publishing twice daily",
+        "4 platforms driven from one sheet",
+        "Zero duplicates via status tracking"
+      ],
+      "color": "from-secondary/20 to-accent/20"
+    }
+  ],
+  "details": {
+    "1": [
+      {
+        "title": "How a Mid-Market SaaS Company Unlocked   $1.8M in Predictable Revenue Growth   by Deploying a CRO-Led Multi-Agent Revenue Operating System",
+        "paragraphs": [
+          "A transformation from revenue chaos to complete predictability in 90 days"
+        ],
+        "tables": []
+      },
+      {
+        "title": "Client Snapshot",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "label": "Industry",
+              "value": "B2B SaaS (Productivity & Workflow mgmt)",
+              "color": "primary"
+            },
+            {
+              "label": "Team Size",
+              "value": "85",
+              "color": "secondary"
+            },
+            {
+              "label": "Monthly Revenue",
+              "value": "~$1.1M/month",
+              "color": "accent"
+            },
+            {
+              "label": "Primary Challenge",
+              "value": "Revenue stagnation due to siloed analytics, slow decision making & inconsistent go-to-market execution",
+              "color": "primary"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "The Core Business Problem",
+        "paragraphs": [
+          "Before working with us, the company's revenue engine was fragmented and unstable:",
+          "They didn't need another dashboard.  They needed a central brain to run their revenue engine."
+        ],
+        "tables": [
+          [
+            "CRO couldn't make fast decisions due to disconnected data",
+            "Sales, marketing, and ops were operating on contradicting numbers",
+            "No unified forecasting → revenue planning was unpredictable",
+            "Pipeline leakages were invisible for weeks",
+            "Attribution was guesswork — budgets were being burned",
+            "Pricing decisions took weeks and were not backed by data"
+          ]
+        ]
+      },
+      {
+        "title": "What Was at Stake",
+        "paragraphs": [],
+        "tables": [
+          [
+            "The business was on track to miss their annual revenue target by ~$3.2M due to blind spots in forecasting and funnel analytics.",
+            "Leadership felt pressure from investors.",
+            "Teams were burning out because they were reacting — not planning.",
+            "Scaling was impossible without clarity, predictability, and alignment."
+          ]
+        ]
+      },
+      {
+        "title": "Our Diagnostic Process",
+        "paragraphs": [
+          "We conducted a complete revenue operations investigation:",
+          "We uncovered  23 critical failure points  costing the company an estimated  $150k–$190k/month  in lost revenue opportunities."
+        ],
+        "tables": [
+          [
+            {
+              "step": "01",
+              "title": "Full-funnel audit across sales, marketing & retention",
+              "description": "Revenue systems mapping (data → insights → actions loop)"
+            },
+            {
+              "step": "02",
+              "title": "Attribution and forecasting gap analysis",
+              "description": "Pricing sensitivity review"
+            },
+            {
+              "step": "03",
+              "title": "Operational inefficiency mapping",
+              "description": "Complete systems audit"
+            }
+          ],
+          [
+            "0 0 20px rgba(230, 184, 58, 0.3)",
+            "0 0 40px rgba(230, 184, 58, 0.5)",
+            "0 0 20px rgba(230, 184, 58, 0.3)"
+          ]
+        ]
+      },
+      {
+        "title": "The Solution Architecture",
+        "paragraphs": [
+          "Revenue OS",
+          "We built a CRO-led Multi-Agent Revenue Operating System™, powered by a coordinated team of specialized AI analysts working together.  The system operated like a full-time Revenue Ops team:",
+          "Orchestrates all revenue decisions",
+          "Everything worked in parallel, as a single coordinated  \"Revenue Brain\"  that answered any question in seconds.",
+          "No more spreadsheets.",
+          "No more dashboards nobody read.",
+          "No more waiting on analysts."
+        ],
+        "tables": [
+          [
+            {
+              "title": "Pipeline Analyst",
+              "desc": "Diagnose funnel bottlenecks daily"
+            },
+            {
+              "title": "Attribution Specialist",
+              "desc": "Show exactly what channels drive revenue"
+            },
+            {
+              "title": "Forecasting Analyst",
+              "desc": "Running predictive modelling & scenario planning"
+            },
+            {
+              "title": "RevOps Manager",
+              "desc": "Optimizing CRM, handoffs & territory planning"
+            },
+            {
+              "title": "Pricing Strategist",
+              "desc": "Generating value-based pricing recommendations"
+            },
+            {
+              "title": "Intelligence Analyst",
+              "desc": "Turning raw data into actionable insights"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "The Transformation",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "label": "Forecasts",
+              "value": "3–5 days"
+            },
+            {
+              "label": "Attribution clarity",
+              "value": "Unclear"
+            },
+            {
+              "label": "Pipeline analysis",
+              "value": "Manual, weekly"
+            },
+            {
+              "label": "Pricing decisions",
+              "value": "Intuition-based"
+            },
+            {
+              "label": "Cross-functional alignment",
+              "value": "Fragmented"
+            },
+            {
+              "label": "Revenue predictability",
+              "value": "±25% variance"
+            },
+            {
+              "label": "CRO workload",
+              "value": "Overwhelmed"
+            }
+          ],
+          [
+            {
+              "label": "Forecasts",
+              "value": "60 seconds"
+            },
+            {
+              "label": "Attribution clarity",
+              "value": "Complete visibility"
+            },
+            {
+              "label": "Pipeline analysis",
+              "value": "Real-time, daily"
+            },
+            {
+              "label": "Pricing decisions",
+              "value": "Data-driven"
+            },
+            {
+              "label": "Cross-functional alignment",
+              "value": "Unified OS"
+            },
+            {
+              "label": "Revenue predictability",
+              "value": "±3% variance"
+            },
+            {
+              "label": "CRO workload",
+              "value": "70% reduced"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "Quantified Results",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "value": "$1.8M",
+              "label": "projected revenue unlocked"
+            },
+            {
+              "value": "37%",
+              "label": "pipeline conversion lift"
+            },
+            {
+              "value": "18%",
+              "label": "sales velocity increase"
+            },
+            {
+              "value": "91%",
+              "label": "forecasting accuracy improvement"
+            },
+            {
+              "value": "60–70%",
+              "label": "operational workload reduction"
+            },
+            {
+              "value": "$24K/mo",
+              "label": "analytics cost reduction"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "Client Feedback",
+        "paragraphs": [
+          "This was not automation — this became our entire revenue command center. Every strategic decision now comes with instant clarity and data we trust."
+        ],
+        "tables": []
+      }
+    ],
+    "2": [
+      {
+        "title": "How an Early-Stage Founder Eliminated   50+ Hours of Manual Work Monthly   Using a Fully Autonomous AI Personal Assistant OS",
+        "paragraphs": [
+          "From operational overwhelm to autonomous execution in 60 days"
+        ],
+        "tables": []
+      },
+      {
+        "title": "Client Snapshot",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "label": "Industry",
+              "value": "Solo Founder / Productivity",
+              "color": "secondary"
+            },
+            {
+              "label": "Team Size",
+              "value": "1",
+              "color": "primary"
+            },
+            {
+              "label": "Monthly Revenue",
+              "value": "$12k/month",
+              "color": "accent"
+            },
+            {
+              "label": "Primary Challenge",
+              "value": "Overload of repetitive admin, emails, scheduling, and manual task switching",
+              "color": "secondary"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "The Core Business Problem",
+        "paragraphs": [
+          "Before working with us, the founder's operations were overwhelmed with inefficiency:",
+          "The founder didn't need another task manager.  He needed an AI employee that works autonomously."
+        ],
+        "tables": [
+          [
+            "The founder spent 3–5 hours daily switching between tasks",
+            "Email responses were delayed by days",
+            "Calendar clashes and missed follow-ups were becoming common",
+            "Research tasks took too long",
+            "No centralized system for tasks, reminders, or project updates",
+            "Mental load was high — everything depended on memory"
+          ]
+        ]
+      },
+      {
+        "title": "What Was at Stake",
+        "paragraphs": [],
+        "tables": [
+          [
+            "If nothing changed, the founder would hit an early burnout ceiling.",
+            "Growth was slowing because too much time was spent on coordination, not execution.",
+            "Missed opportunities and slow turnaround times were costing revenue.",
+            "Scaling was impossible without leverage."
+          ]
+        ]
+      },
+      {
+        "title": "Our Diagnostic Process",
+        "paragraphs": [
+          "We conducted a complete personal operations audit:",
+          "We identified  19 major operational gaps  costing him  45–55 hours/month  of lost productivity."
+        ],
+        "tables": [
+          [
+            {
+              "step": "01",
+              "title": "Task workflow mapping",
+              "description": "Email + communication load analysis"
+            },
+            {
+              "step": "02",
+              "title": "Daily routine breakdown",
+              "description": "Cognitive load analysis"
+            },
+            {
+              "step": "03",
+              "title": "Research bottleneck mapping",
+              "description": "Complete operations audit"
+            }
+          ],
+          [
+            "0 0 20px rgba(230, 184, 58, 0.3)",
+            "0 0 40px rgba(230, 184, 58, 0.5)",
+            "0 0 20px rgba(230, 184, 58, 0.3)"
+          ]
+        ]
+      },
+      {
+        "title": "The Solution Architecture",
+        "paragraphs": [
+          "AI Personal Assistant OS",
+          "We built a fully autonomous AI Personal Assistant OS, acting like a digital employee.  The system included:",
+          "Orchestrates all tasks and decisions",
+          "Everything worked in parallel — an AI assistant that  understands, executes, updates, and reminds  without being asked twice.",
+          "No more mental overhead.",
+          "No more forgotten tasks.",
+          "No more admin load."
+        ],
+        "tables": [
+          [
+            {
+              "title": "AI Task Manager",
+              "desc": "Autonomous task execution & updates"
+            },
+            {
+              "title": "AI Email Intelligence Engine",
+              "desc": "Smart email processing & responses"
+            },
+            {
+              "title": "Query Understanding Layer",
+              "desc": "Natural language command processing"
+            },
+            {
+              "title": "Smart Reminder + Follow-up Engine",
+              "desc": "Proactive notifications & follow-ups"
+            },
+            {
+              "title": "Personal Knowledge Memory System",
+              "desc": "Contextual information retention"
+            },
+            {
+              "title": "Autonomous Research Agent",
+              "desc": "Intelligent information gathering"
+            },
+            {
+              "title": "Calendar Optimization Module",
+              "desc": "Automated scheduling & conflict resolution"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "The Transformation",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "label": "Task switching time",
+              "value": "3–5 hours daily"
+            },
+            {
+              "label": "Email response time",
+              "value": "Delayed by days"
+            },
+            {
+              "label": "Follow-ups",
+              "value": "Manual, often missed"
+            },
+            {
+              "label": "Research time",
+              "value": "Hours per task"
+            },
+            {
+              "label": "System centralization",
+              "value": "None"
+            },
+            {
+              "label": "Mental overhead",
+              "value": "Extremely high"
+            },
+            {
+              "label": "Operational efficiency",
+              "value": "Low"
+            }
+          ],
+          [
+            {
+              "label": "Task switching time",
+              "value": "Automated"
+            },
+            {
+              "label": "Email response time",
+              "value": "Near-instant"
+            },
+            {
+              "label": "Follow-ups",
+              "value": "Fully automated"
+            },
+            {
+              "label": "Research time",
+              "value": "Minutes per task"
+            },
+            {
+              "label": "System centralization",
+              "value": "Complete"
+            },
+            {
+              "label": "Mental overhead",
+              "value": "Minimal"
+            },
+            {
+              "label": "Operational efficiency",
+              "value": "High"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "Quantified Results",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "value": "52+",
+              "label": "hours saved monthly"
+            },
+            {
+              "value": "38%",
+              "label": "faster task execution"
+            },
+            {
+              "value": "Near-instant",
+              "label": "follow-ups"
+            },
+            {
+              "value": "70%",
+              "label": "email load reduction"
+            },
+            {
+              "value": "100%",
+              "label": "focus hours regained"
+            },
+            {
+              "value": "Dramatic",
+              "label": "operational friction drop"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "Client Feedback",
+        "paragraphs": [
+          "I feel like I finally hired my first employee — except this one works 24/7, never forgets anything, and never gets tired."
+        ],
+        "tables": []
+      }
+    ],
+    "3": [
+      {
+        "title": "How an   Automated Lead Engine   Replaced 100% Manual Prospecting Using AI-Driven Yelp & Trustpilot Scraping + Autonomous Outreach",
+        "paragraphs": [
+          "From scattered lead searches to a fully hands-off acquisition system running end-to-end on autopilot."
+        ],
+        "tables": []
+      },
+      {
+        "title": "Client Snapshot",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "label": "Industry",
+              "value": "B2B Digital Marketing / Lead Gen",
+              "color": "primary"
+            },
+            {
+              "label": "Team Size",
+              "value": "Solo Founder",
+              "color": "secondary"
+            },
+            {
+              "label": "Monthly Revenue",
+              "value": "$12k/month",
+              "color": "accent"
+            },
+            {
+              "label": "Primary Challenge",
+              "value": "No scalable method to find, qualify, and contact leads consistently",
+              "color": "primary"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "The Core Business Problem",
+        "paragraphs": [
+          "Before implementing the automation, lead acquisition was slow, manual, and inconsistent:",
+          "The founder didn't need a \"lead list.\"  He needed an Autonomous Lead Pipeline that discovers, qualifies, and contacts leads on its own."
+        ],
+        "tables": [
+          [
+            "Manual searching on Yelp every day",
+            "No way to filter by sub-locations precisely",
+            "Trustpilot credibility checks done manually",
+            "Lead data scattered across tabs & spreadsheets",
+            "Outreach emails written from scratch for each lead",
+            "Hours wasted switching tools",
+            "Zero automation — everything depended on human effort"
+          ]
+        ]
+      },
+      {
+        "title": "What Was at Stake",
+        "paragraphs": [],
+        "tables": [
+          [
+            "Lead volume would cap due to manual bottlenecks",
+            "Opportunities lost to competitors with faster outreach",
+            "Founder stuck doing research instead of selling",
+            "Revenue growth plateau due to inconsistent pipeline",
+            "High mental load caused by repetitive tasks",
+            "Scaling was impossible without automation leverage"
+          ]
+        ]
+      },
+      {
+        "title": "Our Diagnostic Process",
+        "paragraphs": [
+          "We performed a deep operational audit of the client's lead workflow:",
+          "We identified  19 major workflow gaps  costing  45–55 hours/month  in manual research, data cleaning, and messaging."
+        ],
+        "tables": [
+          [
+            {
+              "step": "01",
+              "title": "Lead Source Mapping",
+              "description": "Identified all platforms where ideal clients appear (Yelp, Trustpilot, industry directories)"
+            },
+            {
+              "step": "02",
+              "title": "Workflow Breakdown",
+              "description": "Mapped every step: location discovery → scraping → validation → data entry → outreach"
+            },
+            {
+              "step": "03",
+              "title": "Automation Feasibility Scan",
+              "description": "Tracked inefficiencies, friction points, and repetitive tasks"
+            }
+          ],
+          [
+            "0 0 20px rgba(230, 184, 58, 0.3)",
+            "0 0 40px rgba(230, 184, 58, 0.5)",
+            "0 0 20px rgba(230, 184, 58, 0.3)"
+          ]
+        ]
+      },
+      {
+        "title": "The Solution Architecture",
+        "paragraphs": [
+          "Autonomous Lead Engine",
+          "We built an Autonomous Lead Engine that discovers, qualifies, and contacts leads on autopilot.  The system included:",
+          "Orchestrates all lead discovery and outreach",
+          "Everything worked in parallel as a single coordinated  \"Lead Acquisition Brain\"  to generate, qualify, and contact leads automatically — eliminating spreadsheets, manual research, and waiting on data entry."
+        ],
+        "tables": [
+          [
+            {
+              "title": "Yelp Data Harvester",
+              "desc": "Automated platform scraping"
+            },
+            {
+              "title": "Trustpilot Review Intelligence",
+              "desc": "Credibility verification"
+            },
+            {
+              "title": "Sub-Location AI Analyzer",
+              "desc": "Geographic segmentation"
+            },
+            {
+              "title": "Data Cleaning & Deduplication",
+              "desc": "Quality assurance layer"
+            },
+            {
+              "title": "Google Sheets Sync",
+              "desc": "Real-time data updates"
+            },
+            {
+              "title": "AI Email Writer",
+              "desc": "Personalized outreach generation"
+            },
+            {
+              "title": "Automated Gmail Sender",
+              "desc": "Batch email automation"
+            },
+            {
+              "title": "Continuous Lead Loop",
+              "desc": "Ongoing pipeline management"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "The Transformation",
+        "paragraphs": [],
+        "tables": [
+          [
+            "Manual Yelp searches daily",
+            "No way to segment sub-locations",
+            "Trustpilot credibility checks done manually",
+            "Hours spent copy-pasting into spreadsheets",
+            "Outreach emails written from scratch",
+            "Outreach sent 1-by-1",
+            "15–20 hours/week wasted"
+          ],
+          [
+            "Fully automated Yelp scraping via BrightData",
+            "AI generates location clusters automatically",
+            "Automated Trustpilot review extraction",
+            "Structured Google Sheets sync",
+            "AI generates personalized email copy",
+            "Gmail auto-sends to unique leads",
+            "System runs entirely on autopilot"
+          ]
+        ]
+      },
+      {
+        "title": "Quantified Results",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "value": "120+",
+              "label": "Leads generated monthly automatically"
+            },
+            {
+              "value": "100%",
+              "label": "Elimination of manual scraping work"
+            },
+            {
+              "value": "70–80%",
+              "label": "Time savings vs. manual research"
+            },
+            {
+              "value": "2×",
+              "label": "Higher email send volume due to automation"
+            },
+            {
+              "value": "Verified",
+              "label": "Accurate + verified leads through dual-source validation"
+            },
+            {
+              "value": "Daily",
+              "label": "Consistent daily pipeline without human effort"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "Client Feedback",
+        "paragraphs": [
+          "Everything I used to do manually — finding leads, checking their ratings, cleaning data, and writing outreach — now happens automatically. It feels like I hired a full-time lead researcher and email marketer combined."
+        ],
+        "tables": []
+      }
+    ],
+    "4": [
+      {
+        "title": "How a   Website Chatbot   Learned an Entire Documentation Library Using an Automated RAG Pipeline",
+        "paragraphs": [
+          "From hand-written bot replies to a self-updating knowledge base that answers every question straight from company documents."
+        ],
+        "tables": []
+      },
+      {
+        "title": "Client Snapshot",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "label": "Industry",
+              "value": "B2B SaaS / Online Services",
+              "color": "primary"
+            },
+            {
+              "label": "Team Size",
+              "value": "2-person support team",
+              "color": "secondary"
+            },
+            {
+              "label": "Monthly Revenue",
+              "value": "$9k/month",
+              "color": "accent"
+            },
+            {
+              "label": "Primary Challenge",
+              "value": "Chatbot could not answer anything that lived inside PDFs and internal docs",
+              "color": "primary"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "The Core Business Problem",
+        "paragraphs": [
+          "The client's previous chatbot looked helpful but knew almost nothing about the business:",
+          "The client didn't need a smarter-sounding chatbot.  They needed a chatbot that actually reads the company's documents."
+        ],
+        "tables": [
+          [
+            "Could not answer questions about internal product specs",
+            "Support guides sat in Google Drive, invisible to the bot",
+            "PDFs and scanned images could not be indexed at all",
+            "Every knowledge update meant manual copy-pasting",
+            "Bot replies went stale the moment a document changed",
+            "No way to verify where an answer came from",
+            "Tier 1 questions still landed in the support inbox"
+          ]
+        ]
+      },
+      {
+        "title": "What Was at Stake",
+        "paragraphs": [],
+        "tables": [
+          [
+            "Customers waiting hours for answers already written in a PDF",
+            "Support team buried under the same documentation questions",
+            "Outdated bot replies quietly damaging trust",
+            "Every new document adding manual maintenance work",
+            "Unverifiable answers creating real business risk",
+            "No way to scale support without hiring"
+          ]
+        ]
+      },
+      {
+        "title": "Our Diagnostic Process",
+        "paragraphs": [
+          "We audited both the documentation and the questions customers were actually asking:",
+          "We found that  68% of incoming questions  were already answered inside  documents the chatbot could not read."
+        ],
+        "tables": [
+          [
+            {
+              "step": "01",
+              "title": "Document Audit",
+              "description": "Catalogued every product spec, support guide, and scanned PDF sitting in Google Drive"
+            },
+            {
+              "step": "02",
+              "title": "Question Mapping",
+              "description": "Reviewed real chat transcripts to find which answers already existed in the documents"
+            },
+            {
+              "step": "03",
+              "title": "Retrieval Feasibility Scan",
+              "description": "Tested OCR accuracy and chunking strategy against the client's messiest files"
+            }
+          ],
+          [
+            "0 0 20px rgba(230, 184, 58, 0.3)",
+            "0 0 40px rgba(230, 184, 58, 0.5)",
+            "0 0 20px rgba(230, 184, 58, 0.3)"
+          ]
+        ]
+      },
+      {
+        "title": "The Solution Architecture",
+        "paragraphs": [
+          "Document Intelligence + Live Chat Agent",
+          "We built a dual-component n8n workflow: one pipeline turns raw documents into searchable knowledge, the other answers users in real time from that knowledge.  The system included:",
+          "Turns raw documents into grounded answers",
+          "Ingestion and retrieval run as one coordinated  \"Documentation Brain\"  — drop a file in Google Drive and the chatbot can answer from it, with a clear \"I couldn't find that on this site\" fallback when it can't."
+        ],
+        "tables": [
+          [
+            {
+              "title": "Google Drive Loader",
+              "desc": "Pulls documents from a watched folder"
+            },
+            {
+              "title": "Mistral DOC OCR",
+              "desc": "Extracts clean text from PDFs & images"
+            },
+            {
+              "title": "Signed URL Handoff",
+              "desc": "Secure file transfer to the OCR API"
+            },
+            {
+              "title": "Smart Chunking",
+              "desc": "Splits text into ~1000-character passages"
+            },
+            {
+              "title": "Mistral Cloud Embeddings",
+              "desc": "Converts chunks into vectors"
+            },
+            {
+              "title": "Qdrant Vector Store",
+              "desc": "Stores and retrieves by meaning"
+            },
+            {
+              "title": "GPT-4.1-mini Chat Agent",
+              "desc": "Replies in the site chat widget"
+            },
+            {
+              "title": "Conversation Memory",
+              "desc": "Keeps the last 10 turns in context"
+            },
+            {
+              "title": "Grounding Guardrails",
+              "desc": "Blocks answers not found in the docs"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "The Transformation",
+        "paragraphs": [],
+        "tables": [
+          [
+            "Bot answers hand-written one by one",
+            "PDFs and scans completely unreadable",
+            "Knowledge updates took days",
+            "Replies went stale after every doc change",
+            "No source behind any answer",
+            "Repeat questions hit the support inbox",
+            "Bot guessed when it didn't know"
+          ],
+          [
+            "Documents ingested straight from Google Drive",
+            "Mistral OCR reads PDFs and images",
+            "Knowledge refreshed in a single workflow run",
+            "New docs searchable the same day",
+            "Every reply grounded in a real document",
+            "Documentation questions answered automatically",
+            "Honest fallback instead of invented answers"
+          ]
+        ]
+      },
+      {
+        "title": "Quantified Results",
+        "paragraphs": [],
+        "tables": [
+          [
+            {
+              "value": "68%",
+              "label": "Of documentation questions answered without a human"
+            },
+            {
+              "value": "24/7",
+              "label": "Instant replies grounded in company documentation"
+            },
+            {
+              "value": "100%",
+              "label": "Of answers traceable to a source document"
+            },
+            {
+              "value": "$700",
+              "label": "Monthly support cost avoided on repeat questions"
+            },
+            {
+              "value": "Zero",
+              "label": "Manual copy-pasting to update the knowledge base"
+            },
+            {
+              "value": "Same-day",
+              "label": "New Google Drive documents become searchable"
+            }
+          ]
+        ]
+      },
+      {
+        "title": "Client Feedback",
+        "paragraphs": [
+          "I used to answer the same five questions every day, then rewrite the bot's script whenever a document changed. Now I drop a file into Drive and the chatbot simply knows it — and it never makes things up."
+        ],
+        "tables": []
+      }
+    ]
+  },
+  "businessStats": [
+    {
+      "value": "2x–4x",
+      "label": "Monthly Revenue Influenced"
+    },
+    {
+      "value": "100+",
+      "label": "Tasks Fully Automated"
+    },
+    {
+      "value": "50+",
+      "label": "Automated Workflows Live in Production"
+    },
+    {
+      "value": "6+",
+      "label": "Countries We Serve"
+    },
+    {
+      "value": "35%–70%",
+      "label": "Operational Workload Eliminated"
+    },
+    {
+      "value": "2–4",
+      "label": "Additional Deals Generated Monthly"
+    }
+  ]
+}

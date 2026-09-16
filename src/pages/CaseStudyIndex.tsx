@@ -29,6 +29,22 @@ const caseStudies = [
     after: ["120+ leads monthly on autopilot", "100% elimination of manual work", "2× higher email send volume"],
     color: "from-accent/20 to-secondary/20",
   },
+  {
+    id: 4,
+    tag: "AI Chatbot / RAG",
+    title: "Website Chatbot with Google Drive Knowledge Base",
+    before: ["Chatbot couldn't read PDFs or internal docs", "Knowledge updated by manual copy-paste", "Repeat questions filling the support inbox"],
+    after: ["68% of doc questions answered automatically", "New Drive files searchable the same day", "100% of replies grounded in real documents"],
+    color: "from-primary/20 to-secondary/20",
+  },
+  {
+    id: 5,
+    tag: "Social Media Automation",
+    title: "Automated Multi-Platform Social Media Scheduler & Publisher",
+    before: ["Manual uploads to 4 platforms every day", "Optimal posting windows missed", "Duplicate posts from messy tracking"],
+    after: ["Hands-free publishing twice daily", "4 platforms driven from one sheet", "Zero duplicates via status tracking"],
+    color: "from-secondary/20 to-accent/20",
+  },
 ];
 
 export default function CaseStudyIndex() {
@@ -46,7 +62,7 @@ export default function CaseStudyIndex() {
             className="text-center mb-16 max-w-4xl mx-auto"
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Client Success Stories
+              Our Projects
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground">
               Real transformations. Measurable results. Zero manual work.
@@ -62,7 +78,7 @@ export default function CaseStudyIndex() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Link to={`/case-study/${study.id}`}>
+                <Link to={`/projects/${study.id}`}>
                   <div className="glass-card p-8 h-full border border-primary/10 hover:border-primary/30 hover:shadow-glow transition-all duration-500 hover:scale-105 group relative overflow-hidden">
                     {/* Gradient Background */}
                     <div className={`absolute inset-0 bg-gradient-to-br ${study.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} />
@@ -115,7 +131,7 @@ export default function CaseStudyIndex() {
 
                       {/* CTA */}
                       <div className="flex items-center gap-2 text-accent font-semibold group-hover:gap-3 transition-all">
-                        <span>View Case Study</span>
+                        <span>View Project</span>
                         <ArrowRight className="w-4 h-4" />
                       </div>
                     </div>

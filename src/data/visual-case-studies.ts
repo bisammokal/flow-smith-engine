@@ -1,0 +1,108 @@
+export type VisualCaseStudy = {
+  headline: string; highlight: string; cardTitle: string; cardBefore: string; cardAfter: string;
+  context: string[];
+  metrics: { value: string; label: string }[];
+  problemTitle: string;
+  changes: { label: string; before: string; after: string }[];
+  buildTitle: string; buildIntro: string;
+  steps: { title: string; description: string }[];
+  flow: [string, string, string]; note: string;
+  outcomeTitle: string; outcome: string; quote?: string;
+};
+
+export const visualCaseStudies: Record<number, VisualCaseStudy> = {
+  1: {
+    headline: 'One revenue command center.', highlight: 'Forecasts in 60 seconds.',
+    cardTitle: 'Revenue decisions, without the data silos.', cardBefore: 'Disconnected reports', cardAfter: 'one coordinated revenue system',
+    context: ['B2B SaaS', '85-person team'],
+    metrics: [{ value: '60 sec', label: 'revenue forecasts' }, { value: '37%', label: 'pipeline conversion lift' }, { value: '18%', label: 'higher sales velocity' }],
+    problemTitle: 'Slow reports were slowing decisions.',
+    changes: [{ label: 'Forecasts', before: '3–5 days to prepare', after: 'Ready in 60 seconds' }, { label: 'Pipeline', before: 'Manual weekly analysis', after: 'Daily, real-time insights' }, { label: 'Alignment', before: 'Teams using different numbers', after: 'One shared revenue view' }],
+    buildTitle: 'Six specialists. One coordinated system.',
+    buildIntro: 'I connected pipeline analysis, attribution, forecasting, revenue operations, pricing and intelligence agents around a shared data-to-decision workflow.',
+    steps: [{ title: 'Audit the revenue flow', description: 'Mapped sales, marketing and retention data to locate forecasting gaps and operational bottlenecks.' }, { title: 'Connect specialist agents', description: 'Each agent handles a distinct responsibility, from diagnosing pipeline leaks to pricing recommendations.' }, { title: 'Turn insights into decisions', description: 'The shared operating system brings forecasts, attribution and cross-team priorities into one view.' }],
+    flow: ['Revenue data', 'Specialist AI agents', 'Forecasts & decisions'],
+    note: 'The system covers the full funnel: pipeline health, channel attribution, CRM handoffs, forecasting and pricing. It replaces isolated reports with coordinated analysis.',
+    outcomeTitle: 'Clearer forecasts. Faster execution.',
+    outcome: 'The existing case study reports $1.8M in projected revenue unlocked, 60–70% lower operational workload and $24K/month in analytics cost reduction, alongside the conversion and velocity improvements above.',
+    quote: 'This was not automation — this became our entire revenue command center. Every strategic decision now comes with instant clarity and data we trust.',
+  },
+  3: {
+    headline: 'Less lead research.', highlight: '120+ leads every month.',
+    cardTitle: 'A lead pipeline that builds itself.', cardBefore: 'Manual prospect searches', cardAfter: 'researched leads & personalized outreach',
+    context: ['B2B lead generation', 'Solo founder'],
+    metrics: [{ value: '120+', label: 'leads generated / month' }, { value: '70–80%', label: 'less research time' }, { value: '2×', label: 'email send volume' }],
+    problemTitle: 'Prospecting depended on manual effort.',
+    changes: [{ label: 'Research', before: '15–20 hours each week', after: 'Automated discovery' }, { label: 'Data quality', before: 'Manual checks & duplicates', after: 'Cleaned, validated contacts' }, { label: 'Outreach', before: 'Inconsistent lead flow', after: 'A daily outreach pipeline' }],
+    buildTitle: 'Discover. Validate. Reach out.',
+    buildIntro: 'I connected Yelp and Trustpilot prospect research with geographic analysis, contact cleaning, Google Sheets and AI-written email outreach.',
+    steps: [{ title: 'Find relevant businesses', description: 'Location analysis directs searches across Yelp and Trustpilot to discover prospects in the right areas.' }, { title: 'Validate & organize', description: 'The workflow cross-checks sources, cleans contact data and removes duplicates before syncing Google Sheets.' }, { title: 'Prepare & send outreach', description: 'AI generates personalized emails and Gmail handles sending, keeping the prospecting loop moving.' }],
+    flow: ['Yelp & Trustpilot', 'Validation & AI copy', 'Sheets & Gmail'],
+    note: 'Dual-source validation and deduplication sit between discovery and outreach. The founder receives a consistent pipeline rather than another unprocessed list.',
+    outcomeTitle: 'Research time became selling time.',
+    outcome: 'Manual scraping was eliminated. The workflow produced a consistent daily pipeline with verified contact information and doubled email sending capacity.',
+    quote: 'Everything I used to do manually — finding leads, checking their ratings, cleaning data, and writing outreach — now happens automatically. It feels like I hired a full-time lead researcher and email marketer combined.',
+  },
+  4: {
+    headline: 'Your documents, put to work.', highlight: '68% of questions handled automatically.',
+    cardTitle: 'Company knowledge, ready to answer.', cardBefore: 'Answers buried in PDFs', cardAfter: 'a document-grounded website chatbot',
+    context: ['B2B SaaS / Online services', 'Two-person support team'],
+    metrics: [{ value: '68%', label: 'document questions automated' }, { value: '$700', label: 'monthly support cost avoided' }, { value: 'Same day', label: 'new documents searchable' }],
+    problemTitle: 'The answers existed. The chatbot couldn’t find them.',
+    changes: [{ label: 'Knowledge', before: 'PDFs outside the chatbot', after: 'Searchable document context' }, { label: 'Updates', before: 'Manual copy-pasting', after: 'New Drive files ingested' }, { label: 'Support', before: 'Repeated document questions', after: 'Source-grounded answers' }],
+    buildTitle: 'From a Drive folder to a useful answer.',
+    buildIntro: 'I built a retrieval-augmented generation (RAG) pipeline: it finds relevant passages in the company’s documents and gives them to the chatbot as answer context.',
+    steps: [{ title: 'Read the documents', description: 'Google Drive supplies files; Mistral OCR extracts text from PDFs and scanned images through a signed-URL handoff.' }, { title: 'Build searchable knowledge', description: 'Text is split into roughly 1,000-character chunks, embedded with Mistral and stored in Qdrant.' }, { title: 'Answer with context', description: 'GPT-4.1-mini retrieves relevant passages and uses the last 10 conversation turns to respond in context.' }],
+    flow: ['Google Drive + OCR', 'Qdrant retrieval', 'Website chat answers'],
+    note: 'Grounding guardrails block unsupported answers. The case study reports 100% of answers traceable to a source document, with no manual copy-pasting to refresh the knowledge base.',
+    outcomeTitle: 'Less repetition for the support team.',
+    outcome: 'Customers can get document-based answers around the clock. New documents become searchable the same day, while the team spends less time on recurring questions.',
+    quote: 'I used to answer the same five questions every day, then rewrite the bot’s script whenever a document changed. Now I drop a file into Drive and the chatbot simply knows it — and it never makes things up.',
+  },
+  5: {
+    headline: 'Four channels. One workflow.', highlight: 'Publishing without daily uploads.',
+    cardTitle: 'Content queued once. Published across channels.', cardBefore: 'Four manual upload routines', cardAfter: 'two scheduled publishing paths',
+    context: ['AI Automation Engineer', 'Published December 13, 2025'],
+    metrics: [{ value: '4', label: 'publishing platforms' }, { value: '2× daily', label: 'scheduled runs' }, { value: '2 paths', label: 'video & image/text' }],
+    problemTitle: 'Keeping four platforms updated was a daily chore.',
+    changes: [{ label: 'Schedule', before: 'Missed posting windows', after: '9 AM & 7 PM triggers' }, { label: 'Publishing', before: 'Manual platform uploads', after: 'Connected API publishing' }, { label: 'Tracking', before: 'Messy queues & duplicates', after: 'Posted statuses & file cleanup' }],
+    buildTitle: 'Different content. The right path for each.',
+    buildIntro: 'I used n8n to separate short-form video distribution from image/text posts. Google Sheets holds the queues, Google Drive supplies media, and Airtable stages Instagram content.',
+    steps: [{ title: 'Select ready content', description: 'Both paths run at 9 AM and 7 PM. The video queue selects “post”; image/text selects “Ready” and checks for a Drive image ID.' }, { title: 'Publish to four channels', description: 'Videos go to YouTube and Instagram Reels. Image/text posts branch to Facebook and LinkedIn.' }, { title: 'Record & clear the queue', description: 'Completed rows become “posted” or “Posted”. Videos move into the “Posted shorts” folder to prevent repeat publishing.' }],
+    flow: ['Sheets & Drive', 'Two n8n paths', 'YouTube · IG · FB · LinkedIn'],
+    note: 'YouTube uploads use Category ID 27. Instagram details are staged in Airtable, then the Facebook Graph API creates a Reels container; a 15-minute wait precedes publishing. Google Sheets3 records completed image/text posts.',
+    outcomeTitle: 'Consistent publishing. Cleaner content tracking.',
+    outcome: 'Scheduled distribution eliminated hours of manual scheduling and uploading. Status updates and file movement prevent duplicate posts while handling each platform’s API requirements. Deliverables: Social Media Audit and Publishing Automation.',
+  },
+  6: {
+    headline: 'From Maps to qualified leads.', highlight: '100× prospecting velocity.',
+    cardTitle: 'Raw business data becomes sales intelligence.', cardBefore: 'Manual Maps research', cardAfter: 'verified leads with tailored icebreakers',
+    context: ['AI Automation Engineer', 'Published December 2, 2025'],
+    metrics: [{ value: '100×', label: 'prospecting velocity' }, { value: '99%', label: 'verified email quality' }, { value: '5,000+', label: 'automated leads / week' }],
+    problemTitle: 'Sales time was disappearing into list building.',
+    changes: [{ label: 'Discovery', before: '50 manual leads / week', after: '5,000+ generated / week' }, { label: 'Email quality', before: 'Unverified scraped contacts', after: 'Mandatory Reoon checks' }, { label: 'Personalization', before: 'Generic introductions', after: 'An icebreaker for every lead' }],
+    buildTitle: 'Four specialists, from search to sales-ready.',
+    buildIntro: 'I built a modular n8n pipeline that combines Gemini search planning, contact extraction, Reoon verification and AI qualification, with Google Sheets as the shared CRM.',
+    steps: [{ title: 'Plan the search', description: 'Gemini generates 20+ optimized, non-repetitive Maps queries from the target niche and location.' }, { title: 'Extract & clean', description: 'HTTP nodes and JavaScript/Regex parse websites, emails, phone numbers and social links, excluding non-business domains.' }, { title: 'Verify every email', description: 'Reoon checks risk, validity and status. Only contacts marked Verified proceed to outreach.' }, { title: 'Qualify & personalize', description: 'One agent summarizes the website; another evaluates ICP fit and generates a conversational icebreaker.' }],
+    flow: ['Maps discovery', 'Verification + AI enrichment', 'Google Sheets CRM'],
+    note: 'Reading and qualification are separate AI responsibilities. Verified contacts, qualification context and personalized introduction lines arrive together in Sheets. The 99% figure describes verified email-data quality.',
+    outcomeTitle: 'The sales team moved from data entry to closing.',
+    outcome: 'The system eliminated manual list building, reduced acquisition cost and made personalized outreach scalable across niches and locations. Deliverables: AI Agent Development, AI Bot and Lead Generation Chatbot.',
+    quote: 'This automation effectively cloned our best research analyst. The AI qualification is surprisingly accurate—it filters out the bad fits better than our VAs did. We wake up to a spreadsheet full of qualified, verified leads with intro lines ready to go.',
+  },
+  7: {
+    headline: 'An inbox that sorts itself.', highlight: 'Human review where it matters.',
+    cardTitle: 'Routine replies automated. Sensitive replies reviewed.', cardBefore: 'A cluttered, manual inbox', cardAfter: 'classified emails & controlled responses',
+    context: ['AI Automation Engineer', 'Published December 2, 2025'],
+    metrics: [{ value: '3', label: 'email categories' }, { value: '100%', label: 'flagged replies go to drafts' }, { value: '10 min', label: 'inbox polling interval' }],
+    problemTitle: 'Important messages were lost in the noise.',
+    changes: [{ label: 'Organization', before: 'Mixed sales & support', after: 'Automatic Gmail labels' }, { label: 'General email', before: 'Routine replies delayed', after: 'AI-written auto-responses' }, { label: 'Sensitive email', before: 'Concern about auto-reply errors', after: 'Drafts for human approval' }],
+    buildTitle: 'Classify first. Then choose how to respond.',
+    buildIntro: 'I separated the classifier from the responder using n8n, Gmail and GPT-4.1-mini. Structured output parsers validate routing fields, and switch nodes direct messages by sensitivity.',
+    steps: [{ title: 'Initialize & classify', description: 'Setup creates Sales, Support, Others, Needs Approval and Already Responded labels. Gmail polls every 10 minutes; AI identifies category and sensitivity.' }, { title: 'Apply the right label', description: 'The workflow matches label_name to Gmail label IDs. Others are labeled and excluded from response generation.' }, { title: 'Reply or prepare a draft', description: 'General messages are sent and tagged Already Responded. The Sensitive AI Responder routes approval-required replies to Create a draft.' }],
+    flow: ['Incoming Gmail', 'Category + sensitivity', 'Auto-reply or draft'],
+    note: 'The project reports under 2 minutes for general-inquiry responses, but the 10-minute polling interval can add waiting time before processing. A 90% reduction in manual triage was a goal, not a measured result.',
+    outcomeTitle: 'An organized inbox, with control over sensitive replies.',
+    outcome: 'Routine messages are handled automatically; 100% of replies flagged Needs Approval stop at Gmail Drafts for review. Schema validation keeps routing data consistent. Deliverables: AI Agent Development, AI Classifier and AI Bot.',
+  },
+};

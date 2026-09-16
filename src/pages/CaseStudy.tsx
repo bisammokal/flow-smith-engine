@@ -1,7 +1,7 @@
 import { Header } from "@/components/Header";
 
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Building2, Users, DollarSign, AlertCircle, Target, Zap, TrendingUp, CheckCircle, ShieldCheck, BarChart3, Activity, Brain, Mail, Clock, Search, Database, Calendar, User, Star, MapPin, Filter, FileSpreadsheet, Send, RefreshCw, Quote } from "lucide-react";
+import { ArrowRight, Building2, Users, DollarSign, AlertCircle, Target, Zap, TrendingUp, CheckCircle, ShieldCheck, BarChart3, Activity, Brain, Mail, Clock, Search, Database, Calendar, User, Star, MapPin, Filter, FileSpreadsheet, Send, RefreshCw, Quote, FolderOpen, ScanLine, Layers, Cpu, Bot, Lock, MessageSquare } from "lucide-react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { Link, useParams, Navigate } from "react-router-dom";
@@ -10,6 +10,7 @@ import systemArchitecture from "@/assets/case-study-system-architecture.png";
 import aiAssistantArchitecture from "@/assets/case-study-ai-assistant-architecture.png";
 import caseStudyLeadEngineWorkflow from "@/assets/case-study-lead-engine-workflow.png";
 import caseStudyLeadSystemArchitecture from "@/assets/case-study-lead-system-architecture.png";
+import caseStudyChatbotWorkflow from "@/assets/case-study-chatbot-workflow.jpg";
 
 // Counter animation hook
 const useCountUp = (end: number, duration: number = 2, prefix: string = "", suffix: string = "") => {
@@ -32,8 +33,8 @@ const CaseStudy = () => {
   }, [controls, inView]);
 
   // Redirect to index if invalid ID
-  if (!id || caseStudyId < 1 || caseStudyId > 3) {
-    return <Navigate to="/case-study" replace />;
+  if (!id || caseStudyId < 1 || caseStudyId > 4) {
+    return <Navigate to="/projects" replace />;
   }
 
   return (
@@ -88,7 +89,7 @@ const CaseStudy = () => {
                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(230, 184, 58, 0.3)" }}
               >
                 <Target className="w-4 h-4 text-primary" />
-                <span className="text-sm font-semibold text-primary">Enterprise Case Study</span>
+                <span className="text-sm font-semibold text-primary">Enterprise Project</span>
               </motion.div>
             </motion.div>
 
@@ -665,7 +666,7 @@ const CaseStudy = () => {
                 whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(230, 184, 58, 0.3)" }}
               >
                 <User className="w-4 h-4 text-secondary" />
-                <span className="text-sm font-semibold text-secondary">Solo Founder Case Study</span>
+                <span className="text-sm font-semibold text-secondary">Solo Founder Project</span>
               </motion.div>
             </motion.div>
 
@@ -1689,6 +1690,515 @@ const CaseStudy = () => {
               
               <p className="text-2xl md:text-3xl text-foreground leading-relaxed text-center font-light italic relative z-10">
                 Everything I used to do manually — finding leads, checking their ratings, cleaning data, and writing outreach — now happens automatically. It feels like I hired a full-time lead researcher and email marketer combined.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      </>
+      )}
+
+      {/* CASE STUDY 4 - WEBSITE CHATBOT WITH GOOGLE DRIVE KNOWLEDGE BASE */}
+      {caseStudyId === 4 && (
+        <>
+
+      {/* Hero Section - Case Study 4 */}
+      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 z-0"
+          style={{
+            backgroundImage: `url(${caseStudyChatbotWorkflow})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            filter: 'blur(8px)',
+            transform: 'scale(1.1)',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/90 to-background/95 z-10" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+          <motion.div
+            className="max-w-5xl mx-auto text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={staggerContainer}
+          >
+            <motion.h1
+              variants={fadeUp}
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight mb-4"
+            >
+              How a{" "}
+              <span className="text-primary">
+                Website Chatbot
+              </span>
+              {" "}Learned an Entire Documentation Library Using an Automated RAG Pipeline
+            </motion.h1>
+
+            <motion.p
+              variants={fadeUp}
+              className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto"
+            >
+              From hand-written bot replies to a self-updating knowledge base that answers every question straight from company documents.
+            </motion.p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Client Snapshot - Case Study 4 */}
+      <section className="py-8 md:py-12 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="max-w-6xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Client Snapshot
+            </motion.h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              {[
+                { icon: Building2, label: "Industry", value: "B2B SaaS / Online Services", color: "primary" },
+                { icon: Users, label: "Team Size", value: "2-person support team", color: "secondary" },
+                { icon: DollarSign, label: "Monthly Revenue", value: "$9k/month", color: "accent" },
+                { icon: AlertCircle, label: "Primary Challenge", value: "Chatbot could not answer anything that lived inside PDFs and internal docs", color: "primary" },
+              ].map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={index}
+                    variants={fadeUp}
+                    whileHover={{
+                      scale: 1.05,
+                      boxShadow: "0 20px 40px rgba(230, 184, 58, 0.2)",
+                    }}
+                    className="glass-card p-6 border border-primary/10 hover:border-primary/30 transition-all duration-500"
+                  >
+                    <div className={`w-14 h-14 bg-${item.color}/10 rounded-xl flex items-center justify-center mb-4`}>
+                      <Icon className={`w-7 h-7 text-${item.color}`} />
+                    </div>
+                    <div className="text-sm font-bold text-primary mb-2 uppercase tracking-wider">
+                      {item.label}
+                    </div>
+                    <div className="text-base text-foreground font-medium">
+                      {item.value}
+                    </div>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Core Business Problem - Case Study 4 */}
+      <section className="py-8 md:py-12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-destructive/5 to-transparent pointer-events-none" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="max-w-5xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+              The Core Business Problem
+            </motion.h2>
+
+            <motion.p variants={fadeUp} className="text-xl text-muted-foreground mb-12">
+              The client's previous chatbot looked helpful but knew almost nothing about the business:
+            </motion.p>
+
+            <div className="space-y-4">
+              {[
+                "Could not answer questions about internal product specs",
+                "Support guides sat in Google Drive, invisible to the bot",
+                "PDFs and scanned images could not be indexed at all",
+                "Every knowledge update meant manual copy-pasting",
+                "Bot replies went stale the moment a document changed",
+                "No way to verify where an answer came from",
+                "Tier 1 questions still landed in the support inbox",
+              ].map((problem, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{ x: 8 }}
+                  className="flex items-start gap-4 p-5 glass-card border border-destructive/20 hover:border-destructive/40 transition-all duration-300"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-destructive/10 flex items-center justify-center flex-shrink-0 mt-1">
+                    <AlertCircle className="w-5 h-5 text-destructive" />
+                  </div>
+                  <p className="text-lg text-foreground">{problem}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              variants={fadeUp}
+              className="mt-12 p-8 glass-card border-2 border-primary/30 text-center"
+            >
+              <p className="text-2xl md:text-3xl font-bold text-primary">
+                The client didn't need a smarter-sounding chatbot.
+                <br />
+                <span className="text-foreground">They needed a chatbot that actually reads the company's documents.</span>
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* What Was at Stake - Case Study 4 */}
+      <section className="py-8 md:py-12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-background via-muted/20 to-background" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="max-w-4xl mx-auto text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold mb-8">
+              What Was at Stake
+            </motion.h2>
+
+            <motion.div
+              variants={scaleIn}
+              className="glass-card p-8 md:p-12 border border-destructive/30 space-y-6"
+            >
+              {[
+                "Customers waiting hours for answers already written in a PDF",
+                "Support team buried under the same documentation questions",
+                "Outdated bot replies quietly damaging trust",
+                "Every new document adding manual maintenance work",
+                "Unverifiable answers creating real business risk",
+                "No way to scale support without hiring",
+              ].map((stake, index) => (
+                <motion.p
+                  key={index}
+                  variants={fadeUp}
+                  className="text-xl md:text-2xl text-foreground leading-relaxed font-medium"
+                >
+                  {stake}
+                </motion.p>
+              ))}
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Diagnostic Process - Case Study 4 */}
+      <section className="py-8 md:py-12 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="max-w-6xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12">
+              Our Diagnostic Process
+            </motion.h2>
+
+            <motion.p variants={fadeUp} className="text-xl text-muted-foreground text-center mb-16 max-w-3xl mx-auto">
+              We audited both the documentation and the questions customers were actually asking:
+            </motion.p>
+
+            <div className="relative">
+              {/* Connection Lines */}
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-primary/30 to-transparent hidden lg:block" />
+
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 relative z-10">
+                {[
+                  {
+                    step: "01",
+                    title: "Document Audit",
+                    description: "Catalogued every product spec, support guide, and scanned PDF sitting in Google Drive",
+                  },
+                  {
+                    step: "02",
+                    title: "Question Mapping",
+                    description: "Reviewed real chat transcripts to find which answers already existed in the documents",
+                  },
+                  {
+                    step: "03",
+                    title: "Retrieval Feasibility Scan",
+                    description: "Tested OCR accuracy and chunking strategy against the client's messiest files",
+                  },
+                ].map((step, index) => (
+                  <motion.div
+                    key={index}
+                    variants={fadeUp}
+                    whileHover={{ y: -8, scale: 1.02 }}
+                    className="glass-card p-8 border border-primary/20 hover:border-primary/40 transition-all duration-500 text-center"
+                  >
+                    <motion.div
+                      className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 border-2 border-primary flex items-center justify-center backdrop-blur-sm"
+                      animate={{
+                        boxShadow: [
+                          "0 0 20px rgba(230, 184, 58, 0.3)",
+                          "0 0 40px rgba(230, 184, 58, 0.5)",
+                          "0 0 20px rgba(230, 184, 58, 0.3)",
+                        ],
+                      }}
+                      transition={{ duration: 3, repeat: Infinity }}
+                    >
+                      <span className="text-2xl font-bold text-primary">{step.step}</span>
+                    </motion.div>
+                    <h3 className="text-xl font-bold mb-4">{step.title}</h3>
+                    <p className="text-muted-foreground">{step.description}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <motion.div
+              variants={scaleIn}
+              className="mt-16 p-8 glass-card border-2 border-primary/30 text-center"
+            >
+              <p className="text-2xl md:text-3xl font-bold">
+                We found that{" "}
+                <span className="text-primary">68% of incoming questions</span>{" "}
+                were already answered inside{" "}
+                <span className="text-primary">documents the chatbot could not read</span>.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Solution Architecture - Case Study 4 */}
+      <section className="py-8 md:py-12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-transparent pointer-events-none" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="max-w-6xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6">
+              The Solution Architecture
+            </motion.h2>
+
+            <motion.p variants={fadeUp} className="text-xl text-muted-foreground text-center mb-4">
+              Document Intelligence + Live Chat Agent
+            </motion.p>
+
+            <motion.p variants={fadeUp} className="text-lg text-foreground text-center mb-16 max-w-4xl mx-auto">
+              We built a dual-component n8n workflow: one pipeline turns raw documents into searchable knowledge, the other answers users in real time from that knowledge.
+              <br />
+              <span className="text-primary font-semibold">The system included:</span>
+            </motion.p>
+
+            {/* System Architecture Visualization */}
+            <motion.div
+              variants={fadeUp}
+              className="max-w-6xl mx-auto mb-16 rounded-2xl overflow-hidden border border-primary/20"
+            >
+              <img
+                src={caseStudyChatbotWorkflow}
+                alt="Website Chat Agent and Document Intelligence Pipeline Architecture Diagram"
+                className="w-full h-auto"
+              />
+            </motion.div>
+
+            {/* Central Engine Core */}
+            <motion.div variants={scaleIn} className="mb-12">
+              <div className="glass-card p-8 border-2 border-primary/40 text-center max-w-md mx-auto">
+                <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-luxury flex items-center justify-center">
+                  <Database className="w-10 h-10 text-background" />
+                </div>
+                <h3 className="text-2xl font-bold text-primary mb-2">RAG Knowledge Core</h3>
+                <p className="text-muted-foreground">Turns raw documents into grounded answers</p>
+              </div>
+            </motion.div>
+
+            {/* Connected Modules */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                { icon: FolderOpen, title: "Google Drive Loader", desc: "Pulls documents from a watched folder" },
+                { icon: ScanLine, title: "Mistral DOC OCR", desc: "Extracts clean text from PDFs & images" },
+                { icon: Lock, title: "Signed URL Handoff", desc: "Secure file transfer to the OCR API" },
+                { icon: Layers, title: "Smart Chunking", desc: "Splits text into ~1000-character passages" },
+                { icon: Cpu, title: "Mistral Cloud Embeddings", desc: "Converts chunks into vectors" },
+                { icon: Database, title: "Qdrant Vector Store", desc: "Stores and retrieves by meaning" },
+                { icon: Bot, title: "GPT-4.1-mini Chat Agent", desc: "Replies in the site chat widget" },
+                { icon: MessageSquare, title: "Conversation Memory", desc: "Keeps the last 10 turns in context" },
+                { icon: ShieldCheck, title: "Grounding Guardrails", desc: "Blocks answers not found in the docs" },
+              ].map((module, index) => (
+                <motion.div
+                  key={index}
+                  variants={fadeUp}
+                  whileHover={{ scale: 1.05, y: -4 }}
+                  className="glass-card p-4 border border-primary/20 hover:border-primary/40 transition-all duration-300"
+                >
+                  <module.icon className="w-8 h-8 text-primary mb-3" />
+                  <h4 className="text-base font-bold mb-1">{module.title}</h4>
+                  <p className="text-xs text-muted-foreground">{module.desc}</p>
+                </motion.div>
+              ))}
+            </div>
+
+            <motion.div
+              variants={fadeUp}
+              className="mt-8 p-6 glass-card border-2 border-primary/30 text-center"
+            >
+              <p className="text-base text-foreground">
+                Ingestion and retrieval run as one coordinated{" "}
+                <span className="text-primary font-bold">"Documentation Brain"</span>
+                {" "}— drop a file in Google Drive and the chatbot can answer from it, with a clear "I couldn't find that on this site" fallback when it can't.
+              </p>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Transformation - Case Study 4 */}
+      <section className="py-8 md:py-12 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="max-w-5xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-2xl md:text-3xl font-bold text-center mb-8">
+              The Transformation
+            </motion.h2>
+
+            <motion.div variants={scaleIn} className="glass-card p-6 md:p-8 overflow-x-auto border border-primary/20">
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Before Column */}
+                <div>
+                  <h3 className="text-xl font-bold text-destructive mb-4 flex items-center gap-3">
+                    <AlertCircle className="w-5 h-5" />
+                    Before
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      "Bot answers hand-written one by one",
+                      "PDFs and scans completely unreadable",
+                      "Knowledge updates took days",
+                      "Replies went stale after every doc change",
+                      "No source behind any answer",
+                      "Repeat questions hit the support inbox",
+                      "Bot guessed when it didn't know",
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-2 p-3 glass-card border border-destructive/20">
+                        <div className="w-1.5 h-1.5 rounded-full bg-destructive mt-1.5 flex-shrink-0" />
+                        <p className="text-sm text-foreground">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* After Column */}
+                <div>
+                  <h3 className="text-xl font-bold text-primary mb-4 flex items-center gap-3">
+                    <CheckCircle className="w-5 h-5" />
+                    After
+                  </h3>
+                  <div className="space-y-3">
+                    {[
+                      "Documents ingested straight from Google Drive",
+                      "Mistral OCR reads PDFs and images",
+                      "Knowledge refreshed in a single workflow run",
+                      "New docs searchable the same day",
+                      "Every reply grounded in a real document",
+                      "Documentation questions answered automatically",
+                      "Honest fallback instead of invented answers",
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-2 p-3 glass-card border border-primary/20">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                        <p className="text-sm text-foreground font-medium">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Quantified Results - Case Study 4 */}
+      <section className="py-8 md:py-12 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-background pointer-events-none" />
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <motion.div
+            className="max-w-6xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16">
+              Quantified Results
+            </motion.h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                { value: "68%", label: "Of documentation questions answered without a human" },
+                { value: "24/7", label: "Instant replies grounded in company documentation" },
+                { value: "100%", label: "Of answers traceable to a source document" },
+                { value: "$700", label: "Monthly support cost avoided on repeat questions" },
+                { value: "Zero", label: "Manual copy-pasting to update the knowledge base" },
+                { value: "Same-day", label: "New Google Drive documents become searchable" },
+              ].map((metric, index) => (
+                <motion.div
+                  key={index}
+                  variants={scaleIn}
+                  whileHover={{ scale: 1.05, y: -8 }}
+                  className="glass-card p-4 border border-primary/20 hover:border-primary/40 transition-all duration-500 text-center"
+                >
+                  <div className="text-3xl md:text-4xl font-bold mb-2 text-accent">
+                    {metric.value}
+                  </div>
+                  <p className="text-xs text-foreground font-medium leading-snug">{metric.label}</p>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* Client Feedback - Case Study 4 */}
+      <section className="py-8 md:py-12 relative">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            className="max-w-4xl mx-auto"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={staggerContainer}
+          >
+            <motion.h2 variants={fadeUp} className="text-3xl md:text-4xl font-bold text-center mb-12">
+              Client Feedback
+            </motion.h2>
+
+            <motion.div
+              variants={scaleIn}
+              whileHover={{ scale: 1.02 }}
+              className="glass-card p-12 md:p-16 border-2 border-primary/30 relative"
+            >
+              <div className="absolute top-8 left-8 text-8xl text-primary/20 font-serif leading-none">"</div>
+              <div className="absolute bottom-8 right-8 text-8xl text-primary/20 font-serif leading-none">"</div>
+
+              <p className="text-2xl md:text-3xl text-foreground leading-relaxed text-center font-light italic relative z-10">
+                I used to answer the same five questions every day, then rewrite the bot's script whenever a document changed. Now I drop a file into Drive and the chatbot simply knows it — and it never makes things up.
               </p>
             </motion.div>
           </motion.div>
